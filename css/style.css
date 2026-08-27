@@ -523,6 +523,15 @@ p {
   gap: 22px;
 }
 
+/* Last card is a lone leftover in its row — centre it instead of
+   leaving it stuck to the left with empty space beside it. */
+.advantage-grid > .advantage:last-child {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
 .advantage {
   display: flex;
   align-items: flex-start;
