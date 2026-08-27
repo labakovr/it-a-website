@@ -251,6 +251,83 @@ p {
   border-radius: 3px;
 }
 
+/* ===== Nav dropdown (submenus for Битрикс24 / Телефония) ===== */
+
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-item-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.nav-caret {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 4px;
+  margin: 0;
+  cursor: pointer;
+  color: var(--text-on-dark-soft);
+  font-size: 10px;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.15s ease;
+}
+
+.nav-caret:hover {
+  color: var(--white);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  min-width: 240px;
+  margin-top: 14px;
+  background: var(--dark-2);
+  border: 1px solid rgba(143, 191, 33, 0.2);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 6px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+  z-index: 60;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-on-dark-soft);
+  white-space: nowrap;
+}
+
+.dropdown a:hover {
+  background: rgba(143, 191, 33, 0.14);
+  color: var(--white);
+}
+
+@media (min-width: 1151px) {
+  .nav-item:hover .dropdown,
+  .nav-item:focus-within .dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+  }
+}
+
 .header__actions {
   display: flex;
   align-items: center;
@@ -990,6 +1067,27 @@ p {
     gap: 18px;
     border-bottom: 1px solid rgba(143, 191, 33, 0.2);
   }
+  .nav-item { flex-direction: column; width: 100%; }
+  .nav-item-row { width: 100%; justify-content: center; }
+  .nav-caret { display: inline-flex; }
+  .nav-item .dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    margin-top: 0;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+  }
+  .nav-item.is-open .dropdown { max-height: 220px; padding: 6px 0 0; }
+  .nav-item.is-open .nav-caret { transform: rotate(180deg); }
+  .dropdown a { text-align: center; font-size: 14px; padding: 8px 12px; }
 }
 
 @media (max-width: 560px) {

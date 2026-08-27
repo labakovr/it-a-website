@@ -15,6 +15,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Nav dropdown submenus (tap-to-expand on mobile/tablet; desktop
+  // uses plain CSS :hover, this only matters below the 1150px
+  // breakpoint where the caret becomes visible)
+  document.querySelectorAll(".nav-caret").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const item = btn.closest(".nav-item");
+      if (!item) return;
+      const isOpen = item.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  });
+
   // Scroll reveal
   const revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && revealEls.length) {
