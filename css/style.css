@@ -892,12 +892,10 @@ p {
   .check-grid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1150px) {
   .nav, .header__phone { display: none; }
   .nav-toggle { display: flex; }
   .header__inner { height: auto; padding: 14px 24px; }
-  .brand__mark { width: 34px; height: 34px; }
-  .brand__name { font-size: 15px; }
   .header__actions { gap: 10px; }
   .header__actions .btn { padding: 10px 16px; font-size: 13px; }
   .nav a.is-active::after { bottom: -8px; }
@@ -913,6 +911,11 @@ p {
     gap: 18px;
     border-bottom: 1px solid rgba(143, 191, 33, 0.2);
   }
+}
+
+@media (max-width: 760px) {
+  .brand__mark { width: 34px; height: 34px; }
+  .brand__name { font-size: 15px; }
   .hero h1 { font-size: 36px; }
   .page-hero h1 { font-size: 30px; }
   .steps { grid-template-columns: 1fr; }
