@@ -914,6 +914,29 @@ p {
   }
 }
 
+@media (max-width: 560px) {
+  .header__inner { flex-wrap: nowrap; padding: 10px 14px; gap: 6px; height: 60px; }
+  .brand { gap: 6px; min-width: 0; }
+  .brand__mark { width: 24px; height: 24px; flex: none; }
+  .brand__name { font-size: 12.5px; white-space: nowrap; }
+  .header__actions { flex: none; gap: 6px; }
+  /* On very small screens the CTA button is dropped — the phone
+     number itself becomes the tappable call-to-action pill. */
+  .header__actions > a.btn { display: none; }
+  .header__phone {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    background: var(--green);
+    color: var(--dark);
+    font-size: 11px;
+    padding: 8px 10px;
+    border-radius: 999px;
+  }
+  .nav-toggle { width: 32px; height: 32px; font-size: 15px; flex: none; }
+  .header.is-open .nav { top: 60px; }
+}
+
 @media (max-width: 760px) {
   .brand__mark { width: 34px; height: 34px; }
   .brand__name { font-size: 15px; }
