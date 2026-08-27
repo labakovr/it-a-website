@@ -895,15 +895,29 @@ p {
 @media (max-width: 1150px) {
   .nav { display: none; }
   .nav-toggle { display: flex; }
-  .header__inner { height: auto; padding: 14px 24px; flex-wrap: wrap; row-gap: 10px; }
-  .header__actions { gap: 10px; flex: 1 1 100%; justify-content: space-between; }
-  .header__phone { font-size: 14px; }
-  .header__actions .btn { padding: 10px 16px; font-size: 13px; }
+  .header__inner { height: auto; padding: 14px 24px; flex-wrap: nowrap; }
+  .header__actions { gap: 10px; flex: none; }
+  /* With the nav collapsed there isn't room for a separate "Заказать
+     звонок" button next to the full phone number — the number itself
+     becomes the green call-to-action pill, so the header always stays
+     on a single row. */
+  .header__actions > a.btn { display: none; }
+  .header__phone {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    background: var(--green);
+    color: var(--dark);
+    font-weight: 800;
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 999px;
+  }
   .nav a.is-active::after { bottom: -8px; }
   .header.is-open .nav {
     display: flex;
     position: absolute;
-    top: 84px;
+    top: 100%;
     left: 0;
     right: 0;
     background: var(--dark);
@@ -915,31 +929,16 @@ p {
 }
 
 @media (max-width: 560px) {
-  .header__inner { flex-wrap: nowrap; padding: 10px 14px; gap: 6px; height: 60px; }
+  .header__inner { padding: 10px 14px; gap: 6px; height: 60px; }
   .brand { gap: 6px; min-width: 0; }
   .brand__mark { width: 24px; height: 24px; flex: none; }
   .brand__name { font-size: 12.5px; white-space: nowrap; }
-  .header__actions { flex: none; gap: 6px; }
-  /* On very small screens the CTA button is dropped — the phone
-     number itself becomes the tappable call-to-action pill. */
-  .header__actions > a.btn { display: none; }
-  .header__phone {
-    display: inline-flex;
-    align-items: center;
-    white-space: nowrap;
-    background: var(--green);
-    color: var(--dark);
-    font-size: 11px;
-    padding: 8px 10px;
-    border-radius: 999px;
-  }
+  .header__actions { gap: 6px; }
+  .header__phone { font-size: 11px; padding: 8px 10px; }
   .nav-toggle { width: 32px; height: 32px; font-size: 15px; flex: none; }
-  .header.is-open .nav { top: 60px; }
 }
 
 @media (max-width: 760px) {
-  .brand__mark { width: 34px; height: 34px; }
-  .brand__name { font-size: 15px; }
   .hero h1 { font-size: 36px; }
   .page-hero h1 { font-size: 30px; }
   .steps { grid-template-columns: 1fr; }
