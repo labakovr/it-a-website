@@ -663,15 +663,23 @@ p {
 .partners-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 60px;
+  justify-content: space-between;
+  gap: 40px;
   flex-wrap: wrap;
   opacity: 0.92;
 }
 
 .partners-row img {
-  height: 42px;
+  height: 80px;
   width: auto;
+  max-width: 30%;
+  object-fit: contain;
+  flex: 1 1 0;
+}
+
+@media (max-width: 640px) {
+  .partners-row { justify-content: center; }
+  .partners-row img { height: 52px; max-width: 45%; flex: none; }
 }
 
 /* ===== Offices ===== */
