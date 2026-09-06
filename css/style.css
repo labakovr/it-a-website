@@ -877,6 +877,181 @@ p {
   padding-top: 48px;
 }
 
+/* ===== Наши услуги (tabbed services block) ===== */
+
+.services-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+.services-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: var(--white);
+}
+
+.slash {
+  display: inline-block;
+  width: 10px;
+  height: 22px;
+  border-left: 3px solid var(--green);
+  transform: skewX(-18deg);
+}
+
+.services-top__link {
+  flex: none;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.services-top__link:hover {
+  color: var(--white);
+}
+
+.services-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+.services-tabs {
+  flex: 0 0 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.services-tab {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: none;
+  border: none;
+  border-left: 3px solid transparent;
+  padding: 14px 4px 14px 20px;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--ff);
+  color: var(--text-on-dark-soft);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.services-tab__num {
+  font-weight: 800;
+  font-size: 12.5px;
+  color: inherit;
+  opacity: 0.8;
+}
+
+.services-tab__label {
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.services-tab:hover {
+  color: var(--white);
+}
+
+.services-tab.is-active {
+  border-left-color: var(--green);
+  color: var(--white);
+}
+
+.services-tab.is-active .services-tab__num {
+  color: var(--green);
+  opacity: 1;
+}
+
+.services-panels {
+  flex: 1;
+  min-width: 0;
+}
+
+.services-panel {
+  display: none;
+}
+
+.services-panel.is-active {
+  display: block;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.service-tile {
+  display: flex;
+  flex-direction: column;
+  background: var(--dark-2);
+  border: 1px solid rgba(143, 191, 33, 0.16);
+  border-radius: 16px;
+  padding: 26px 26px 22px;
+  min-height: 168px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.service-tile:hover {
+  border-color: var(--green);
+  transform: translateY(-3px);
+}
+
+.service-tile h3 {
+  color: var(--white);
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+.service-tile p {
+  color: var(--text-on-dark-soft);
+  font-size: 13.5px;
+  margin: 0;
+  flex: 1;
+}
+
+.service-tile__arrow {
+  align-self: flex-end;
+  width: 34px;
+  height: 34px;
+  margin-top: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(236, 236, 236, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: var(--white);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.service-tile:hover .service-tile__arrow {
+  background: var(--green);
+  color: var(--dark);
+  border-color: var(--green);
+}
+
+@media (max-width: 900px) {
+  .services-block { flex-direction: column; gap: 28px; }
+  .services-tabs { flex-direction: row; flex-wrap: wrap; gap: 8px 20px; }
+  .services-tab { border-left: none; border-bottom: 3px solid transparent; padding: 6px 2px 10px; }
+  .services-tab.is-active { border-bottom-color: var(--green); }
+}
+
+@media (max-width: 640px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .services-top { margin-bottom: 28px; }
+}
+
 .news-head {
   display: flex;
   align-items: baseline;

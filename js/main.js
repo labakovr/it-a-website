@@ -28,6 +28,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // "Наши услуги" tabbed block
+  const serviceTabs = document.querySelectorAll(".services-tab");
+  const servicePanels = document.querySelectorAll(".services-panel");
+  const servicesLink = document.querySelector("[data-services-link]");
+  serviceTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      serviceTabs.forEach((t) => {
+        t.classList.remove("is-active");
+        t.setAttribute("aria-selected", "false");
+      });
+      servicePanels.forEach((p) => p.classList.remove("is-active"));
+      tab.classList.add("is-active");
+      tab.setAttribute("aria-selected", "true");
+      const panel = document.querySelector(`.services-panel[data-panel="${tab.dataset.tab}"]`);
+      if (panel) panel.classList.add("is-active");
+      if (servicesLink && tab.dataset.href) servicesLink.href = tab.dataset.href;
+    });
+  });
+
   // News carousel arrows
   const newsTrack = document.querySelector(".news-track");
   const newsPrev = document.querySelector(".news-arrow--prev");
