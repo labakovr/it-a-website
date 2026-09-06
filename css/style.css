@@ -1925,6 +1925,77 @@ p {
   background: var(--light);
 }
 
+/* ===== Полная таблица сравнения (compare.html) ===== */
+
+.compare-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin-top: 28px;
+}
+
+.compare-toc a {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-on-dark-soft);
+  border: 1px solid rgba(236, 236, 236, 0.2);
+  border-radius: 999px;
+  padding: 7px 14px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.compare-toc a:hover {
+  color: var(--white);
+  border-color: var(--green);
+}
+
+.compare-full-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.compare-full-section:nth-child(odd) {
+  background: var(--light);
+}
+
+.compare-full-section__title {
+  margin-bottom: 20px;
+}
+
+.compare-table--full td:first-child {
+  font-weight: 400;
+  padding-left: 18px;
+}
+
+.compare-table--full tr.ct-lvl-0 td:first-child {
+  font-weight: 800;
+  color: var(--dark);
+}
+
+.compare-table--full tr.ct-lvl-1 td:first-child {
+  padding-left: 32px;
+  color: var(--text-soft);
+}
+
+.compare-table--full tr.ct-lvl-2 td:first-child {
+  padding-left: 46px;
+  color: var(--text-soft);
+  font-size: 13px;
+}
+
+.compare-table--full .ct-yes {
+  color: var(--green-dark);
+  font-weight: 800;
+}
+
+.compare-table--full .ct-no {
+  color: rgba(29, 29, 27, 0.25);
+}
+
+@media (max-width: 640px) {
+  .compare-toc { display: none; }
+}
+
 @media (max-width: 900px) {
   .pricing-grid--box { grid-template-columns: 1fr; }
 }
