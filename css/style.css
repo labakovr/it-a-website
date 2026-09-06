@@ -1576,4 +1576,7 @@ p {
   .steps { grid-template-columns: 1fr; }
   .cta-band { flex-direction: column; text-align: center; padding: 40px 28px; }
   .section { padding: 64px 0; }
+  .advantages-section { padding-top: 48px; padding-bottom: 48px; }
+  .services-section { padding: 24px 0; }
+  .cases-section { padding: 24px 0; }
 }
