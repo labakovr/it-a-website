@@ -99,6 +99,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Тарифы Битрикс24: селектор количества пользователей (коробочная версия)
+  document.querySelectorAll(".price-card__users-toggle").forEach((toggle) => {
+    let prices = {};
+    try {
+      prices = JSON.parse(toggle.dataset.prices || "{}");
+    } catch (e) {
+      prices = {};
+    }
+    const card = toggle.closest(".price-card");
+    const amountEl = card ? card.querySelector(".price-card__amount--users") : null;
+    const countEl = card ? card.querySelector(".price-card__users-count") : null;
+    const buttons = toggle.querySelectorAll(".price-card__users-btn");
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        const users = btn.dataset.users;
+        if (amountEl && prices[users]) amountEl.textContent = prices[users] + " BYN";
+        if (countEl) countEl.textContent = users;
+      });
+    });
+  });
+
   // Тарифы Битрикс24: переключатель "на месяц / на год"
   const pricingToggle = document.querySelector(".pricing-toggle");
   const pricingGrid = document.querySelector(".pricing-grid");

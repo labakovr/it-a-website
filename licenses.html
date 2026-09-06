@@ -131,6 +131,23 @@
 
       <div class="pricing-grid reveal">
         <div class="price-card">
+          <div class="price-card__name">Бесплатный</div>
+          <p class="price-card__tagline">Чтобы попробовать Битрикс24 без обязательств</p>
+          <div class="price-card__price">
+            <span class="price-card__amount" style="display:inline;">0 BYN</span>
+          </div>
+          <div class="price-card__meta">неограниченно пользователей · 5 ГБ</div>
+          <a href="https://www.bitrix24.by/create.php" target="_blank" rel="noopener" class="btn btn--outline-dark price-card__cta">Начать бесплатно</a>
+          <ul class="price-card__features">
+            <li><img class="ico" src="assets/img/check.svg" alt="">Совместная работа, лента, чат</li>
+            <li><img class="ico" src="assets/img/check.svg" alt="">Задачи без ограничения по количеству</li>
+            <li><img class="ico" src="assets/img/check.svg" alt="">Базовая CRM: сделки, контакты, каталог товаров</li>
+            <li><img class="ico" src="assets/img/check.svg" alt="">Онлайн-подпись документов</li>
+            <li><img class="ico" src="assets/img/check.svg" alt="">1 сайт на конструкторе</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
           <div class="price-card__name">Базовый</div>
           <p class="price-card__tagline">CRM для небольших отделов продаж</p>
           <div class="price-card__price">
@@ -205,7 +222,7 @@
         </div>
       </div>
 
-      <p class="pricing-note reveal">Есть и бесплатный тариф — неограниченно пользователей, 5 ГБ на диске, базовый набор инструментов. Битрикс24 можно <a href="https://www.bitrix24.by/create.php" target="_blank" rel="noopener">начать бесплатно</a> и обновиться до платного тарифа в любой момент.</p>
+      <p class="pricing-note reveal">С бесплатного тарифа можно в любой момент обновиться до платного — без потери данных.</p>
     </div>
 
     <div class="pricing-mode-panel" data-mode-panel="box" hidden>
@@ -220,6 +237,7 @@
           <a href="contacts.html#form" class="btn btn--outline-dark price-card__cta">Оставить заявку</a>
           <ul class="price-card__features">
             <li><img class="ico" src="assets/img/check.svg" alt="">CRM и готовый интернет-магазин</li>
+            <li><img class="ico" src="assets/img/check.svg" alt="">Экстранет и eCommerce-платформа</li>
             <li><img class="ico" src="assets/img/check.svg" alt="">Продажи, задачи, диск, документы</li>
             <li><img class="ico" src="assets/img/check.svg" alt="">Размещение на вашем сервере</li>
           </ul>
@@ -229,13 +247,20 @@
           <div class="price-card__badge">Рекомендуем</div>
           <div class="price-card__name">Корпоративный портал</div>
           <p class="price-card__tagline">Полный портал для совместной работы всей компании</p>
-          <div class="price-card__price">
-            <span class="price-card__amount" style="display:inline;">от 5 400 BYN</span>
+          <div class="price-card__users-toggle" role="group" aria-label="Количество пользователей" data-prices='{"50":"5 400","100":"7 800","250":"11 400","500":"20 100"}'>
+            <button type="button" class="price-card__users-btn is-active" data-users="50">50</button>
+            <button type="button" class="price-card__users-btn" data-users="100">100</button>
+            <button type="button" class="price-card__users-btn" data-users="250">250</button>
+            <button type="button" class="price-card__users-btn" data-users="500">500</button>
           </div>
-          <div class="price-card__meta">от 50 до 500 пользователей · лицензия на 12 мес</div>
+          <div class="price-card__price">
+            <span class="price-card__amount price-card__amount--users" style="display:inline;">5 400 BYN</span>
+          </div>
+          <div class="price-card__meta"><span class="price-card__users-count">50</span> пользователей · лицензия на 12 мес</div>
           <a href="contacts.html#form" class="btn btn--primary price-card__cta">Оставить заявку</a>
           <ul class="price-card__features">
             <li><img class="ico" src="assets/img/check.svg" alt="">Всё из тарифа «Интернет-магазин + CRM», плюс:</li>
+            <li><img class="ico" src="assets/img/check.svg" alt="">Документы Онлайн</li>
             <li><img class="ico" src="assets/img/check.svg" alt="">Полный набор инструментов совместной работы</li>
             <li><img class="ico" src="assets/img/check.svg" alt="">Масштабирование от 50 до 500 пользователей</li>
           </ul>
@@ -251,7 +276,6 @@
           <a href="contacts.html#form" class="btn btn--outline-dark price-card__cta">Рассчитать стоимость</a>
           <ul class="price-card__features">
             <li><img class="ico" src="assets/img/check.svg" alt="">Всё из тарифа «Корпоративный портал», плюс:</li>
-            <li><img class="ico" src="assets/img/check.svg" alt="">Экстранет и eCommerce-платформа</li>
             <li><img class="ico" src="assets/img/check.svg" alt="">Многодепартаментность и веб-кластер</li>
             <li><img class="ico" src="assets/img/check.svg" alt="">VIP-поддержка 24/7</li>
           </ul>
@@ -259,6 +283,27 @@
       </div>
 
       <p class="pricing-note reveal">Коробочная версия — разовая покупка лицензии на 12 месяцев с размещением на вашем сервере, без ежемесячной оплаты. Поможем выбрать редакцию и рассчитать точную стоимость под нужное число пользователей.</p>
+
+      <div class="compare-table-wrap reveal" style="margin-top:32px;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Возможность</th>
+              <th>Интернет-магазин + CRM</th>
+              <th>Корпоративный портал</th>
+              <th>Энтерпрайз</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Экстранет</td><td>✓</td><td>✓</td><td>✓</td></tr>
+            <tr><td>eCommerce-платформа</td><td>✓</td><td>✓</td><td>✓</td></tr>
+            <tr><td>Документы Онлайн</td><td>—</td><td>✓</td><td>✓</td></tr>
+            <tr><td>Многодепартаментность</td><td>—</td><td>—</td><td>✓</td></tr>
+            <tr><td>Веб-кластер</td><td>—</td><td>—</td><td>✓</td></tr>
+            <tr><td>VIP-поддержка 24/7</td><td>—</td><td>—</td><td>✓</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
@@ -274,6 +319,7 @@
         <thead>
           <tr>
             <th>Возможность</th>
+            <th>Бесплатный</th>
             <th>Базовый</th>
             <th>Стандартный</th>
             <th>Профессиональный</th>
@@ -281,18 +327,18 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Пользователи</td><td>5</td><td>50</td><td>100</td><td>от 250</td></tr>
-          <tr><td>Диск</td><td>24 ГБ</td><td>100 ГБ</td><td>1 024 ГБ</td><td>от 3 ТБ</td></tr>
-          <tr><td>CRM с BitrixGPT</td><td>✓</td><td>✓</td><td>CRM №1</td><td>CRM №1</td></tr>
-          <tr><td>Маркетинг</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
-          <tr><td>Документы Онлайн</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
-          <tr><td>BI-конструктор</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
-          <tr><td>Администрирование</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
-          <tr><td>Сквозная аналитика</td><td>—</td><td>—</td><td>✓</td><td>✓</td></tr>
-          <tr><td>Автоматизация процессов</td><td>—</td><td>—</td><td>✓</td><td>✓</td></tr>
-          <tr><td>HR: Компания</td><td>—</td><td>—</td><td>✓</td><td>✓</td></tr>
-          <tr><td>Филиалы</td><td>—</td><td>—</td><td>—</td><td>✓</td></tr>
-          <tr><td>Энтерпрайз-кластер</td><td>—</td><td>—</td><td>—</td><td>✓</td></tr>
+          <tr><td>Пользователи</td><td>неограниченно</td><td>5</td><td>50</td><td>100</td><td>от 250</td></tr>
+          <tr><td>Диск</td><td>5 ГБ</td><td>24 ГБ</td><td>100 ГБ</td><td>1 024 ГБ</td><td>от 3 ТБ</td></tr>
+          <tr><td>CRM с BitrixGPT</td><td>✓</td><td>✓</td><td>✓</td><td>CRM №1</td><td>CRM №1</td></tr>
+          <tr><td>Маркетинг</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Документы Онлайн</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
+          <tr><td>BI-конструктор</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Администрирование</td><td>—</td><td>—</td><td>✓</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Сквозная аналитика</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Автоматизация процессов</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>✓</td></tr>
+          <tr><td>HR: Компания</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Филиалы</td><td>—</td><td>—</td><td>—</td><td>—</td><td>✓</td></tr>
+          <tr><td>Энтерпрайз-кластер</td><td>—</td><td>—</td><td>—</td><td>—</td><td>✓</td></tr>
         </tbody>
       </table>
     </div>
