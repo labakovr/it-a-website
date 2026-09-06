@@ -1377,8 +1377,13 @@ p {
   max-height: 14px;
 }
 
+.yandex-reviews-widget--page {
+  height: 900px;
+}
+
 @media (max-width: 640px) {
   .yandex-reviews-widget { height: 520px; }
+  .yandex-reviews-widget--page { height: 640px; }
 }
 
 /* ===== FAQ ===== */
