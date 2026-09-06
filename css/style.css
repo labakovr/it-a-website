@@ -1316,6 +1316,28 @@ p {
   .cases-card { flex-basis: 82%; }
 }
 
+/* ===== Отзывы ===== */
+
+.reviews-section {
+  padding: 24px 0;
+}
+
+.reviews-widget-holder {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 48px 32px;
+  border: 1px solid rgba(236, 236, 236, 0.12);
+  border-radius: var(--radius);
+  background: var(--dark-2);
+}
+
+.reviews-placeholder {
+  color: var(--text-on-dark-soft);
+  font-size: 15px;
+  margin: 0;
+}
+
 /* ===== FAQ ===== */
 
 .faq-list {
@@ -1579,4 +1601,5 @@ p {
   .advantages-section { padding-top: 48px; padding-bottom: 48px; }
   .services-section { padding: 24px 0; }
   .cases-section { padding: 24px 0; }
+  .reviews-section { padding: 24px 0; }
 }
