@@ -366,7 +366,7 @@ p {
   background: var(--dark);
   color: var(--text-on-dark);
   overflow: hidden;
-  padding: 90px 0 55px;
+  padding: 90px 0 110px;
 }
 
 .hero__glow {
@@ -871,7 +871,6 @@ p {
 }
 
 .advantages-section {
-  padding-top: 48px;
   padding-bottom: 48px;
 }
 
