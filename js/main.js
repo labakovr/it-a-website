@@ -99,6 +99,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Полное сравнение тарифов: переключатель "Показать различия" + сворачивание разделов
+  const diffToggle = document.querySelector(".compare-diff-toggle");
+  if (diffToggle) {
+    const rows = document.querySelectorAll(".compare-table--full tbody tr");
+    rows.forEach((row) => {
+      const cells = [...row.querySelectorAll("td")].slice(1);
+      const values = cells.map((c) => c.textContent.trim());
+      const uniform = values.every((v) => v === values[0]);
+      if (uniform) row.dataset.uniform = "true";
+    });
+    diffToggle.addEventListener("change", () => {
+      document.body.classList.toggle("show-diff-only", diffToggle.checked);
+    });
+  }
+
+  document.querySelectorAll(".compare-full-section__title").forEach((title) => {
+    title.addEventListener("click", () => {
+      const section = title.closest(".compare-full-section");
+      if (section) section.classList.toggle("is-collapsed");
+    });
+  });
+
   // Тарифы Битрикс24: селектор количества пользователей (коробочная версия)
   document.querySelectorAll(".price-card__users-toggle").forEach((toggle) => {
     let prices = {};
