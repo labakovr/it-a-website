@@ -329,6 +329,19 @@ p {
 }
 
 @media (min-width: 1151px) {
+  /* Invisible bridge over the gap between the nav item and the
+     dropdown (created by .dropdown's margin-top) -- without it the
+     cursor leaves .nav-item's hover box while crossing the gap and
+     the dropdown closes before it can be reached. */
+  .nav-item::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 22px;
+  }
+
   .nav-item:hover .dropdown,
   .nav-item:focus-within .dropdown {
     opacity: 1;
