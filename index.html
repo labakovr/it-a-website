@@ -239,8 +239,8 @@
 <section class="news-section">
   <div class="container">
     <div class="news-head reveal">
-      <h2>Новости</h2>
-      <a href="news.html" class="news-head__link">Все публикации →</a>
+      <h2 class="slash-title"><span class="slash" aria-hidden="true"></span>Новости<span class="slash" aria-hidden="true"></span></h2>
+      <a href="news.html" class="block-link">Все публикации →</a>
     </div>
     <div class="news-carousel reveal">
       <button type="button" class="news-arrow news-arrow--prev" aria-label="Предыдущие новости">‹</button>
@@ -302,8 +302,8 @@
 <section class="section section--dark services-section" id="our-services">
   <div class="container">
     <div class="services-top reveal">
-      <h2 class="services-title"><span class="slash" aria-hidden="true"></span>Наши услуги<span class="slash" aria-hidden="true"></span></h2>
-      <a href="bitrix24.html" class="services-top__link" data-services-link>Все услуги →</a>
+      <h2 class="slash-title"><span class="slash" aria-hidden="true"></span>Наши услуги<span class="slash" aria-hidden="true"></span></h2>
+      <a href="bitrix24.html" class="block-link" data-services-link>Все услуги →</a>
     </div>
     <div class="services-block reveal">
       <div class="services-tabs" role="tablist">
@@ -428,56 +428,65 @@
   </div>
 </section>
 
-<section class="section section--dark cases-section">
+<section class="section cases-section">
   <div class="container">
     <div class="cases-head reveal">
-      <div>
-        <div class="eyebrow">Кейсы</div>
-        <h2>Гордимся нашими проектами</h2>
-      </div>
-      <div class="cases-nav">
-        <a href="cases.html" class="services-top__link">Все кейсы →</a>
-        <button type="button" class="cases-arrow cases-arrow--prev" aria-label="Предыдущие кейсы">‹</button>
-        <button type="button" class="cases-arrow cases-arrow--next" aria-label="Следующие кейсы">›</button>
-      </div>
+      <h2 class="slash-title"><span class="slash" aria-hidden="true"></span>Кейсы<span class="slash" aria-hidden="true"></span></h2>
+      <a href="cases.html" class="block-link">Все кейсы →</a>
     </div>
-    <div class="cases-track reveal">
-      <a href="cases.html" class="service-tile cases-card">
-        <span class="cases-card__tag">Скоро</span>
-        <h3>Внедрение Битрикс24</h3>
-        <p>Готовим подробный разбор проекта — с задачами, решением и результатами.</p>
-        <span class="service-tile__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="cases.html" class="service-tile cases-card">
-        <span class="cases-card__tag">Скоро</span>
-        <h3>Автоматизация продаж</h3>
-        <p>Покажем, как настроенные бизнес-процессы ускорили работу отдела продаж.</p>
-        <span class="service-tile__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="cases.html" class="service-tile cases-card">
-        <span class="cases-card__tag">Скоро</span>
-        <h3>IP-телефония для отдела продаж</h3>
-        <p>Расскажем, как настройка телефонии повлияла на обработку звонков.</p>
-        <span class="service-tile__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="cases.html" class="service-tile cases-card">
-        <span class="cases-card__tag">Скоро</span>
-        <h3>Интеграция с 1С</h3>
-        <p>Опишем, как объединили Битрикс24 и 1С в единый рабочий процесс.</p>
-        <span class="service-tile__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="cases.html" class="service-tile cases-card">
-        <span class="cases-card__tag">Скоро</span>
-        <h3>ИИ-ассистент в CRM</h3>
-        <p>Разберём, как ИИ-ассистент помогает обрабатывать обращения клиентов.</p>
-        <span class="service-tile__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <a href="cases.html" class="service-tile cases-card">
-        <span class="cases-card__tag">Скоро</span>
-        <h3>Сквозная аналитика</h3>
-        <p>Покажем, как отчётность помогла увидеть эффективность продаж и маркетинга.</p>
-        <span class="service-tile__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
+    <div class="cases-carousel reveal">
+      <button type="button" class="cases-arrow cases-arrow--prev" aria-label="Предыдущие кейсы">‹</button>
+      <div class="cases-track">
+        <a href="cases.html" class="cases-card">
+          <div class="cases-card__media"><img src="assets/img/logo-mark.png" alt=""></div>
+          <div class="cases-card__body">
+            <span class="cases-card__tag">Скоро</span>
+            <h3 class="cases-card__title">Внедрение Битрикс24</h3>
+            <p class="cases-card__text">Готовим подробный разбор проекта — с задачами, решением и результатами.</p>
+          </div>
+        </a>
+        <a href="cases.html" class="cases-card">
+          <div class="cases-card__media"><img src="assets/img/logo-mark.png" alt=""></div>
+          <div class="cases-card__body">
+            <span class="cases-card__tag">Скоро</span>
+            <h3 class="cases-card__title">Автоматизация продаж</h3>
+            <p class="cases-card__text">Покажем, как настроенные бизнес-процессы ускорили работу отдела продаж.</p>
+          </div>
+        </a>
+        <a href="cases.html" class="cases-card">
+          <div class="cases-card__media"><img src="assets/img/logo-mark.png" alt=""></div>
+          <div class="cases-card__body">
+            <span class="cases-card__tag">Скоро</span>
+            <h3 class="cases-card__title">IP-телефония для отдела продаж</h3>
+            <p class="cases-card__text">Расскажем, как настройка телефонии повлияла на обработку звонков.</p>
+          </div>
+        </a>
+        <a href="cases.html" class="cases-card">
+          <div class="cases-card__media"><img src="assets/img/logo-mark.png" alt=""></div>
+          <div class="cases-card__body">
+            <span class="cases-card__tag">Скоро</span>
+            <h3 class="cases-card__title">Интеграция с 1С</h3>
+            <p class="cases-card__text">Опишем, как объединили Битрикс24 и 1С в единый рабочий процесс.</p>
+          </div>
+        </a>
+        <a href="cases.html" class="cases-card">
+          <div class="cases-card__media"><img src="assets/img/logo-mark.png" alt=""></div>
+          <div class="cases-card__body">
+            <span class="cases-card__tag">Скоро</span>
+            <h3 class="cases-card__title">ИИ-ассистент в CRM</h3>
+            <p class="cases-card__text">Разберём, как ИИ-ассистент помогает обрабатывать обращения клиентов.</p>
+          </div>
+        </a>
+        <a href="cases.html" class="cases-card">
+          <div class="cases-card__media"><img src="assets/img/logo-mark.png" alt=""></div>
+          <div class="cases-card__body">
+            <span class="cases-card__tag">Скоро</span>
+            <h3 class="cases-card__title">Сквозная аналитика</h3>
+            <p class="cases-card__text">Покажем, как отчётность помогла увидеть эффективность продаж и маркетинга.</p>
+          </div>
+        </a>
+      </div>
+      <button type="button" class="cases-arrow cases-arrow--next" aria-label="Следующие кейсы">›</button>
     </div>
   </div>
 </section>
