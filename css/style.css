@@ -1021,7 +1021,7 @@ p {
 }
 
 .service-tile h3 {
-  color: var(--white);
+  color: var(--green);
   font-size: 16px;
   margin: 0 0 10px;
 }
