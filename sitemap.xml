@@ -16,8 +16,38 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://it-a.by/ai.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://it-a.by/portfolio.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://it-a.by/cases.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://it-a.by/reviews.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://it-a.by/certificates.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://it-a.by/about.html</loc>
     <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://it-a.by/news.html</loc>
+    <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
