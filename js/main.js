@@ -83,6 +83,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Тарифы Битрикс24: переключатель "Облако / Коробка"
+  const pricingModeToggle = document.querySelector(".pricing-mode-toggle");
+  if (pricingModeToggle) {
+    const modeBtns = pricingModeToggle.querySelectorAll(".pricing-mode-toggle__btn");
+    const modePanels = document.querySelectorAll(".pricing-mode-panel");
+    modeBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modeBtns.forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        modePanels.forEach((panel) => {
+          panel.hidden = panel.dataset.modePanel !== btn.dataset.mode;
+        });
+      });
+    });
+  }
+
   // Тарифы Битрикс24: переключатель "на месяц / на год"
   const pricingToggle = document.querySelector(".pricing-toggle");
   const pricingGrid = document.querySelector(".pricing-grid");
