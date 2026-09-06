@@ -1340,17 +1340,45 @@ p {
 .reviews-widget-holder {
   max-width: 640px;
   margin: 0 auto;
-  text-align: center;
-  padding: 48px 32px;
-  border: 1px solid rgba(236, 236, 236, 0.12);
-  border-radius: var(--radius);
-  background: var(--dark-2);
 }
 
-.reviews-placeholder {
-  color: var(--text-on-dark-soft);
-  font-size: 15px;
-  margin: 0;
+.yandex-reviews-widget {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.yandex-reviews-widget iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(236, 236, 236, 0.16);
+  border-radius: var(--radius);
+  box-sizing: border-box;
+}
+
+.yandex-reviews-widget__attribution {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  width: 100%;
+  padding: 0 16px;
+  text-align: center;
+  font-family: "YS Text", sans-serif;
+  font-size: 10px;
+  color: #b3b3b3;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 14px;
+}
+
+@media (max-width: 640px) {
+  .yandex-reviews-widget { height: 520px; }
 }
 
 /* ===== FAQ ===== */
