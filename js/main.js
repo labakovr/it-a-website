@@ -83,6 +83,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Тарифы Битрикс24: переключатель "на месяц / на год"
+  const pricingToggle = document.querySelector(".pricing-toggle");
+  const pricingGrid = document.querySelector(".pricing-grid");
+  if (pricingToggle && pricingGrid) {
+    const toggleBtns = pricingToggle.querySelectorAll(".pricing-toggle__btn");
+    toggleBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        toggleBtns.forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        pricingGrid.classList.toggle("is-yearly", btn.dataset.period === "year");
+      });
+    });
+  }
+
   // Scroll reveal
   const revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && revealEls.length) {
