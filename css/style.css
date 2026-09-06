@@ -396,6 +396,13 @@ p {
   margin-bottom: 22px;
 }
 
+.hero__badge-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex: none;
+}
+
 .hero h1 {
   font-size: 52px;
   color: var(--white);
