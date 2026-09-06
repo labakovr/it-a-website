@@ -866,7 +866,11 @@ p {
 /* ===== News carousel ===== */
 
 .news-section {
-  padding: 48px 0 56px;
+  padding: 24px 0 56px;
+}
+
+.advantages-section {
+  padding-bottom: 48px;
 }
 
 .news-head {
