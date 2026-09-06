@@ -328,6 +328,10 @@ p {
   color: var(--green);
 }
 
+.dropdown a.is-active::after {
+  content: none;
+}
+
 @media (min-width: 1151px) {
   /* Invisible bridge over the gap between the nav item and the
      dropdown (created by .dropdown's margin-top) -- without it the
