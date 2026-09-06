@@ -430,7 +430,7 @@ p {
 .hero__stats {
   display: flex;
   gap: 36px;
-  margin-top: 56px;
+  margin-top: 28px;
   flex-wrap: wrap;
 }
 
