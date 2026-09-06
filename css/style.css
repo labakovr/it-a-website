@@ -866,11 +866,15 @@ p {
 /* ===== News carousel ===== */
 
 .news-section {
-  padding: 24px 0 56px;
+  padding: 24px 0;
 }
 
 .advantages-section {
   padding-bottom: 48px;
+}
+
+.services-section {
+  padding-top: 48px;
 }
 
 .news-head {
