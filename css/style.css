@@ -397,8 +397,8 @@ p {
 }
 
 .hero__badge-icon {
-  width: 16px;
-  height: 16px;
+  width: 11px;
+  height: 11px;
   object-fit: contain;
   flex: none;
 }
