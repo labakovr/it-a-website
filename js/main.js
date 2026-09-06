@@ -65,6 +65,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Cases carousel arrows
+  const casesTrack = document.querySelector(".cases-track");
+  const casesPrev = document.querySelector(".cases-arrow--prev");
+  const casesNext = document.querySelector(".cases-arrow--next");
+  if (casesTrack && casesPrev && casesNext) {
+    const caseStep = () => {
+      const card = casesTrack.querySelector(".cases-card");
+      const gap = parseFloat(getComputedStyle(casesTrack).gap) || 20;
+      return card ? card.offsetWidth + gap : 300;
+    };
+    casesPrev.addEventListener("click", () => {
+      casesTrack.scrollBy({ left: -caseStep(), behavior: "smooth" });
+    });
+    casesNext.addEventListener("click", () => {
+      casesTrack.scrollBy({ left: caseStep(), behavior: "smooth" });
+    });
+  }
+
   // Scroll reveal
   const revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && revealEls.length) {
