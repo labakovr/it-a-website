@@ -865,6 +865,10 @@ p {
 
 /* ===== News carousel ===== */
 
+.news-section {
+  padding: 48px 0 56px;
+}
+
 .news-head {
   display: flex;
   align-items: baseline;
