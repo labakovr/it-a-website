@@ -28,6 +28,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // News carousel arrows
+  const newsTrack = document.querySelector(".news-track");
+  const newsPrev = document.querySelector(".news-arrow--prev");
+  const newsNext = document.querySelector(".news-arrow--next");
+  if (newsTrack && newsPrev && newsNext) {
+    const step = () => {
+      const card = newsTrack.querySelector(".news-card");
+      const gap = parseFloat(getComputedStyle(newsTrack).gap) || 22;
+      return card ? card.offsetWidth + gap : 280;
+    };
+    newsPrev.addEventListener("click", () => {
+      newsTrack.scrollBy({ left: -step(), behavior: "smooth" });
+    });
+    newsNext.addEventListener("click", () => {
+      newsTrack.scrollBy({ left: step(), behavior: "smooth" });
+    });
+  }
+
   // Scroll reveal
   const revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && revealEls.length) {
