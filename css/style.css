@@ -798,6 +798,21 @@ p {
   box-shadow: var(--shadow);
 }
 
+.office-map {
+  max-width: 640px;
+  margin: 24px auto 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.office-map iframe {
+  display: block;
+  width: 100%;
+  height: 360px;
+  border: 0;
+}
+
 .office-card .city {
   font-weight: 900;
   font-size: 19px;
