@@ -1995,6 +1995,17 @@ p {
   margin-top: 28px;
 }
 
+.market-shot {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(29, 29, 27, 0.08);
+}
+
+@media (max-width: 980px) {
+  .market-block .grid-2 img { order: -1; }
+}
+
 .compare-toc a {
   font-size: 13px;
   font-weight: 700;
