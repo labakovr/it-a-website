@@ -517,6 +517,7 @@ p {
 
 .breadcrumb {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   align-items: center;
   font-size: 13px;
@@ -609,6 +610,210 @@ p {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   border: 1px solid rgba(29, 29, 27, 0.08);
+}
+
+/* ===== Equipment catalog (catalog/) ===== */
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.catalog-tile {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid rgba(29, 29, 27, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.catalog-tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--green);
+}
+
+.catalog-tile__img {
+  aspect-ratio: 4 / 3;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.catalog-tile__img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.catalog-tile__body {
+  padding: 16px 18px 18px;
+}
+
+.catalog-tile__title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--dark);
+  margin: 0 0 4px;
+}
+
+.catalog-tile__count {
+  font-size: 13px;
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+.catalog-group-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 16px;
+}
+
+.catalog-group + .catalog-group {
+  margin-top: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 1px solid rgba(29, 29, 27, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--green);
+}
+
+.product-card__img {
+  aspect-ratio: 1 / 1;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-card__img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-card__body {
+  padding: 14px 16px 16px;
+}
+
+.product-card__name {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
+
+.product-card__price {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--green-dark);
+}
+
+.product-card__price--none {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-soft);
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 44px;
+  align-items: start;
+}
+
+.product-detail__img {
+  background: var(--light);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 24px;
+}
+
+.product-detail__img img {
+  max-width: 100%;
+}
+
+.product-detail__price {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--dark);
+  margin: 14px 0 6px;
+}
+
+.product-detail__price--none {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-soft);
+  margin: 14px 0 6px;
+}
+
+.product-detail__note {
+  font-size: 13px;
+  color: var(--text-soft);
+  margin-bottom: 22px;
+}
+
+.product-specs h3 {
+  font-size: 16px;
+  color: var(--dark);
+  margin: 24px 0 10px;
+}
+
+.product-specs h3:first-child {
+  margin-top: 0;
+}
+
+.product-specs ul {
+  list-style: disc;
+  margin: 0 0 4px 20px;
+  padding: 0;
+}
+
+.product-specs ul ul {
+  margin-top: 6px;
+}
+
+.product-specs li {
+  margin-bottom: 6px;
+  color: var(--text-soft);
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+
+@media (max-width: 860px) {
+  .product-detail { grid-template-columns: 1fr; }
+  .product-detail__img { position: static; }
 }
 
 .course-facts {

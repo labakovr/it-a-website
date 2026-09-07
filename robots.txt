@@ -39,3 +39,4 @@ User-agent: YandexBot
 Allow: /
 
 Sitemap: https://it-a.by/sitemap.xml
+Sitemap: https://it-a.by/sitemap-catalog.xml
