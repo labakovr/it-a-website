@@ -603,6 +603,14 @@ p {
   border: 1px solid rgba(29, 29, 27, 0.06);
 }
 
+.trainer-photo {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(29, 29, 27, 0.08);
+}
+
 .course-facts {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
