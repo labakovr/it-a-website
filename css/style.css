@@ -1595,6 +1595,14 @@ p {
 
 .mt-0 { margin-top: 0; }
 .text-center { text-align: center; }
+.link-blue {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.link-blue:hover {
+  color: #1d4ed8;
+}
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -2076,27 +2084,6 @@ p {
   width: 14.4%;
 }
 
-/* Немного цвета в нашем стиле вместо чёрно-серой гаммы */
-.compare-table--full thead tr {
-  border-bottom: 3px solid var(--green);
-}
-
-.compare-table--full tbody tr:nth-child(even) {
-  background: rgba(143, 191, 33, 0.05);
-}
-
-.compare-table--full th:nth-child(4),
-.compare-table--full td:nth-child(4) {
-  background: rgba(143, 191, 33, 0.1);
-}
-
-.compare-table--full tbody tr:nth-child(even) td:nth-child(4) {
-  background: rgba(143, 191, 33, 0.16);
-}
-
-.compare-full-section__title::after {
-  color: var(--green-dark);
-}
 
 .ct-level {
   display: inline-flex;
@@ -2131,8 +2118,9 @@ p {
 .compare-diff-control {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 10px;
-  margin-top: 20px;
+  margin: 0 0 16px;
   font-size: 13px;
   font-weight: 700;
   color: var(--text-on-dark-soft);
