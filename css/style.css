@@ -447,6 +447,11 @@ p {
   color: var(--text-on-dark-soft);
 }
 
+.page-hero .hero__lead,
+.page-intro-light .hero__lead {
+  max-width: none;
+}
+
 .hero__actions {
   display: flex;
   gap: 16px;
