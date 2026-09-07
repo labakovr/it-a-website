@@ -2195,6 +2195,36 @@ p {
   transform: rotate(-90deg);
 }
 
+.box-features-group.compare-full-section {
+  padding: 0;
+  margin-bottom: 16px;
+  border: 1px solid rgba(29, 29, 27, 0.1);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--white);
+}
+
+.box-features-group.compare-full-section:nth-child(odd) {
+  background: var(--white);
+}
+
+.box-features-group .compare-full-section__title {
+  padding: 16px 20px;
+  margin: 0;
+  background: var(--light);
+  font-size: 16px;
+}
+
+.box-features-group .compare-table--full th:first-child,
+.box-features-group .compare-table--full td:first-child {
+  width: 40%;
+}
+
+.box-features-group .compare-table--full th:not(:first-child),
+.box-features-group .compare-table--full td:not(:first-child) {
+  width: 20%;
+}
+
 .compare-full-section.is-collapsed .compare-table-wrap {
   display: none;
 }
