@@ -503,7 +503,6 @@ p {
 
 .page-hero__inner {
   position: relative;
-  max-width: 760px;
 }
 
 .page-hero h1 {
@@ -528,7 +527,6 @@ p {
 }
 
 .page-intro-light {
-  max-width: 760px;
   margin-bottom: 40px;
 }
 
