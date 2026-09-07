@@ -527,6 +527,29 @@ p {
   color: var(--green);
 }
 
+.page-intro-light {
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+
+.page-intro-light .breadcrumb {
+  color: var(--text-soft);
+}
+
+.page-intro-light h1 {
+  color: var(--dark);
+  font-size: 42px;
+  margin: 0 0 16px;
+}
+
+.page-intro-light .hero__lead {
+  color: var(--text-soft);
+}
+
+@media (max-width: 760px) {
+  .page-intro-light h1 { font-size: 30px; }
+}
+
 /* ===== Checklist ===== */
 
 .check-list {
@@ -1979,6 +2002,16 @@ p {
   border-color: var(--green);
 }
 
+.compare-toc--light a {
+  color: var(--text-soft);
+  border-color: rgba(29, 29, 27, 0.14);
+}
+
+.compare-toc--light a:hover {
+  color: var(--dark);
+  border-color: var(--green-dark);
+}
+
 .compare-full-section {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -2022,6 +2055,49 @@ p {
   color: rgba(29, 29, 27, 0.25);
 }
 
+/* Фиксированная ширина колонок — чтобы столбцы совпадали
+   между отдельными таблицами разных разделов */
+.compare-table--full {
+  table-layout: fixed;
+}
+
+.compare-table--full th,
+.compare-table--full td {
+  white-space: normal;
+}
+
+.compare-table--full th:first-child,
+.compare-table--full td:first-child {
+  width: 28%;
+}
+
+.compare-table--full th:not(:first-child),
+.compare-table--full td:not(:first-child) {
+  width: 14.4%;
+}
+
+/* Немного цвета в нашем стиле вместо чёрно-серой гаммы */
+.compare-table--full thead tr {
+  border-bottom: 3px solid var(--green);
+}
+
+.compare-table--full tbody tr:nth-child(even) {
+  background: rgba(143, 191, 33, 0.05);
+}
+
+.compare-table--full th:nth-child(4),
+.compare-table--full td:nth-child(4) {
+  background: rgba(143, 191, 33, 0.1);
+}
+
+.compare-table--full tbody tr:nth-child(even) td:nth-child(4) {
+  background: rgba(143, 191, 33, 0.16);
+}
+
+.compare-full-section__title::after {
+  color: var(--green-dark);
+}
+
 .ct-level {
   display: inline-flex;
   gap: 3px;
@@ -2060,6 +2136,14 @@ p {
   font-size: 13px;
   font-weight: 700;
   color: var(--text-on-dark-soft);
+}
+
+.compare-diff-control--light {
+  color: var(--text-soft);
+}
+
+.compare-diff-control--light .compare-diff-switch__track {
+  background: rgba(29, 29, 27, 0.14);
 }
 
 .compare-diff-switch {
