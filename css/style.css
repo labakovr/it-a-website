@@ -603,6 +603,36 @@ p {
   border: 1px solid rgba(29, 29, 27, 0.06);
 }
 
+.course-facts {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.course-facts .card {
+  padding: 22px 20px;
+  text-align: center;
+}
+
+.course-facts .eyebrow {
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.course-facts strong {
+  display: block;
+  font-size: 16px;
+  color: var(--dark);
+}
+
+@media (max-width: 1150px) {
+  .course-facts { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .course-facts { grid-template-columns: repeat(2, 1fr); }
+}
+
 .service-card {
   background: var(--dark);
   color: var(--text-on-dark);
@@ -1116,6 +1146,12 @@ p {
   background: var(--green);
   color: var(--dark);
   border-color: var(--green);
+}
+
+/* Odd tile count in a row leaves a lone leftover — span it full width
+   instead of sticking it to the left with empty space beside it. */
+.services-grid > .service-tile:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 @media (max-width: 900px) {
