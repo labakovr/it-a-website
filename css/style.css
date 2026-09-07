@@ -2219,15 +2219,15 @@ p {
 }
 
 .compare-table thead th {
-  background: var(--dark);
-  color: var(--white);
+  background: var(--green);
+  color: var(--dark);
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 
 .compare-table thead th:first-child {
-  color: var(--white);
+  color: var(--dark);
 }
 
 .compare-table tbody tr:last-child td {
@@ -2303,7 +2303,7 @@ p {
 
 .compare-table--full tr.ct-lvl-0 td:first-child {
   font-weight: 800;
-  color: var(--dark);
+  color: var(--green-dark);
 }
 
 .compare-table--full tr.ct-lvl-1 td:first-child {
