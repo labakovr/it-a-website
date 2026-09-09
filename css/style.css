@@ -1435,6 +1435,31 @@ p {
   opacity: 0.9;
 }
 
+.news-card__media--photo {
+  background: var(--dark);
+}
+
+.news-card__media--photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+a.news-card {
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+a.news-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--green);
+}
+
+a.news-card:hover .news-card__title {
+  color: var(--green-dark);
+}
+
 .news-card__body {
   padding: 20px 22px 24px;
 }
@@ -2634,6 +2659,52 @@ body.show-diff-only .compare-table--full tbody tr[data-uniform="true"] {
 @media (max-width: 860px) {
   .case-facts { grid-template-columns: repeat(2, 1fr); }
   .case-list { grid-template-columns: 1fr; }
+}
+
+/* ===== Новости: статья ===== */
+
+.article-quote {
+  margin: 24px 0;
+  padding: 4px 0 4px 24px;
+  border-left: 4px solid var(--green);
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.section--light .article-quote {
+  border-left-color: var(--green-dark);
+}
+
+.article-quote cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  font-style: normal;
+  color: var(--green-dark);
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.news-list .card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.news-list .card:hover .case-list__title {
+  color: var(--green-dark);
+}
+
+@media (max-width: 760px) {
+  .article-quote { font-size: 16px; }
 }
 
 /* ===== Возможности Битрикс24: липкие вкладки-разделы ===== */
