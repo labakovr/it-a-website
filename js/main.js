@@ -98,6 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
         t.setAttribute("aria-selected", i === idx ? "true" : "false");
       });
       fPanels.forEach((p, i) => p.classList.toggle("is-active", i === idx));
+      // «Все услуги →» на главной ведёт на страницу активного направления
+      if (servicesLink && fTabs[idx].dataset.href) servicesLink.href = fTabs[idx].dataset.href;
       if (fBar) fBar.style.width = (N > 1 ? (idx / (N - 1)) * 100 : 0) + "%";
       if (tabStrip && mqMobile.matches) {
         const tab = fTabs[idx];

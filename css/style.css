@@ -2765,6 +2765,36 @@ body.show-diff-only .compare-table--full tbody tr[data-uniform="true"] {
   transition: width 0.3s ease;
 }
 
+/* На главной блок «Наши услуги» тоже становится закреплённой сценой:
+   ужимаем крупные внешние отступы, чтобы контент помещался в экран. */
+.services-section.feature-explorer {
+  padding: 48px 0 56px;
+}
+
+.feature-explorer .services-top {
+  margin-bottom: 20px;
+}
+
+/* Плитки услуг в закреплённой сцене — компактнее, чтобы 4 ряда влезали в экран */
+.services-section.feature-explorer .services-grid {
+  gap: 14px;
+}
+
+.services-section.feature-explorer .service-tile {
+  min-height: 0;
+  padding: 16px 18px 14px;
+}
+
+.services-section.feature-explorer .service-tile h3 {
+  margin-bottom: 6px;
+}
+
+.services-section.feature-explorer .service-tile__arrow {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+
 .feature-explorer .services-tabs {
   flex-basis: 260px;
 }
