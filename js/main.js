@@ -177,6 +177,74 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
+  // Возможности Битрикс24: липкие вкладки-разделы со скролл-спаем
+  const featureTabs = document.querySelector(".feature-tabs");
+  if (featureTabs) {
+    const scroller = featureTabs.querySelector(".feature-tabs__scroll");
+    const tabs = [...featureTabs.querySelectorAll(".feature-tab")];
+    const sentinel = document.querySelector(".feature-tabs-sentinel");
+    const pageHeader = document.querySelector(".header");
+    const headerH = () => (pageHeader ? pageHeader.offsetHeight : 84);
+    const sections = tabs
+      .map((t) => document.querySelector(t.getAttribute("href")))
+      .filter(Boolean);
+
+    const syncOffsets = () => {
+      featureTabs.style.setProperty("--feat-tabs-top", headerH() + "px");
+      document.documentElement.style.scrollPaddingTop =
+        headerH() + featureTabs.offsetHeight + 12 + "px";
+      featureTabs.classList.toggle(
+        "is-scrollable",
+        scroller.scrollWidth > scroller.clientWidth + 1
+      );
+    };
+    syncOffsets();
+    window.addEventListener("resize", syncOffsets);
+
+    if (sentinel && "IntersectionObserver" in window) {
+      new IntersectionObserver(
+        ([entry]) => featureTabs.classList.toggle("is-stuck", !entry.isIntersecting),
+        { rootMargin: `-${headerH() + 1}px 0px 0px 0px` }
+      ).observe(sentinel);
+    }
+
+    let activeId = null;
+    const setActive = (id) => {
+      if (id === activeId) return;
+      activeId = id;
+      tabs.forEach((t) => {
+        const on = t.getAttribute("href") === "#" + id;
+        t.classList.toggle("is-active", on);
+        if (on) {
+          const left = t.offsetLeft - scroller.clientWidth / 2 + t.clientWidth / 2;
+          scroller.scrollTo({ left: Math.max(0, left), behavior: "smooth" });
+        }
+      });
+    };
+
+    let ticking = false;
+    const spy = () => {
+      ticking = false;
+      const line = headerH() + featureTabs.offsetHeight + 16;
+      let current = sections[0];
+      sections.forEach((sec) => {
+        if (sec.getBoundingClientRect().top <= line) current = sec;
+      });
+      if (current) setActive(current.id);
+    };
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(spy);
+      }
+    });
+    spy();
+
+    tabs.forEach((t) => {
+      t.addEventListener("click", () => setActive(t.getAttribute("href").slice(1)));
+    });
+  }
+
   // Contact form (front-end only demo)
   const form = document.querySelector(".contact-form");
   if (form) {
