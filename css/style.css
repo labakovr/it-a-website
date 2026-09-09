@@ -2930,3 +2930,57 @@ body.show-diff-only .compare-table--full tbody tr[data-uniform="true"] {
     min-height: 0 !important;
   }
 }
+
+/* ===== Статья: BI-аналитика (макеты дашбордов, сравнение систем) ===== */
+
+.article-shot {
+  margin: 30px auto;
+  max-width: 880px;
+}
+
+.article-shot__frame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(29, 29, 27, 0.1);
+  background: var(--white);
+}
+
+.article-shot__frame svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.article-shot figcaption {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-soft);
+  text-align: center;
+}
+
+.section--dark .article-shot figcaption {
+  color: var(--text-on-dark-soft);
+}
+
+/* Сравнение BI-систем: в ячейках длинный текст — разрешаем перенос и левое выравнивание */
+.compare-table--bi {
+  min-width: 720px;
+}
+
+.compare-table--bi th,
+.compare-table--bi td {
+  white-space: normal;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.compare-table--bi td {
+  color: var(--text-soft);
+}
+
+.compare-table--bi td:first-child {
+  color: var(--dark);
+}

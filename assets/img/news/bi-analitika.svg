@@ -1,0 +1,23 @@
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BI-аналитика для Битрикс24">
+  <rect width="1280" height="720" fill="#1d1d1b"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#8fbf21"/>
+  <text x="90" y="150" fill="#8fbf21" font-family="Nunito, 'Segoe UI', sans-serif" font-size="26" font-weight="800" letter-spacing="3">СТАТЬЯ · BI-АНАЛИТИКА</text>
+  <text x="90" y="240" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="72" font-weight="900">BI-аналитика</text>
+  <text x="90" y="320" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="72" font-weight="900">для Битрикс24</text>
+  <text x="92" y="380" fill="#b7b7b2" font-family="Nunito, 'Segoe UI', sans-serif" font-size="28" font-weight="700">BI Конструктор · DataLens · Looker Studio · Power BI</text>
+
+  <g transform="translate(90 430)">
+    <rect x="0" y="0" width="1100" height="210" rx="16" fill="#262622"/>
+    <rect x="28" y="28" width="150" height="60" rx="8" fill="#303029"/><rect x="42" y="46" width="92" height="10" rx="5" fill="#8fbf21"/><rect x="42" y="64" width="60" height="10" rx="5" fill="#55564f"/>
+    <rect x="198" y="28" width="150" height="60" rx="8" fill="#303029"/><rect x="212" y="46" width="92" height="10" rx="5" fill="#8fbf21"/><rect x="212" y="64" width="60" height="10" rx="5" fill="#55564f"/>
+    <g transform="translate(28 110)">
+      <rect x="0" y="60" width="40" height="40" fill="#8fbf21"/>
+      <rect x="56" y="34" width="40" height="66" fill="#8fbf21"/>
+      <rect x="112" y="46" width="40" height="54" fill="#8fbf21"/>
+      <rect x="168" y="14" width="40" height="86" fill="#8fbf21"/>
+      <rect x="224" y="26" width="40" height="74" fill="#4c952e"/>
+    </g>
+    <polyline points="420,180 500,150 580,158 660,120 740,108 820,70 900,60 980,40" fill="none" stroke="#8fbf21" stroke-width="4"/>
+    <circle cx="980" cy="40" r="7" fill="#b6db5a"/>
+  </g>
+</svg>

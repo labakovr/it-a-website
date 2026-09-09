@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BI-аналитика для Битрикс24: DataLens, Looker Studio, Power BI и BI Конструктор | АйТи Аналитикс</title>
+<meta name="description" content="Разбираем настройку BI-аналитики в связке с Битрикс24: встроенный BI Конструктор, Yandex DataLens, Google Looker Studio и Microsoft Power BI. Сравнение возможностей, примеры дашбордов под реальные задачи и подводные камни.">
+<link rel="canonical" href="https://it-a.by/news-bi-analitika-bitrix24.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="АйТи Аналитикс">
+<meta property="og:title" content="BI-аналитика для Битрикс24: DataLens, Looker Studio, Power BI и BI Конструктор">
+<meta property="og:description" content="Встроенный BI Конструктор и внешние BI-системы в связке с Битрикс24: что выбрать, как это настраивается, примеры дашбордов и подводные камни.">
+<meta property="og:url" content="https://it-a.by/news-bi-analitika-bitrix24.html">
+<meta property="og:image" content="https://it-a.by/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BI-аналитика для Битрикс24: DataLens, Looker Studio, Power BI и BI Конструктор">
+<meta name="twitter:description" content="Встроенный BI Конструктор и внешние BI-системы в связке с Битрикс24: что выбрать, как это настраивается, примеры дашбордов и подводные камни.">
+<meta name="twitter:image" content="https://it-a.by/assets/img/og-image.png">
+<meta name="theme-color" content="#1d1d1b">
+<link rel="icon" href="assets/img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "BI-аналитика для Битрикс24: DataLens, Looker Studio, Power BI и BI Конструктор",
+  "description": "Настройка BI-аналитики в связке с Битрикс24: встроенный BI Конструктор на Apache Superset, Yandex DataLens, Google Looker Studio и Microsoft Power BI. Сравнение систем, примеры дашбордов и подводные камни.",
+  "image": "https://it-a.by/assets/img/og-image.png",
+  "author": { "@type": "Organization", "name": "АйТи Аналитикс", "url": "https://it-a.by/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "АйТи Аналитикс",
+    "logo": { "@type": "ImageObject", "url": "https://it-a.by/assets/img/logo-mark.png" }
+  },
+  "datePublished": "2026-09-09",
+  "dateModified": "2026-09-09",
+  "mainEntityOfPage": "https://it-a.by/news-bi-analitika-bitrix24.html",
+  "about": "BI-аналитика, бизнес-аналитика и визуализация данных Битрикс24"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://it-a.by/" },
+    { "@type": "ListItem", "position": 2, "name": "Новости", "item": "https://it-a.by/news.html" },
+    { "@type": "ListItem", "position": 3, "name": "BI-аналитика для Битрикс24", "item": "https://it-a.by/news-bi-analitika-bitrix24.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+      <span class="brand__name">АйТи Аналитикс</span>
+    </a>
+    <nav class="nav">
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="bitrix24.html" class="nav-link">Битрикс24</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по Битрикс24" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="features.html">Возможности Битрикс24</a>
+          <a href="licenses.html">Лицензии Битрикс24</a>
+          <a href="bitrix24.html">Внедрение Битрикс24</a>
+          <a href="bitrix24.html">Сопровождение Битрикс24</a>
+          <a href="education.html">Обучение Битрикс24</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="telephony.html" class="nav-link">Телефония</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по телефонии" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="telephony.html">Внедрение IP-телефонии</a>
+          <a href="telephony.html">Настройка АТС</a>
+          <a href="telephony.html">Сопровождение телефонии</a>
+          <a href="catalog/index.html">Каталог оборудования</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="ai.html" class="nav-link">ИИ-решения</a>
+          <button type="button" class="nav-caret" aria-label="Показать ИИ-решения" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="ai.html">Внедрение ИИ-ассистентов</a>
+          <a href="ai.html">Автоматизация процессов</a>
+          <a href="ai.html">Обучение и сопровождение</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="portfolio.html" class="nav-link">Портфолио</a>
+          <button type="button" class="nav-caret" aria-label="Показать разделы портфолио" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="cases.html">Кейсы</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="certificates.html">Сертификаты</a>
+          <a href="about.html">О нас</a>
+        </div>
+      </div>
+      <a href="news.html" class="is-active">Новости</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:+375445057799" class="header__phone">+375 (44) 505-77-99</a>
+      <a href="contacts.html#form" class="btn btn--primary btn--sm">Заказать звонок</a>
+      <button class="nav-toggle" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">Главная</a><span class="sep">/</span><a href="news.html">Новости</a><span class="sep">/</span><span>BI-аналитика для Битрикс24</span></div>
+    <div class="eyebrow">Статья · BI-аналитика · 9 сентября 2026</div>
+    <h1>BI-аналитика для Битрикс24: BI Конструктор, DataLens, Looker Studio и Power BI</h1>
+    <p class="hero__lead">Стандартных отчётов CRM однажды становится мало: собственнику нужен один экран со всеми цифрами, маркетологу — сквозная воронка от канала до оплаты, финансисту — план-факт и маржинальность. Дальше начинается BI. Разбираем, что Битрикс24 умеет сам, что даёт подключение внешних систем, чем они отличаются и на какие грабли обычно наступают.</p>
+    <div class="hero__actions">
+      <a href="#sravnenie" class="btn btn--outline-dark">Перейти к сравнению →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="case-facts reveal">
+      <div class="card">
+        <div class="eyebrow">Услуга</div>
+        <strong>Настройка BI-аналитики в связке с Битрикс24</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Платформа</div>
+        <strong>Битрикс24.BI-Аналитика и встроенный BI Конструктор</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Внешние системы</div>
+        <strong>Yandex DataLens · Google Looker Studio · Microsoft Power BI</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Кому актуально</div>
+        <strong>Бизнес, где решения принимают по цифрам, а не по ощущениям</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">С чего начинается BI</div>
+      <h2>Зачем аналитика поверх Битрикс24</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>В Битрикс24 уже есть готовая аналитика: отчёты по CRM, «Сквозная аналитика», Sales Intelligence, отчёты по задачам и по нагрузке сотрудников. Для оперативного контроля этого хватает. BI-инструменты нужны, когда запрос меняется:</p>
+      <p>— нужен <strong>один дашборд</strong>, где сведены продажи, маркетинг, финансы и производство, а не десяток разных вкладок;<br>
+      — нужны <strong>свои метрики</strong>: маржинальность по группе товаров, LTV по когорте, ДРР по каналу, план-факт по менеджеру с накоплением;<br>
+      — нужно <strong>соединить Битрикс24 с другими источниками</strong> — 1С, складом, сайтом, Google Analytics, рекламными кабинетами;<br>
+      — дашборд должен уходить людям, у которых <strong>нет доступа в портал</strong>: совету директоров, инвестору, внешнему финансовому консультанту.</p>
+      <blockquote class="article-quote">
+        «BI не заменяет наведение порядка в CRM. Если данные в Битрикс24 заполняются как попало, красивый дашборд просто быстрее покажет, что учёт сломан. Поэтому мы всегда начинаем с того, какие показатели компания хочет видеть и откуда они берутся».
+        <cite>Команда «АйТи Аналитикс»</cite>
+      </blockquote>
+      <p>У Битрикс24 есть штатный механизм выгрузки данных в BI-системы, а с 2024 года — и собственный визуальный редактор отчётов, <strong>BI Конструктор</strong>. Ниже — все четыре варианта по очереди.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Механика</div>
+      <h2>Как Битрикс24 отдаёт данные в BI</h2>
+      <p>Всё подключение живёт в одном разделе: <em>CRM → Аналитика → Оперативная аналитика → BI-аналитика</em>. Логика одинаковая для DataLens, Looker Studio и Power BI.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>1. Источник данных</h4>
+        <p>Выбираете готовый набор — «Универсальный источник BI-аналитики» с лидами, сделками и смарт-процессами — или собираете свой набор полей. Это и есть датасет, который увидит внешняя система.</p>
+      </div>
+      <div class="step">
+        <h4>2. Адрес сервера и ключ</h4>
+        <p>Битрикс24 выдаёт адрес подключения и секретный ключ на вкладке нужной системы. Ключ = полный доступ к выгружаемым данным, поэтому обращаться с ним нужно как с паролем.</p>
+      </div>
+      <div class="step">
+        <h4>3. Шаблон отчёта</h4>
+        <p>Для каждой системы есть готовые шаблоны дашбордов. Часть шаблонов требует подписку Битрикс24.Маркет Плюс или свободный лимит приложений на портале.</p>
+      </div>
+      <div class="step">
+        <h4>4. Обновление данных</h4>
+        <p>Данные в отчёте обновляются при открытии и кешируются примерно на час. Ручное обновление доступно, но с интервалом. «Секундного» реального времени BI-выгрузка не даёт — это витрина, а не монитор.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Вариант 1</div>
+      <h2>Встроенный BI Конструктор</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>BI Конструктор — визуальный редактор дашбордов прямо внутри Битрикс24, построенный на Apache Superset. Ничего подключать не нужно: источник — те же датасеты BI-аналитики, отчёт открывается в портале, права раздаются штатными средствами Битрикс24.</p>
+      <p>Это оптимальная точка входа: подходит, когда нужны продажи, воронки, активность менеджеров и деньги «в разрезах», а данные не выходят за пределы Битрикс24.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <svg viewBox="0 0 860 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Макет дашборда «Продажи» в BI Конструкторе Битрикс24: KPI-плитки, воронка продаж и выручка по месяцам">
+          <rect width="860" height="470" fill="#f7f7f5"/>
+          <rect width="860" height="46" fill="#1d1d1b"/>
+          <circle cx="22" cy="23" r="4" fill="#55564f"/><circle cx="38" cy="23" r="4" fill="#55564f"/><circle cx="54" cy="23" r="4" fill="#55564f"/>
+          <text x="78" y="29" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="14" font-weight="800">Битрикс24 · BI Конструктор</text>
+          <rect x="638" y="12" width="200" height="23" rx="11" fill="#8fbf21"/>
+          <text x="738" y="28" fill="#1d1d1b" font-family="Nunito, 'Segoe UI', sans-serif" font-size="11" font-weight="800" text-anchor="middle">Дашборд продаж · сентябрь</text>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <g>
+              <rect x="20" y="62" width="198" height="66" rx="10" fill="#fff" stroke="#e2e2e0"/>
+              <text x="34" y="84" fill="#55564f" font-size="10" font-weight="700">ВЫРУЧКА</text>
+              <text x="34" y="106" fill="#1d1d1b" font-size="19" font-weight="900">2,84 млн ₽</text>
+              <text x="34" y="121" fill="#4c952e" font-size="10" font-weight="800">▲ 12% к августу</text>
+            </g>
+            <g>
+              <rect x="228" y="62" width="198" height="66" rx="10" fill="#fff" stroke="#e2e2e0"/>
+              <text x="242" y="84" fill="#55564f" font-size="10" font-weight="700">СДЕЛОК ОПЛАЧЕНО</text>
+              <text x="242" y="106" fill="#1d1d1b" font-size="19" font-weight="900">428</text>
+              <text x="242" y="121" fill="#4c952e" font-size="10" font-weight="800">▲ 6%</text>
+            </g>
+            <g>
+              <rect x="436" y="62" width="198" height="66" rx="10" fill="#fff" stroke="#e2e2e0"/>
+              <text x="450" y="84" fill="#55564f" font-size="10" font-weight="700">СРЕДНИЙ ЧЕК</text>
+              <text x="450" y="106" fill="#1d1d1b" font-size="19" font-weight="900">6 640 ₽</text>
+              <text x="450" y="121" fill="#4c952e" font-size="10" font-weight="800">▲ 4%</text>
+            </g>
+            <g>
+              <rect x="644" y="62" width="196" height="66" rx="10" fill="#fff" stroke="#e2e2e0"/>
+              <text x="658" y="84" fill="#55564f" font-size="10" font-weight="700">КОНВЕРСИЯ В ОПЛАТУ</text>
+              <text x="658" y="106" fill="#1d1d1b" font-size="19" font-weight="900">23%</text>
+              <text x="658" y="121" fill="#4c952e" font-size="10" font-weight="800">▲ 2 п.п.</text>
+            </g>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="20" y="142" width="404" height="308" rx="10" fill="#fff" stroke="#e2e2e0"/>
+            <text x="36" y="168" fill="#1d1d1b" font-size="13" font-weight="800">Воронка продаж</text>
+            <g>
+              <rect x="36" y="184" width="352" height="34" rx="5" fill="#8fbf21"/>
+              <text x="48" y="205" fill="#1d1d1b" font-size="11" font-weight="800">Лид</text>
+              <text x="376" y="205" fill="#1d1d1b" font-size="11" font-weight="800" text-anchor="end">1 240</text>
+
+              <rect x="36" y="228" width="247" height="34" rx="5" fill="#9cc63b"/>
+              <text x="48" y="249" fill="#1d1d1b" font-size="11" font-weight="800">Квалификация</text>
+              <text x="271" y="249" fill="#1d1d1b" font-size="11" font-weight="800" text-anchor="end">870</text>
+
+              <rect x="36" y="272" width="153" height="34" rx="5" fill="#7cae2f"/>
+              <text x="48" y="293" fill="#fff" font-size="11" font-weight="800">КП отправлено</text>
+              <text x="177" y="293" fill="#fff" font-size="11" font-weight="800" text-anchor="end">540</text>
+
+              <rect x="36" y="316" width="91" height="34" rx="5" fill="#5f962a"/>
+              <text x="48" y="337" fill="#fff" font-size="11" font-weight="800">Счёт</text>
+              <text x="115" y="337" fill="#fff" font-size="11" font-weight="800" text-anchor="end">320</text>
+
+              <rect x="36" y="360" width="81" height="34" rx="5" fill="#4c952e"/>
+              <text x="48" y="381" fill="#fff" font-size="11" font-weight="800">Оплата</text>
+              <text x="105" y="381" fill="#fff" font-size="11" font-weight="800" text-anchor="end">286</text>
+            </g>
+            <text x="36" y="424" fill="#55564f" font-size="10.5">Сквозная конверсия «Лид → Оплата»: 23,1%</text>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="436" y="142" width="404" height="308" rx="10" fill="#fff" stroke="#e2e2e0"/>
+            <text x="452" y="168" fill="#1d1d1b" font-size="13" font-weight="800">Выручка по месяцам, млн ₽</text>
+            <line x1="452" y1="410" x2="820" y2="410" stroke="#e2e2e0"/>
+            <g>
+              <rect x="470" y="270" width="40" height="140" fill="#8fbf21"/><text x="490" y="262" fill="#55564f" font-size="10" text-anchor="middle">1,9</text><text x="490" y="426" fill="#55564f" font-size="10" text-anchor="middle">Апр</text>
+              <rect x="528" y="248" width="40" height="162" fill="#8fbf21"/><text x="548" y="240" fill="#55564f" font-size="10" text-anchor="middle">2,2</text><text x="548" y="426" fill="#55564f" font-size="10" text-anchor="middle">Май</text>
+              <rect x="586" y="262" width="40" height="148" fill="#8fbf21"/><text x="606" y="254" fill="#55564f" font-size="10" text-anchor="middle">2,0</text><text x="606" y="426" fill="#55564f" font-size="10" text-anchor="middle">Июн</text>
+              <rect x="644" y="226" width="40" height="184" fill="#8fbf21"/><text x="664" y="218" fill="#55564f" font-size="10" text-anchor="middle">2,5</text><text x="664" y="426" fill="#55564f" font-size="10" text-anchor="middle">Июл</text>
+              <rect x="702" y="212" width="40" height="198" fill="#8fbf21"/><text x="722" y="204" fill="#55564f" font-size="10" text-anchor="middle">2,7</text><text x="722" y="426" fill="#55564f" font-size="10" text-anchor="middle">Авг</text>
+              <rect x="760" y="202" width="40" height="208" fill="#4c952e"/><text x="780" y="194" fill="#1d1d1b" font-size="10" font-weight="800" text-anchor="middle">2,84</text><text x="780" y="426" fill="#1d1d1b" font-size="10" font-weight="800" text-anchor="middle">Сен</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Макет дашборда «Продажи» в BI Конструкторе: KPI-плитки, воронка и динамика выручки собираются из датасетов Битрикс24 без внешних сервисов. Пример условный.</figcaption>
+    </figure>
+
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Что удобно</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Ничего не подключать — работает внутри портала</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Русский интерфейс, без зарубежной оплаты и VPN</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Права на отчёты — штатными средствами Битрикс24</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Готовые дашборды по продажам и активности «из коробки»</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Где предел</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Источник — в основном данные Битрикс24, внешние источники ограниченно</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Сложная многотабличная логика даётся тяжелее, чем в Power BI</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Отчёт живёт в портале — «наружу» его так удобно не отдать</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Дизайн дашборда скромнее, чем у Looker Studio</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Вариант 2</div>
+      <h2>Yandex DataLens</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Облачная BI-система из экосистемы Yandex Cloud. После ухода Power BI и Tableau с российского рынка DataLens стал «облачным BI по умолчанию» для новых проектов в РФ и РБ: русский интерфейс, рабочий бесплатный тариф Community без ограничения по числу пользователей, платный Business — около 990 ₽ в месяц за активного пользователя.</p>
+      <p>Сильные стороны — гео-аналитика и карты, связка с Яндекс Метрикой, размещение данных на российской инфраструктуре. Слабее, чем Power BI, слой моделирования данных: для сложной бизнес-логики по нескольким таблицам придётся аккуратно готовить датасет на стороне Битрикс24.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <svg viewBox="0 0 860 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Макет дашборда сети клиник в Yandex DataLens: схематичная карта филиалов, KPI и загрузка врачей по городам">
+          <rect width="860" height="470" fill="#f4f6fb"/>
+          <rect width="860" height="46" fill="#ffcc00"/>
+          <text x="22" y="29" fill="#1d1d1b" font-family="Nunito, 'Segoe UI', sans-serif" font-size="14" font-weight="900">Yandex DataLens</text>
+          <rect x="646" y="12" width="192" height="23" rx="11" fill="#1d1d1b"/>
+          <text x="742" y="28" fill="#fff" font-family="Nunito, 'Segoe UI', sans-serif" font-size="11" font-weight="800" text-anchor="middle">Сеть клиник · записи</text>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="20" y="62" width="486" height="388" rx="10" fill="#fff" stroke="#e2e6ef"/>
+            <text x="36" y="86" fill="#1d1d1b" font-size="13" font-weight="800">Филиалы на карте · выручка за месяц</text>
+            <path d="M70 150 C120 120 190 116 250 130 C320 120 400 128 430 160 C452 210 430 270 400 300 C340 340 250 350 190 330 C120 320 70 280 62 230 C56 195 55 170 70 150 Z" fill="#dde6f5" stroke="#c3d1ea"/>
+            <g>
+              <circle cx="228" cy="232" r="30" fill="#5282ff" fill-opacity="0.68" stroke="#5282ff"/><text x="228" y="236" fill="#1d1d1b" font-size="10" font-weight="800" text-anchor="middle">Минск</text>
+              <circle cx="120" cy="270" r="15" fill="#5282ff" fill-opacity="0.6" stroke="#5282ff"/><text x="120" y="300" fill="#55564f" font-size="9" text-anchor="middle">Брест</text>
+              <circle cx="130" cy="185" r="13" fill="#5282ff" fill-opacity="0.6" stroke="#5282ff"/><text x="130" y="163" fill="#55564f" font-size="9" text-anchor="middle">Гродно</text>
+              <circle cx="300" cy="150" r="14" fill="#5282ff" fill-opacity="0.6" stroke="#5282ff"/><text x="300" y="130" fill="#55564f" font-size="9" text-anchor="middle">Витебск</text>
+              <circle cx="360" cy="248" r="13" fill="#5282ff" fill-opacity="0.6" stroke="#5282ff"/><text x="392" y="252" fill="#55564f" font-size="9">Могилёв</text>
+              <circle cx="300" cy="308" r="18" fill="#5282ff" fill-opacity="0.62" stroke="#5282ff"/><text x="300" y="338" fill="#55564f" font-size="9" text-anchor="middle">Гомель</text>
+            </g>
+            <text x="36" y="430" fill="#8a8f9c" font-size="10">Схематичная карта. Размер круга — доля филиала в выручке сети.</text>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="518" y="62" width="322" height="60" rx="10" fill="#fff" stroke="#e2e6ef"/>
+            <text x="532" y="84" fill="#55564f" font-size="10" font-weight="700">ЗАПИСЕЙ ЗА МЕСЯЦ</text>
+            <text x="532" y="107" fill="#1d1d1b" font-size="18" font-weight="900">3 210</text>
+            <rect x="518" y="130" width="322" height="60" rx="10" fill="#fff" stroke="#e2e6ef"/>
+            <text x="532" y="152" fill="#55564f" font-size="10" font-weight="700">ДОШЛИ ДО ПРИЁМА</text>
+            <text x="532" y="175" fill="#1d1d1b" font-size="18" font-weight="900">78%</text>
+            <rect x="518" y="198" width="322" height="60" rx="10" fill="#fff" stroke="#e2e6ef"/>
+            <text x="532" y="220" fill="#55564f" font-size="10" font-weight="700">LTV ПАЦИЕНТА</text>
+            <text x="532" y="243" fill="#1d1d1b" font-size="18" font-weight="900">1 180 ₽</text>
+
+            <rect x="518" y="266" width="322" height="184" rx="10" fill="#fff" stroke="#e2e6ef"/>
+            <text x="532" y="288" fill="#1d1d1b" font-size="12" font-weight="800">Загрузка врачей по филиалам</text>
+            <g font-size="10" fill="#1d1d1b" font-weight="700">
+              <text x="532" y="312">Минск</text><rect x="600" y="303" width="220" height="12" rx="3" fill="#5282ff"/><text x="828" y="312" text-anchor="end" fill="#fff">92%</text>
+              <text x="532" y="336">Гомель</text><rect x="600" y="327" width="200" height="12" rx="3" fill="#5282ff"/><text x="808" y="336" text-anchor="end" fill="#fff">84%</text>
+              <text x="532" y="360">Брест</text><rect x="600" y="351" width="170" height="12" rx="3" fill="#6f97ff"/><text x="774" y="360" text-anchor="end" fill="#fff">71%</text>
+              <text x="532" y="384">Витебск</text><rect x="600" y="375" width="162" height="12" rx="3" fill="#6f97ff"/><text x="766" y="384" text-anchor="end" fill="#fff">68%</text>
+              <text x="532" y="408">Гродно</text><rect x="600" y="399" width="150" height="12" rx="3" fill="#9db8ff"/><text x="754" y="408" text-anchor="end" fill="#1d1d1b">63%</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Макет дашборда сети медцентров в DataLens: география филиалов, воронка «запись → приём» и загрузка врачей. Данные из Битрикс24 плюс справочник филиалов. Пример условный.</figcaption>
+    </figure>
+
+    <div class="case-prose reveal">
+      <p><strong>Когда выбирать:</strong> нужна гео-аналитика, важна российская инфраструктура и оплата в рублях, команда небольшая (укладывается в Community), нет требований к сложному моделированию.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Вариант 3</div>
+      <h2>Google Looker Studio</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Бывшая Google Data Studio. Базовая версия бесплатна, зрителей можно добавлять без ограничения по числу — удобно раздавать дашборд большому кругу людей. Родная стихия — маркетинг: связка Битрикс24 + Google Analytics 4 + Google Ads в одном отчёте, красивые интерактивные дашборды почти без обучения.</p>
+      <p>Ограничения: родных коннекторов мало (в основном сервисы Google), сторонние часто платные и кешируют данные до 12 часов; слой моделирования тонкий — нет аналога DAX для сложной логики по нескольким таблицам. Плюс организационное: сервисы Google и их оплата из РБ доступны не всем.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <svg viewBox="0 0 860 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Макет маркетингового дашборда интернет-магазина в Looker Studio: показатели, источники трафика, динамика дохода и таблица каналов">
+          <rect width="860" height="470" fill="#f7f8fa"/>
+          <rect width="860" height="46" fill="#fff"/>
+          <line x1="0" y1="46" x2="860" y2="46" stroke="#e6e8ec"/>
+          <rect x="20" y="15" width="7" height="16" fill="#4285F4"/><rect x="29" y="15" width="7" height="16" fill="#EA4335"/><rect x="38" y="15" width="7" height="16" fill="#FBBC04"/><rect x="47" y="15" width="7" height="16" fill="#34A853"/>
+          <text x="64" y="29" fill="#1d1d1b" font-family="Nunito, 'Segoe UI', sans-serif" font-size="14" font-weight="900">Looker Studio</text>
+          <rect x="654" y="12" width="184" height="23" rx="11" fill="#e8eef8"/>
+          <text x="746" y="28" fill="#4285F4" font-family="Nunito, 'Segoe UI', sans-serif" font-size="11" font-weight="800" text-anchor="middle">Магазин · маркетинг</text>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="20" y="60" width="200" height="62" rx="8" fill="#fff" stroke="#e6e8ec"/><text x="34" y="82" fill="#70757a" font-size="10" font-weight="700">СЕАНСЫ</text><text x="34" y="105" fill="#1d1d1b" font-size="18" font-weight="900">84 200</text>
+            <rect x="230" y="60" width="200" height="62" rx="8" fill="#fff" stroke="#e6e8ec"/><text x="244" y="82" fill="#70757a" font-size="10" font-weight="700">ТРАНЗАКЦИИ</text><text x="244" y="105" fill="#1d1d1b" font-size="18" font-weight="900">1 920</text>
+            <rect x="440" y="60" width="200" height="62" rx="8" fill="#fff" stroke="#e6e8ec"/><text x="454" y="82" fill="#70757a" font-size="10" font-weight="700">ДОХОД</text><text x="454" y="105" fill="#1d1d1b" font-size="18" font-weight="900">5,1 млн ₽</text>
+            <rect x="650" y="60" width="190" height="62" rx="8" fill="#fff" stroke="#e6e8ec"/><text x="664" y="82" fill="#70757a" font-size="10" font-weight="700">ДРР</text><text x="664" y="105" fill="#1d1d1b" font-size="18" font-weight="900">11,4%</text>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="20" y="132" width="270" height="196" rx="8" fill="#fff" stroke="#e6e8ec"/>
+            <text x="34" y="154" fill="#1d1d1b" font-size="12" font-weight="800">Источники трафика</text>
+            <circle cx="95" cy="235" r="52" fill="none" stroke="#34A853" stroke-width="24" stroke-dasharray="124 203"/>
+            <circle cx="95" cy="235" r="52" fill="none" stroke="#4285F4" stroke-width="24" stroke-dasharray="101 226" stroke-dashoffset="-124"/>
+            <circle cx="95" cy="235" r="52" fill="none" stroke="#FBBC04" stroke-width="24" stroke-dasharray="59 268" stroke-dashoffset="-225"/>
+            <circle cx="95" cy="235" r="52" fill="none" stroke="#EA4335" stroke-width="24" stroke-dasharray="43 284" stroke-dashoffset="-284"/>
+            <g font-size="10" fill="#1d1d1b" font-weight="700">
+              <rect x="170" y="196" width="10" height="10" fill="#34A853"/><text x="186" y="205">Organic · 38%</text>
+              <rect x="170" y="216" width="10" height="10" fill="#4285F4"/><text x="186" y="225">CPC · 31%</text>
+              <rect x="170" y="236" width="10" height="10" fill="#FBBC04"/><text x="186" y="245">Email · 18%</text>
+              <rect x="170" y="256" width="10" height="10" fill="#EA4335"/><text x="186" y="265">Referral · 13%</text>
+            </g>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="300" y="132" width="540" height="196" rx="8" fill="#fff" stroke="#e6e8ec"/>
+            <text x="314" y="154" fill="#1d1d1b" font-size="12" font-weight="800">Доход и расход на рекламу по неделям</text>
+            <polyline points="322,290 390,270 458,278 526,250 594,235 662,210 730,205 798,185" fill="none" stroke="#4285F4" stroke-width="3"/>
+            <polyline points="322,305 390,300 458,296 526,292 594,286 662,280 730,278 798,272" fill="none" stroke="#EA4335" stroke-width="3"/>
+            <g font-size="10" fill="#1d1d1b" font-weight="700">
+              <rect x="600" y="300" width="10" height="10" fill="#4285F4"/><text x="616" y="309">Доход</text>
+              <rect x="680" y="300" width="10" height="10" fill="#EA4335"/><text x="696" y="309">Расход</text>
+            </g>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="20" y="338" width="820" height="116" rx="8" fill="#fff" stroke="#e6e8ec"/>
+            <g font-size="11" font-weight="800" fill="#70757a">
+              <text x="36" y="360">Канал</text><text x="360" y="360" text-anchor="end">Лиды</text><text x="520" y="360" text-anchor="end">CPL</text><text x="700" y="360" text-anchor="end">ROMI</text>
+            </g>
+            <line x1="20" y1="370" x2="840" y2="370" stroke="#eceef1"/>
+            <g font-size="11" fill="#1d1d1b" font-weight="700">
+              <text x="36" y="390">Контекстная реклама</text><text x="360" y="390" text-anchor="end">640</text><text x="520" y="390" text-anchor="end">18 ₽</text><text x="700" y="390" text-anchor="end" fill="#188038">340%</text>
+              <text x="36" y="412">Таргет</text><text x="360" y="412" text-anchor="end">410</text><text x="520" y="412" text-anchor="end">24 ₽</text><text x="700" y="412" text-anchor="end" fill="#188038">210%</text>
+              <text x="36" y="434">SEO</text><text x="360" y="434" text-anchor="end">520</text><text x="520" y="434" text-anchor="end">6 ₽</text><text x="700" y="434" text-anchor="end" fill="#188038">720%</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Макет маркетингового дашборда в Looker Studio: сделки из Битрикс24 связаны с сеансами и расходами из Google Analytics 4 и рекламных кабинетов. Пример условный.</figcaption>
+    </figure>
+
+    <div class="case-prose reveal">
+      <p><strong>Когда выбирать:</strong> задача маркетинговая, нужна связка с продуктами Google, дашборд смотрит много людей, и у компании есть рабочий доступ к сервисам Google с оплатой.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Вариант 4</div>
+      <h2>Microsoft Power BI</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Самый мощный из четырёх по работе с данными. Power BI Desktop бесплатен, для совместной работы нужен Power BI Pro (около $14 за пользователя в месяц), для выделенных мощностей — Premium. Язык DAX закрывает практически любую бизнес-логику: план-факт с накоплением, скользящие средние, сравнение периодов, сложные меры по нескольким таблицам.</p>
+      <p>Битрикс24 отдаёт данные в Power BI по тому же принципу: адрес сервера, секретный ключ, готовый шаблон <code>.pbix</code>. Важная деталь про лимиты строк на выгрузку: Базовый/Стандартный — 10 000, Профессиональный — 100 000, Энтерпрайз — от 250 000 до 1 000 000. Большую базу нужно заранее ограничивать по датам в редакторе запроса.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <svg viewBox="0 0 860 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Макет отчёта производственной компании в Power BI: карточки KPI, план-факт по кварталам, датчик выполнения плана и таблица маржинальности по группам">
+          <rect width="860" height="470" fill="#f3f3f2"/>
+          <rect width="860" height="46" fill="#fafafa"/>
+          <line x1="0" y1="46" x2="860" y2="46" stroke="#e4e4e2"/>
+          <rect x="20" y="14" width="6" height="18" fill="#F2C811"/>
+          <text x="36" y="29" fill="#1d1d1b" font-family="Nunito, 'Segoe UI', sans-serif" font-size="14" font-weight="900">Power BI</text>
+          <rect x="640" y="12" width="198" height="23" rx="11" fill="#1d1d1b"/>
+          <text x="739" y="28" fill="#F2C811" font-family="Nunito, 'Segoe UI', sans-serif" font-size="11" font-weight="800" text-anchor="middle">Производство · план-факт</text>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="20" y="60" width="200" height="62" rx="6" fill="#fff" stroke="#e4e4e2"/><text x="34" y="82" fill="#666" font-size="10" font-weight="700">ПЛАН, ГОД</text><text x="34" y="105" fill="#1d1d1b" font-size="18" font-weight="900">12,0 млн</text>
+            <rect x="230" y="60" width="200" height="62" rx="6" fill="#fff" stroke="#e4e4e2"/><text x="244" y="82" fill="#666" font-size="10" font-weight="700">ФАКТ, ГОД</text><text x="244" y="105" fill="#1d1d1b" font-size="18" font-weight="900">10,4 млн</text>
+            <rect x="440" y="60" width="200" height="62" rx="6" fill="#fff" stroke="#e4e4e2"/><text x="454" y="82" fill="#666" font-size="10" font-weight="700">ВЫПОЛНЕНИЕ</text><text x="454" y="105" fill="#b5850b" font-size="18" font-weight="900">87%</text>
+            <rect x="650" y="60" width="190" height="62" rx="6" fill="#fff" stroke="#e4e4e2"/><text x="664" y="82" fill="#666" font-size="10" font-weight="700">ДЕБИТОРКА</text><text x="664" y="105" fill="#c0392b" font-size="18" font-weight="900">2,3 млн</text>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="20" y="132" width="410" height="200" rx="6" fill="#fff" stroke="#e4e4e2"/>
+            <text x="34" y="154" fill="#1d1d1b" font-size="12" font-weight="800">План и факт по кварталам, млн ₽</text>
+            <line x1="34" y1="300" x2="416" y2="300" stroke="#e4e4e2"/>
+            <g>
+              <rect x="60" y="180" width="30" height="120" fill="#d9d9d6"/><rect x="92" y="192" width="30" height="108" fill="#F2C811"/><text x="90" y="316" fill="#666" font-size="10" text-anchor="middle">Q1</text>
+              <rect x="150" y="180" width="30" height="120" fill="#d9d9d6"/><rect x="182" y="200" width="30" height="100" fill="#F2C811"/><text x="180" y="316" fill="#666" font-size="10" text-anchor="middle">Q2</text>
+              <rect x="240" y="180" width="30" height="120" fill="#d9d9d6"/><rect x="272" y="204" width="30" height="96" fill="#F2C811"/><text x="270" y="316" fill="#666" font-size="10" text-anchor="middle">Q3</text>
+              <rect x="330" y="180" width="30" height="120" fill="#d9d9d6"/><rect x="362" y="206" width="30" height="94" fill="#F2C811"/><text x="360" y="316" fill="#666" font-size="10" text-anchor="middle">Q4</text>
+            </g>
+            <g font-size="10" fill="#1d1d1b" font-weight="700">
+              <rect x="250" y="140" width="10" height="10" fill="#d9d9d6"/><text x="266" y="149">План</text>
+              <rect x="310" y="140" width="10" height="10" fill="#F2C811"/><text x="326" y="149">Факт</text>
+            </g>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="440" y="132" width="400" height="200" rx="6" fill="#fff" stroke="#e4e4e2"/>
+            <text x="454" y="154" fill="#1d1d1b" font-size="12" font-weight="800">Выполнение годового плана</text>
+            <path d="M500 280 A90 90 0 0 1 680 280" fill="none" stroke="#e4e4e2" stroke-width="20"/>
+            <path d="M500 280 A90 90 0 0 1 662 235" fill="none" stroke="#F2C811" stroke-width="20"/>
+            <text x="590" y="270" fill="#1d1d1b" font-size="30" font-weight="900" text-anchor="middle">87%</text>
+            <text x="590" y="300" fill="#666" font-size="11" text-anchor="middle">цель — 100% к 31.12</text>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="20" y="342" width="820" height="112" rx="6" fill="#fff" stroke="#e4e4e2"/>
+            <g font-size="11" font-weight="800" fill="#666">
+              <text x="36" y="364">Группа продукции</text><text x="520" y="364" text-anchor="end">Выручка, млн</text><text x="720" y="364" text-anchor="end">Маржа %</text>
+            </g>
+            <line x1="20" y1="374" x2="840" y2="374" stroke="#eee"/>
+            <g font-size="11" fill="#1d1d1b" font-weight="700">
+              <text x="36" y="394">Профиль ПВХ</text><text x="520" y="394" text-anchor="end">3,4</text><text x="720" y="394" text-anchor="end">22%</text>
+              <text x="36" y="414">Сэндвич-панели</text><text x="520" y="414" text-anchor="end">2,7</text><text x="720" y="414" text-anchor="end">18%</text>
+              <text x="36" y="434">Фурнитура</text><text x="520" y="434" text-anchor="end">1,9</text><text x="720" y="434" text-anchor="end" fill="#188038">34%</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Макет управленческого отчёта в Power BI: план-факт, датчик выполнения и маржинальность по группам продукции. Сделки из Битрикс24 дополнены данными 1С. Пример условный.</figcaption>
+    </figure>
+
+    <div class="case-prose reveal">
+      <p><strong>Когда выбирать:</strong> нужна серьёзная модель данных и сложные расчёты, в компании уже есть экосистема Microsoft, и вопрос лицензий Power BI Pro решаем.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="sravnenie">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Коротко в таблице</div>
+      <h2>Сравнение систем в связке с Битрикс24</h2>
+      <p>Оценки прикладные — из практики внедрения, а не из маркетинговых материалов вендоров.</p>
+    </div>
+    <div class="compare-table-wrap reveal">
+      <table class="compare-table compare-table--bi">
+        <thead>
+          <tr>
+            <th>Критерий</th>
+            <th>BI Конструктор</th>
+            <th>Yandex DataLens</th>
+            <th>Looker Studio</th>
+            <th>Power BI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Стоимость входа</td>
+            <td>Входит в платные тарифы Битрикс24</td>
+            <td>Бесплатный Community; Business ≈ 990 ₽/мес за пользователя</td>
+            <td>Базовая версия бесплатна; Pro — по запросу</td>
+            <td>Desktop бесплатно; Pro ≈ $14/мес за пользователя</td>
+          </tr>
+          <tr>
+            <td>Русский интерфейс</td>
+            <td class="ct-yes">Да</td>
+            <td class="ct-yes">Да</td>
+            <td>Частично</td>
+            <td class="ct-yes">Да</td>
+          </tr>
+          <tr>
+            <td>Оплата и доступ из РБ</td>
+            <td class="ct-yes">Без ограничений</td>
+            <td class="ct-yes">Без ограничений</td>
+            <td class="ct-no">Зависит от доступа к сервисам Google</td>
+            <td class="ct-no">Нужна подписка Microsoft</td>
+          </tr>
+          <tr>
+            <td>Внешние источники кроме Битрикс24</td>
+            <td>Ограниченно</td>
+            <td>Много (БД, файлы, Метрика)</td>
+            <td>В основном сервисы Google</td>
+            <td class="ct-yes">Очень много</td>
+          </tr>
+          <tr>
+            <td>Глубина моделирования данных</td>
+            <td>Средняя</td>
+            <td>Средняя</td>
+            <td>Низкая (нет аналога DAX)</td>
+            <td class="ct-yes">Высокая (DAX)</td>
+          </tr>
+          <tr>
+            <td>Гео-аналитика и карты</td>
+            <td>Базовая</td>
+            <td class="ct-yes">Сильная</td>
+            <td>Средняя</td>
+            <td>Средняя</td>
+          </tr>
+          <tr>
+            <td>Порог входа для сотрудника</td>
+            <td class="ct-yes">Низкий</td>
+            <td>Средний</td>
+            <td class="ct-yes">Низкий</td>
+            <td class="ct-no">Высокий</td>
+          </tr>
+          <tr>
+            <td>Отдать дашборд «наружу»</td>
+            <td class="ct-no">Неудобно (живёт в портале)</td>
+            <td class="ct-yes">Ссылкой / встраиванием</td>
+            <td class="ct-yes">Ссылкой, много зрителей</td>
+            <td>Публикация в веб или Pro для портала</td>
+          </tr>
+          <tr>
+            <td>Частота обновления данных</td>
+            <td colspan="4" style="text-align:center">Для всех вариантов через BI-выгрузку: кеш ≈ 1 час, ручное обновление с интервалом — это витрина, а не монитор реального времени</td>
+          </tr>
+          <tr>
+            <td>Лучший сценарий</td>
+            <td>Продажи и активность внутри Битрикс24</td>
+            <td>Гео, филиалы, российская инфраструктура</td>
+            <td>Маркетинг и связка с Google Analytics</td>
+            <td>Управленческий и финансовый учёт, сложные модели</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Из практики</div>
+      <h2>Примеры под реальные задачи</h2>
+      <p>Ситуации собирательные, но узнаваемые — по отраслям, с которыми мы работаем.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Оптовая торговля стройматериалами</h4>
+        <p>Запрос: собственник хочет один экран — выручка, воронка, средний чек, причины отказов, план-факт по менеджерам. Данные не выходят за пределы Битрикс24. Решение: <strong>BI Конструктор</strong>, датасет по сделкам и активностям, 2–3 дашборда, доступ по ролям.</p>
+      </div>
+      <div class="step">
+        <h4>Сеть медицинских центров</h4>
+        <p>Запрос: сравнить филиалы между собой, увидеть географию записей, загрузку врачей и LTV пациента. Решение: <strong>Yandex DataLens</strong>, выгрузка сделок и смарт-процессов из Битрикс24 плюс справочник филиалов, карта и панель сравнения филиалов.</p>
+      </div>
+      <div class="step">
+        <h4>Интернет-магазин</h4>
+        <p>Запрос: сквозная картина от рекламного канала до оплаченного заказа, ДРР и ROMI по каналам, еженедельный отчёт маркетологу и руководителю. Решение: <strong>Looker Studio</strong>, связка Битрикс24 + Google Analytics 4 + рекламные кабинеты, дашборд по ссылке.</p>
+      </div>
+      <div class="step">
+        <h4>Производственная компания</h4>
+        <p>Запрос: управленческий отчёт для собственника — план-факт продаж с накоплением, дебиторка, маржинальность по группам продукции (данные Битрикс24 + 1С). Решение: <strong>Power BI</strong>, модель на DAX, отчёт для узкого круга, обновление по расписанию.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Честно о сложностях</div>
+      <h2>Подводные камни</h2>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">BI не лечит грязные данные — сначала порядок в CRM, потом визуализация</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Лимиты строк на выгрузку (10k / 100k / 250k–1M): большую базу режем по датам</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Кеш ≈ 1 час: это не «живой» монитор, а обновляемая витрина</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Часть шаблонов требует Битрикс24.Маркет Плюс или свободный лимит приложений</li>
+        </ul>
+      </div>
+      <div class="card">
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Публикация дашборда «в интернет» может попасть в поисковую выдачу</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Секретный ключ = доступ ко всем выгружаемым данным в обход прав портала</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Терминология и валюта/часовые пояса легко «разъезжаются» — нужен глоссарий метрик</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Датасет проектируется заранее: какие поля, какие смарт-процессы, какая история</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как мы работаем</div>
+      <h2>Что входит в настройку BI-аналитики</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Аудит показателей</h4>
+        <p>Собираем список метрик, которые бизнес хочет видеть, и проверяем, откуда они берутся и заполняются ли поля в Битрикс24.</p>
+      </div>
+      <div class="step">
+        <h4>Проектирование датасета</h4>
+        <p>Определяем состав полей, смарт-процессы, глубину истории и внешние источники (1С, сайт, аналитика).</p>
+      </div>
+      <div class="step">
+        <h4>Выбор системы</h4>
+        <p>Подбираем BI под задачу и ограничения: тариф Битрикс24, бюджет, доступность оплаты, требования к моделированию и публикации.</p>
+      </div>
+      <div class="step">
+        <h4>Сборка дашбордов</h4>
+        <p>Настраиваем подключение, собираем отчёты, согласуем формулировки метрик и разграничиваем доступ.</p>
+      </div>
+      <div class="step">
+        <h4>Обучение и регламент</h4>
+        <p>Показываем команде, как читать дашборды и обновлять данные, фиксируем глоссарий метрик и владельца отчётности.</p>
+      </div>
+      <div class="step">
+        <h4>Сопровождение</h4>
+        <p>Дорабатываем отчёты по мере роста компании, добавляем источники и метрики, следим за лимитами выгрузки.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Настроим BI-аналитику под ваши цифры</h2>
+        <p>Разберём, какие показатели вам нужны, подберём систему — BI Конструктор, DataLens, Looker Studio или Power BI — и соберём дашборды на данных Битрикс24.</p>
+      </div>
+      <a href="contacts.html#form" class="btn btn--primary">Обсудить задачу</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:16px;">
+          <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+          <span class="brand__name">АйТи Аналитикс</span>
+        </a>
+        <p>Внедрение Битрикс24 и систем телефонии. Ваш партнёр в мире Битрикс24 с 2011 года.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="bitrix24.html">Битрикс24</a></li>
+          <li><a href="telephony.html">Телефония</a></li>
+          <li><a href="ai.html">ИИ-решения</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="partners.html">Партнёрам</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+375445057799">+375 (44) 505-77-99</a></li>
+          <li><a href="mailto:sales@it-a.by">sales@it-a.by</a></li>
+          <li><a href="contacts.html#map">г. Минск, ул. Лукьяновича, 10к7</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Мы на связи</h4>
+        <div class="social-row">
+          <a href="https://www.instagram.com/it_a.by/" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="https://t.me/ita_by_bitrix" aria-label="Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2011–2026 АйТи Аналитикс. УНП 791048093</span>
+      <span>Все услуги: Битрикс24 · IP-телефония · Интеграции</span>
+      <span><a href="assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Политика конфиденциальности</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.by/b1536661/crm/site_button/loader_31_u35a1q.js');
+</script>
+</body>
+</html>
