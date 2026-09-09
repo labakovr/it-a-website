@@ -2707,30 +2707,82 @@ body.show-diff-only .compare-table--full tbody tr[data-uniform="true"] {
   .article-quote { font-size: 16px; }
 }
 
-/* ===== Возможности Битрикс24: вкладки-разделы (как «Наши услуги») ===== */
+/* ===== Возможности Битрикс24: закреплённая прокрутка по разделам ===== */
+
+/* .feature-explorer остаётся обычной .section — вертикальные отступы
+   создают воздух до и после закреплённой сцены.
+   .feature-scene получает высоту из JS: 100vh + (N-1) * шаг прокрутки,
+   а .feature-scene__pin «залипает», пока сцена проходит мимо. */
+
+.feature-scene {
+  position: relative;
+  min-height: calc(100vh - 84px);
+}
+
+.feature-scene__pin {
+  position: sticky;
+  top: 84px;
+  min-height: calc(100vh - 84px);
+  display: flex;
+  align-items: center;
+  padding: 22px 0;
+}
+
+.feature-scene__pin > .container {
+  width: 100%;
+}
+
+.feature-scene__pin .section-head {
+  margin-bottom: 20px;
+}
+
+.feature-scene__pin .section-head p {
+  margin-bottom: 0;
+}
+
+/* индикатор прогресса по 12 разделам */
+.feature-progress {
+  margin-top: 24px;
+  height: 3px;
+  background: rgba(236, 236, 236, 0.14);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.feature-progress__bar {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--green);
+  transition: width 0.3s ease;
+}
 
 .feature-explorer .services-tabs {
   flex-basis: 260px;
 }
 
 .feature-explorer .services-tab {
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .feature-explorer .services-tab__label {
-  font-size: 15.5px;
+  font-size: 14.5px;
+}
+
+.feature-explorer .services-panels {
+  position: relative;
 }
 
 .feature-panel__title {
   color: var(--white);
-  font-size: 22px;
-  margin: 4px 0 12px;
+  font-size: 21px;
+  margin: 2px 0 10px;
 }
 
 .feature-panel__lead {
   color: var(--text-on-dark-soft);
-  margin: 0 0 24px;
+  margin: 0 0 22px;
   max-width: 62ch;
 }
 
@@ -2741,14 +2793,63 @@ body.show-diff-only .compare-table--full tbody tr[data-uniform="true"] {
 }
 
 @media (max-width: 900px) {
+  .feature-scene,
+  .feature-scene__pin {
+    min-height: 0;
+  }
+  .feature-scene__pin {
+    position: sticky;
+    top: 64px;
+    align-items: flex-start;
+    padding: 16px 0 22px;
+  }
+  .feature-scene__pin .section-head {
+    margin-bottom: 14px;
+  }
+  .feature-scene__pin .section-head h2 {
+    font-size: 20px;
+  }
+  .feature-scene__pin .section-head p {
+    display: none;
+  }
+  .no-feature-scene .feature-scene__pin .section-head p {
+    display: block;
+  }
+  /* на узком экране в закреплённом виде экономим высоту: прячем подводку,
+     список — в одну колонку (разделов 12, а экран невысокий) */
+  .feature-explorer .feature-panel__lead {
+    display: none;
+  }
+  .feature-explorer .feature-panel__title {
+    font-size: 19px;
+    margin-top: 0;
+  }
+  .feature-explorer .check-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .feature-explorer .check-list li {
+    font-size: 13.5px;
+  }
+  .no-feature-scene .feature-explorer .feature-panel__lead {
+    display: block;
+  }
+  .no-feature-scene .feature-explorer .check-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 40px;
+  }
   .feature-explorer .services-tabs {
+    align-self: stretch;
+    min-width: 0;
+    flex: none;
     flex-direction: row;
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
     gap: 4px;
-    margin: 0 -20px;
-    padding: 0 20px 4px;
+    margin: 0;
+    padding: 0 0 4px;
+    scroll-behavior: smooth;
   }
   .feature-explorer .services-tabs::-webkit-scrollbar { display: none; }
   .feature-explorer .services-tab {
@@ -2759,5 +2860,35 @@ body.show-diff-only .compare-table--full tbody tr[data-uniform="true"] {
   }
   .feature-explorer .services-tab.is-active {
     border-bottom-color: var(--green);
+  }
+}
+
+/* Запасной режим: JS выключил сцену (низкий экран, контент не помещается)
+   или пользователь попросил меньше анимации — обычные вкладки без закрепления. */
+.no-feature-scene .feature-scene,
+.no-feature-scene .feature-scene__pin {
+  min-height: 0;
+  height: auto;
+}
+
+.no-feature-scene .feature-scene__pin {
+  position: static;
+}
+
+.no-feature-scene .feature-explorer .services-panels {
+  min-height: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-scene,
+  .feature-scene__pin {
+    min-height: 0;
+    height: auto;
+  }
+  .feature-scene__pin {
+    position: static;
+  }
+  .feature-explorer .services-panels {
+    min-height: 0 !important;
   }
 }
