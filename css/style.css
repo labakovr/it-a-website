@@ -2709,6 +2709,14 @@ body.show-diff-only .compare-table--full tbody tr[data-uniform="true"] {
 
 /* ===== Возможности Битрикс24: закреплённая прокрутка по разделам ===== */
 
+/* Меньше воздуха между текстом с кнопками и блоком возможностей (в 2 раза). */
+.page-hero--flush { padding-bottom: 42px; }
+.feature-explorer { padding-top: 48px; }
+@media (max-width: 900px) {
+  .page-hero--flush { padding-bottom: 32px; }
+  .feature-explorer { padding-top: 32px; }
+}
+
 /* .feature-explorer остаётся обычной .section — вертикальные отступы
    создают воздух до и после закреплённой сцены.
    .feature-scene получает высоту из JS: 100vh + (N-1) * шаг прокрутки,
