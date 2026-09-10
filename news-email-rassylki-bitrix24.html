@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Почтовые рассылки из Битрикс24: email-маркетинг и подключение сервиса транзакционных рассылок | АйТи Аналитикс</title>
+<meta name="description" content="Как организовать email-маркетинг в Битрикс24: чем плохо слать массовые письма с обычной почты, зачем нужен сервис транзакционных рассылок (SendPulse, UniSender и другие), как привязать домен и почту, настроить SPF, DKIM, DMARC и подключить ящик к CRM-маркетингу как канал рассылок. Разбираем, как максимально повысить доставляемость.">
+<link rel="canonical" href="https://it-a.by/news-email-rassylki-bitrix24.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="АйТи Аналитикс">
+<meta property="og:title" content="Почтовые рассылки из Битрикс24: email-маркетинг и сервис транзакционных рассылок">
+<meta property="og:description" content="Чем рискует бизнес, рассылая массовые письма с обычной почты, и как через сервис транзакционных рассылок довести доставляемость email-маркетинга Битрикс24 до максимума.">
+<meta property="og:url" content="https://it-a.by/news-email-rassylki-bitrix24.html">
+<meta property="og:image" content="https://it-a.by/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Почтовые рассылки из Битрикс24: email-маркетинг и сервис транзакционных рассылок">
+<meta name="twitter:description" content="Чем рискует бизнес, рассылая массовые письма с обычной почты, и как через сервис транзакционных рассылок довести доставляемость email-маркетинга Битрикс24 до максимума.">
+<meta name="twitter:image" content="https://it-a.by/assets/img/og-image.png">
+<meta name="theme-color" content="#1d1d1b">
+<link rel="icon" href="assets/img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Почтовые рассылки из Битрикс24: email-маркетинг и подключение сервиса транзакционных рассылок",
+  "description": "Как организовать email-маркетинг в Битрикс24, зачем подключать сервис транзакционных рассылок, как привязать домен и почту, настроить SPF, DKIM, DMARC и подключить ящик к CRM-маркетингу как канал рассылок. Как максимально повысить доставляемость писем и чем рискует массовая рассылка с обычной почты.",
+  "image": "https://it-a.by/assets/img/og-image.png",
+  "author": { "@type": "Organization", "name": "АйТи Аналитикс", "url": "https://it-a.by/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "АйТи Аналитикс",
+    "logo": { "@type": "ImageObject", "url": "https://it-a.by/assets/img/logo-mark.png" }
+  },
+  "datePublished": "2026-09-10",
+  "dateModified": "2026-09-10",
+  "mainEntityOfPage": "https://it-a.by/news-email-rassylki-bitrix24.html",
+  "about": "Email-маркетинг и почтовые рассылки в Битрикс24 через сервис транзакционных рассылок"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://it-a.by/" },
+    { "@type": "ListItem", "position": 2, "name": "Новости", "item": "https://it-a.by/news.html" },
+    { "@type": "ListItem", "position": 3, "name": "Почтовые рассылки из Битрикс24", "item": "https://it-a.by/news-email-rassylki-bitrix24.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Можно ли делать рассылки из Битрикс24 без стороннего сервиса?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Технически да — Битрикс24 умеет отправлять письма через встроенный сервис или через SMTP обычного почтового ящика. Но у обычной почты жёсткие суточные лимиты, нет полноценной аутентификации домена под рассылки и обработки жалоб, поэтому массовые письма быстро уходят в спам, а ящик могут заблокировать. Для регулярного email-маркетинга подключают специализированный сервис рассылок." }
+    },
+    {
+      "@type": "Question",
+      "name": "Что такое сервис транзакционных рассылок и зачем он нужен для маркетинга?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Это внешний сервис отправки почты (SendPulse, UniSender, DashaMail, Rusender и другие), который берёт на себя доставку писем: аутентификацию домена, репутацию IP-адресов, обработку отписок и жалоб, детальную статистику доставки. Битрикс24 отдаёт письма этому сервису по SMTP, а сервис доставляет их получателям с максимальной вероятностью попасть во «Входящие»." }
+    },
+    {
+      "@type": "Question",
+      "name": "Какие DNS-записи нужны для рассылок из Битрикс24?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Минимум — SPF (разрешает серверам сервиса отправлять почту от вашего домена), DKIM (цифровая подпись писем) и DMARC (политика для писем, не прошедших проверку). Дополнительно настраивают домен для обработки возвратов (Return-Path) и, как правило, выделяют отдельный поддомен под маркетинговые рассылки, чтобы не рисковать репутацией основного домена." }
+    },
+    {
+      "@type": "Question",
+      "name": "Сколько писем в сутки можно отправить из Битрикс24?",
+      "acceptedAnswer": { "@type": "Answer", "text": "В облачном Битрикс24 действует ограничение около 1000 писем в сутки на портал — то, что не влезло, ставится в очередь и уходит на следующий день. В коробочной версии ограничения на стороне портала нет, но остаётся лимит почтового сервиса или сервиса рассылок, через который идёт отправка. Функция CRM-маркетинга доступна на коммерческих тарифах." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+      <span class="brand__name">АйТи Аналитикс</span>
+    </a>
+    <nav class="nav">
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="bitrix24.html" class="nav-link">Битрикс24</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по Битрикс24" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="features.html">Возможности Битрикс24</a>
+          <a href="licenses.html">Лицензии Битрикс24</a>
+          <a href="bitrix24.html">Внедрение Битрикс24</a>
+          <a href="bitrix24.html">Сопровождение Битрикс24</a>
+          <a href="education.html">Обучение Битрикс24</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="telephony.html" class="nav-link">Телефония</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по телефонии" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="telephony.html">Внедрение IP-телефонии</a>
+          <a href="telephony.html">Настройка АТС</a>
+          <a href="telephony.html">Сопровождение телефонии</a>
+          <a href="catalog/index.html">Каталог оборудования</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="ai.html" class="nav-link">ИИ-решения</a>
+          <button type="button" class="nav-caret" aria-label="Показать ИИ-решения" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="ai.html">Внедрение ИИ-ассистентов</a>
+          <a href="ai.html">Автоматизация процессов</a>
+          <a href="ai.html">Обучение и сопровождение</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="portfolio.html" class="nav-link">Портфолио</a>
+          <button type="button" class="nav-caret" aria-label="Показать разделы портфолио" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="cases.html">Кейсы</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="certificates.html">Сертификаты</a>
+          <a href="about.html">О нас</a>
+        </div>
+      </div>
+      <a href="news.html" class="is-active">Новости</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:+375445057799" class="header__phone">+375 (44) 505-77-99</a>
+      <a href="contacts.html#form" class="btn btn--primary btn--sm">Заказать звонок</a>
+      <button class="nav-toggle" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">Главная</a><span class="sep">/</span><a href="news.html">Новости</a><span class="sep">/</span><span>Почтовые рассылки из Битрикс24</span></div>
+    <div class="eyebrow">Статья · Маркетинг · 10 сентября 2026</div>
+    <h1>Почтовые рассылки из Битрикс24: email-маркетинг и сервис транзакционных рассылок</h1>
+    <p class="hero__lead">В Битрикс24 есть полноценный модуль email-маркетинга: сегменты по базе клиентов, редактор писем, триггерные цепочки и статистика. Но письмо мало создать — его нужно доставить во «Входящие», а не в спам. Разбираем, почему рассылать массовую почту с обычного ящика опасно, что даёт подключение сервиса транзакционных рассылок и как настроить всю связку так, чтобы доставляемость была максимальной.</p>
+    <div class="hero__actions">
+      <a href="#dostavlyaemost" class="btn btn--outline-dark">Сразу к доставляемости →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="case-facts reveal">
+      <div class="card">
+        <div class="eyebrow">Услуга</div>
+        <strong>Настройка email-рассылок из Битрикс24 с подключением сервиса рассылок</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Что настраиваем</div>
+        <strong>Сервис рассылок · домен и DNS · SPF, DKIM, DMARC · отправитель в CRM-маркетинге</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Результат</div>
+        <strong>Письма попадают во «Входящие», база и репутация домена не выгорают</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Кому актуально</div>
+        <strong>Всем, кто регулярно пишет клиентам из CRM: новости, акции, реактивация, цепочки</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Что умеет портал</div>
+      <h2>Email-маркетинг внутри Битрикс24</h2>
+      <p>Рассылки в Битрикс24 живут в разделе «CRM-маркетинг». Он работает поверх базы CRM, поэтому не нужно выгружать контакты в отдельную систему и следить за синхронизацией вручную.</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Инструменты</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Сегменты по данным CRM: сделки, товары, источник, город, сумма, статус</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Блочный редактор писем с шаблонами и подстановкой полей из карточки</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Разовые рассылки и триггерные — по событию в сделке или дате</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Статистика: доставлено, открытия, клики, отписки, ошибки</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Один и тот же сегмент можно использовать для email, SMS и мессенджеров</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Как письмо уходит с портала</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Через сервис Битрикс24 «по умолчанию» — быстро, но с низкими лимитами и чужим доменом в адресе</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Через <strong>SMTP вашего почтового ящика</strong> — письма идут от вашего адреса</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Через <strong>SMTP сервиса рассылок</strong>, к которому привязаны ваш домен и почта — рекомендованный вариант для маркетинга</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-prose reveal">
+      <p>Ключевой момент — третий пункт. Отправитель в Битрикс24 настраивается один раз (в «Почте», CRM или «Маркетинге») и дальше доступен во всех рассылках. От того, <em>чем</em> физически отправляются письма, зависит, увидит их клиент или нет.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Честно о рисках</div>
+      <h2>Почему нельзя просто «подключить почту» и слать массовые письма</h2>
+      <p>Соблазн понятный: есть корпоративный ящик <code>info@company.by</code>, подключаем его по SMTP и рассылаем. На небольших объёмах это работает неделю-другую, а потом начинаются проблемы.</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Технические ограничения</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Суточные лимиты почтовых провайдеров: у обычных ящиков это сотни писем в день, у корпоративных тарифов — несколько тысяч. Рассылка на 5–10 тысяч адресов в них не помещается</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Провайдер видит всплеск однотипных писем и включает троттлинг: часть писем задерживается, часть отклоняется, ящик временно блокируется</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">У обычной почты нет DKIM-подписи под ваш домен и выровненной аутентификации — почта получателя не может подтвердить отправителя</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Нет обработки жалоб и отписок на уровне протокола — вы не узнаете, что попали в спам, пока не рухнет доставляемость</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Что теряет бизнес</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Репутацию основного домена: жалобы на рассылку роняют доставляемость <strong>всей</strong> почты — счетов, договоров, ответов менеджеров</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Домен и IP попадают в чёрные списки (Spamhaus и другие) — выход из них занимает недели</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Массовая однотипная отправка без сегментации, подписи и прогрева — для фильтров это типовой признак спам-рассылки</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Юридический риск: реклама по email без согласия получателя нарушает законодательство о рекламе и о персональных данных</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-prose reveal">
+      <blockquote class="article-quote">
+        «Самая дорогая ошибка в email-маркетинге — рассылать акции с того же домена, с которого компания ведёт переписку и шлёт документы. Одна неудачная рассылка по холодной базе — и в спам начинают падать письма менеджеров».
+        <cite>Команда «АйТи Аналитикс»</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Решение</div>
+      <h2>Сервис транзакционных рассылок как канал отправки</h2>
+      <p>Специализированный сервис рассылок — это инфраструктура отправки почты, которую держат и «прогревают» профессионально: пулы IP-адресов с хорошей репутацией, аутентификация домена, обработка возвратов и жалоб, детальная аналитика доставки. Битрикс24 отдаёт письма такому сервису по SMTP, а он доставляет их получателям.</p>
+    </div>
+    <div class="case-prose reveal">
+      <p>Название «транзакционные» исторически закрепилось за сервисами, которые изначально доставляли служебные письма (регистрации, чеки, коды) — там доставляемость критична, поэтому инфраструктура вылизана. Те же сервисы используются и для маркетинговых рассылок: именно ради их доставляемости их и подключают к Битрикс24.</p>
+      <p>Сервисы, которые официально интегрируются с CRM-маркетингом Битрикс24 через приложения Маркетплейса: <strong>UniSender, SendPulse, DashaMail, Sendsay, Rusender, Mailganer, NotiSend</strong>. Такая интеграция, помимо отправки, возвращает в CRM статусы доставки, открытия, клики и отписки — сегмент и статистика остаются внутри портала.</p>
+      <p>Если готового приложения под ваш сервис нет, остаётся универсальный путь — подключить его <strong>SMTP-релей</strong> как отправителя в Битрикс24. Письма будут уходить через сервис и получать всю его репутацию и аутентификацию; статистику доставки при этом смотрят в панели сервиса, а открытия и клики Битрикс24 считает сам.</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Что берёт на себя сервис</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Репутацию отправляющих IP-адресов и их прогрев</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Генерацию DKIM-ключа и подсказки по SPF и DMARC для вашего домена</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Обработку жёстких возвратов, обратной связи по спаму (FBL) и отписок</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Логи по каждому письму: доставлено, отложено, отклонено и почему</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Что остаётся на вашей стороне</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Добавить DNS-записи, которые выдаст сервис</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Держать базу чистой и собирать её с согласия получателей</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Соблюдать частоту и не отправлять по «холодным» спискам</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Следить за содержанием писем и заметной ссылкой на отписку</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как это связано</div>
+      <h2>Схема связки: домен → сервис → Битрикс24</h2>
+      <p>Почта клиента (точнее — её домен) привязывается к сервису рассылок, сервис настраивается и подтверждается, и только потом этот адрес подключается в Битрикс24 как отправитель для маркетинга.</p>
+    </div>
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <svg viewBox="0 0 860 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема подключения почтовых рассылок: домен и почта привязываются к сервису рассылок, настраиваются SPF, DKIM и DMARC, затем адрес подключается в Битрикс24 как отправитель CRM-маркетинга">
+          <rect width="860" height="430" fill="#f4f6f2"/>
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <text x="28" y="46" fill="#1d1d1b" font-size="14" font-weight="900">Порядок подключения — строго по шагам</text>
+
+            <rect x="28" y="70" width="240" height="150" rx="10" fill="#fff" stroke="#e2e2e0"/>
+            <text x="44" y="98" fill="#1d1d1b" font-size="12" font-weight="900">1. Домен и почта</text>
+            <g font-size="9.5" fill="#55564f">
+              <text x="44" y="122">Отдельный поддомен под</text>
+              <text x="44" y="138">рассылки: news.company.by</text>
+              <text x="44" y="158">Адрес отправителя и адрес</text>
+              <text x="44" y="174">для ответов</text>
+              <text x="44" y="194">Доступ к DNS домена</text>
+            </g>
+
+            <path d="M272 145 L312 145" stroke="#4c952e" stroke-width="3"/><path d="M306 137 L322 145 L306 153 Z" fill="#4c952e"/>
+
+            <rect x="326" y="60" width="250" height="180" rx="10" fill="#fff" stroke="#8fbf21" stroke-width="2"/>
+            <text x="342" y="88" fill="#1d1d1b" font-size="12" font-weight="900">2. Сервис рассылок</text>
+            <g font-size="9.5" fill="#55564f">
+              <text x="342" y="112">Добавляем домен, сервис</text>
+              <text x="342" y="128">выдаёт записи:</text>
+              <text x="342" y="148" fill="#1d1d1b" font-weight="800">SPF</text><text x="380" y="148">— кто вправе слать</text>
+              <text x="342" y="166" fill="#1d1d1b" font-weight="800">DKIM</text><text x="384" y="166">— подпись письма</text>
+              <text x="342" y="184" fill="#1d1d1b" font-weight="800">DMARC</text><text x="392" y="184">— политика проверки</text>
+              <text x="342" y="204">Return-Path / bounce (CNAME)</text>
+              <text x="342" y="222">Прогрев, выделенный IP — по объёму</text>
+            </g>
+
+            <path d="M580 150 L620 150" stroke="#4c952e" stroke-width="3"/><path d="M614 142 L630 150 L614 158 Z" fill="#4c952e"/>
+
+            <rect x="634" y="70" width="200" height="150" rx="10" fill="#eef4e2" stroke="#8fbf21"/>
+            <text x="650" y="98" fill="#1d1d1b" font-size="12" font-weight="900">3. Битрикс24</text>
+            <g font-size="9.5" fill="#55564f">
+              <text x="650" y="122">CRM-маркетинг →</text>
+              <text x="650" y="138">добавить отправителя →</text>
+              <text x="650" y="154" fill="#1d1d1b" font-weight="800">SMTP сервиса</text>
+              <text x="650" y="174">Отдельный ящик, дневной</text>
+              <text x="650" y="190">лимит, тестовое письмо</text>
+            </g>
+
+            <rect x="28" y="300" width="806" height="96" rx="10" fill="#1d1d1b"/>
+            <text x="48" y="330" fill="#8fbf21" font-size="11" font-weight="900">ПРОВЕРКА ПЕРЕД ПЕРВОЙ РАССЫЛКОЙ</text>
+            <g font-size="9.5" fill="#ececec">
+              <text x="48" y="352">SPF, DKIM и DMARC проходят и «выровнены» по домену отправителя</text>
+              <text x="48" y="370">Тестовое письмо дошло в Gmail, Яндекс и Mail.ru во «Входящие», подпись валидна</text>
+              <text x="48" y="388">В письме есть заметная ссылка отписки и заголовок List-Unsubscribe с отпиской в один клик</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Домен и почта сначала привязываются и подтверждаются на стороне сервиса рассылок, и только потом адрес подключается в Битрикс24.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Шаг 1</div>
+      <h2>Готовим домен и адрес отправителя</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Перед регистрацией в сервисе решаем, <strong>с какого адреса</strong> пойдут рассылки. Практически всегда это отдельный поддомен — например <code>news.company.by</code> или <code>mail.company.by</code>, а адрес вида <code>news@news.company.by</code>. Смысл простой: у маркетинговых писем своя репутация, и она не должна задевать основной домен, с которого идут договоры, счета и переписка менеджеров.</p>
+      <p>Отдельно закладываем рабочий <strong>адрес для ответов</strong> (Reply-To), который кто-то реально читает. Ящик <code>no-reply@…</code> раздражает клиентов и ухудшает вовлечённость, а низкая вовлечённость — это минус к доставляемости.</p>
+    </div>
+    <div class="card reveal">
+      <div class="eyebrow">Что нужно на этом шаге</div>
+      <ul class="check-list">
+        <li><img class="ico" src="assets/img/check.svg" alt="">Доступ к управлению DNS домена (у регистратора или хостера)</li>
+        <li><img class="ico" src="assets/img/check.svg" alt="">Выбранный поддомен и адрес отправителя под рассылки</li>
+        <li><img class="ico" src="assets/img/check.svg" alt="">Живой адрес для ответов клиентов</li>
+        <li><img class="ico" src="assets/img/check.svg" alt="">Понимание, есть ли уже SPF и DMARC на домене — их придётся аккуратно дополнить, а не перезаписать</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Шаг 2</div>
+      <h2>Настраиваем сам сервис рассылок</h2>
+      <p>Здесь делается основная работа по доставляемости. Порядок у всех сервисов похожий.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Добавляем и подтверждаем домен</h4>
+        <p>В сервисе создаём отправляющий домен (тот самый поддомен). Сервис генерирует набор DNS-записей — их нужно добавить у регистратора и дождаться, пока сервис их увидит.</p>
+      </div>
+      <div class="step">
+        <h4>SPF</h4>
+        <p>TXT-запись, которая перечисляет серверы, имеющие право отправлять почту от вашего домена. Добавляем в неё серверы сервиса рассылок. Если SPF уже есть — дополняем существующую запись, вторую SPF заводить нельзя.</p>
+      </div>
+      <div class="step">
+        <h4>DKIM</h4>
+        <p>Криптографическая подпись каждого письма. Сервис даёт публичный ключ (обычно 2048 бит) — публикуем его в DNS. Почта получателя проверяет подпись и убеждается, что письмо не подменили в пути.</p>
+      </div>
+      <div class="step">
+        <h4>DMARC</h4>
+        <p>Политика на случай, если письмо не прошло SPF или DKIM. Начинаем с мягкого режима мониторинга (<code>p=none</code>) с отчётами, затем, убедившись, что легитимная почта проходит, ужесточаем до карантина и отклонения. Крупные почтовые системы уже требуют наличие DMARC для массовых отправителей.</p>
+      </div>
+      <div class="step">
+        <h4>Домен возвратов (Return-Path)</h4>
+        <p>Отдельная запись (обычно CNAME), чтобы адрес, на который приходят технические возвраты, тоже был на вашем домене. Это улучшает «выравнивание» аутентификации и репутацию.</p>
+      </div>
+      <div class="step">
+        <h4>Прогрев и, при необходимости, выделенный IP</h4>
+        <p>Новый домен репутации не имеет. Первые 2–4 недели рассылаем небольшими объёмами по самым лояльным клиентам, постепенно наращивая. Выделенный IP-адрес имеет смысл только при стабильно больших объёмах (десятки тысяч писем в месяц и выше) — на малых объёмах общий пул сервиса надёжнее.</p>
+      </div>
+    </div>
+    <div class="case-prose reveal">
+      <p>После настройки прогоняем домен через проверку аутентификации и отправляем тестовые письма на ящики в Gmail, Яндекс и Mail.ru — смотрим, что письма попадают во «Входящие», а SPF, DKIM и DMARC в свойствах письма показывают <code>pass</code>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Шаг 3</div>
+      <h2>Подключаем адрес к Битрикс24</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Когда сервис подтвердил домен, подключаем отправителя в портале. В облачном Битрикс24 это может сделать любой сотрудник, в коробочном — только администратор.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Добавляем отправителя</h4>
+        <p>В разделе <strong>CRM-маркетинг</strong> (или «Почта» / «Маркетинг») создаём нового отправителя с типом <strong>SMTP</strong>.</p>
+      </div>
+      <div class="step">
+        <h4>Указываем параметры сервиса</h4>
+        <p>Имя отправителя, адрес <code>news@news.company.by</code>, адрес и порт SMTP-сервера сервиса, логин и пароль (часто это отдельный SMTP-ключ, а не пароль от аккаунта). Включаем защищённое соединение.</p>
+      </div>
+      <div class="step">
+        <h4>Ставим дневной лимит</h4>
+        <p>Задаём лимит отправки на стороне Битрикс24 с запасом ниже лимита вашего тарифа в сервисе, чтобы рассылка не обрывалась на середине.</p>
+      </div>
+      <div class="step">
+        <h4>Проверяем</h4>
+        <p>Подтверждаем адрес по письму и отправляем пробную рассылку на небольшой внутренний сегмент.</p>
+      </div>
+    </div>
+    <div class="case-prose reveal">
+      <p>Дальше этот отправитель выбирается в любой рассылке CRM-маркетинга. Ящик, подключённый по SMTP, не появляется в разделе «Почта» — он живёт только в списке отправителей, и это нормально: для рассылок отдельный адрес и нужен.</p>
+    </div>
+    <div class="card reveal">
+      <div class="eyebrow">Почему отдельный ящик именно под рассылки</div>
+      <ul class="check-list">
+        <li><img class="ico" src="assets/img/check.svg" alt="">Репутация рассылочного адреса не смешивается с деловой перепиской</li>
+        <li><img class="ico" src="assets/img/check.svg" alt="">Лимиты и статистика по маркетингу считаются отдельно</li>
+        <li><img class="ico" src="assets/img/check.svg" alt="">Если что-то пойдёт не так, «отключить рассылки» можно, не трогая рабочую почту</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark" id="dostavlyaemost">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Главное</div>
+      <h2>Как максимально повысить доставляемость</h2>
+      <p>Доставляемость — это не одна галочка, а сумма технической настройки, репутации и дисциплины в работе с базой. Вот что влияет сильнее всего.</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Аутентификация и инфраструктура</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Настроены и проходят SPF, DKIM и DMARC, все три «выровнены» по видимому домену отправителя</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Отправка через сервис рассылок с хорошей репутацией IP, а не с обычного ящика</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Отдельный поддомен под маркетинг, отдельный — под транзакционные и служебные письма</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Домен возвратов на вашем поддомене, а не на домене сервиса</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Репутация и прогрев</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Плавный старт: от небольших объёмов к плановым в течение 2–4 недель</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Первыми — самые активные клиенты: высокие открытия в начале задают репутацию</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Ровный ритм рассылок без длинных пауз и внезапных всплесков объёма</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Мониторинг репутации в постмастерах Google, Mail.ru и Яндекса</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Гигиена базы</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Только собранная с согласия база, никаких купленных и «спарсенных» списков</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Подтверждение подписки (double opt-in) на формах</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Автоматическое исключение жёстких возвратов и жалобщиков</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Работа со «спящими»: реактивация, а затем исключение тех, кто не открывает письма месяцами</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Письмо и отписка</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Заметная ссылка отписки плюс заголовок List-Unsubscribe с отпиской в один клик</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Единый узнаваемый отправитель, честная тема без «кликбейта» и КАПСА</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Разумный баланс текста и картинок, рабочие ссылки, адрес и реквизиты компании в подвале</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Доля жалоб на спам — ниже 0,1–0,3%; при росте останавливаемся и разбираемся</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-prose reveal">
+      <p>Отдельно про отписку: убирать ссылку или прятать её — худшее, что можно сделать. Человек, который не может отписаться, жмёт «Спам», а это бьёт по репутации гораздо сильнее, чем спокойный уход из базы.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Полезно знать</div>
+      <h2>Лимиты рассылок в самом Битрикс24</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>В облачном Битрикс24 действует ограничение — порядка <strong>1000 писем в сутки</strong> на портал через CRM-маркетинг. Всё, что сверх лимита, автоматически ставится в очередь и уходит на следующий день, рассылка не теряется. Ограничения по <em>размеру</em> базы нет — лимит только на скорость отправки.</p>
+      <p>В <strong>коробочной версии</strong> портал писем не ограничивает — потолком становится сервис, через который идёт отправка. Функция CRM-маркетинга доступна на коммерческих тарифах (Бесплатный email-рассылки не включает).</p>
+      <p>Подключение внешнего сервиса рассылок эти портальные лимиты не отменяет, но снимает главное узкое место — доставляемость и лимиты обычной почты. Для больших регулярных рассылок связка «коробка + сервис рассылок» или несколько отправителей позволяет обойти и суточный потолок.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как мы работаем</div>
+      <h2>Что входит в настройку рассылок под ключ</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Аудит и выбор сервиса</h4>
+        <p>Смотрим объёмы, географию базы, текущее состояние домена и почты. Подбираем сервис рассылок под задачи и бюджет, с учётом интеграции с Битрикс24.</p>
+      </div>
+      <div class="step">
+        <h4>Домен и DNS</h4>
+        <p>Заводим поддомен под маркетинг, настраиваем SPF, DKIM, DMARC и домен возвратов, не задевая рабочую почту компании.</p>
+      </div>
+      <div class="step">
+        <h4>Настройка сервиса</h4>
+        <p>Подключаем и подтверждаем домен, готовим план прогрева, при необходимости — выделенный IP, подключаем постмастеры и обратную связь по жалобам.</p>
+      </div>
+      <div class="step">
+        <h4>Подключение к Битрикс24</h4>
+        <p>Добавляем отправителя по SMTP или ставим приложение-коннектор, задаём лимиты, проверяем прохождение аутентификации и тестовые письма.</p>
+      </div>
+      <div class="step">
+        <h4>Шаблоны и сегменты</h4>
+        <p>Собираем мастер-шаблон письма с корректной вёрсткой и отпиской, настраиваем сегменты по данным CRM и, если нужно, триггерные цепочки.</p>
+      </div>
+      <div class="step">
+        <h4>Запуск и сопровождение</h4>
+        <p>Проводим первые рассылки на прогреве, следим за доставляемостью и репутацией, передаём команде инструкцию и дальше помогаем по запросу.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow">Вопросы и ответы</div>
+      <h2>Частые вопросы о рассылках из Битрикс24</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>Можно ли делать рассылки из Битрикс24 без стороннего сервиса?</summary>
+        <p>Технически да — портал умеет отправлять через встроенный сервис или через SMTP обычного ящика. Но у обычной почты жёсткие суточные лимиты, нет полноценной аутентификации домена под рассылки и обработки жалоб, поэтому массовые письма быстро уходят в спам, а ящик могут заблокировать. Для регулярного email-маркетинга подключают специализированный сервис рассылок.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Чем «транзакционный» сервис отличается от обычного сервиса рассылок?</summary>
+        <p>По сути ничем принципиальным для нашей задачи. Так называют платформы, которые изначально доставляли служебные письма с высокими требованиями к доставляемости. Их инфраструктура одинаково хорошо подходит и для маркетинговых рассылок — ради этой доставляемости их и подключают к Битрикс24.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Какой сервис выбрать — SendPulse, UniSender или другой?</summary>
+        <p>С CRM-маркетингом Битрикс24 официально интегрируются UniSender, SendPulse, DashaMail, Sendsay, Rusender, Mailganer, NotiSend. Выбор зависит от объёмов, цены, удобства редактора и того, нужен ли двусторонний обмен статусами с CRM. Если готового коннектора нет, почти любой сервис можно подключить как SMTP-отправитель. Конкретную рекомендацию даём после аудита.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Какие DNS-записи нужны и кто их настраивает?</summary>
+        <p>Минимум — SPF, DKIM и DMARC, плюс домен для обработки возвратов. Записи выдаёт сервис рассылок, добавляются они в DNS домена у регистратора или хостера. Это разовая работа, которую мы берём на себя, чтобы не задеть рабочую почту компании.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Сколько писем в сутки можно отправить?</summary>
+        <p>Облачный Битрикс24 ограничивает порядка 1000 писем в сутки на портал, остальное уходит в очередь на следующий день. В коробочной версии портальных ограничений нет — остаётся лимит сервиса отправки. Размер базы при этом не ограничен.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Что будет, если рассылать по холодной или купленной базе?</summary>
+        <p>Резкий рост жалоб и возвратов, падение репутации домена и IP, попадание в чёрные списки. Пострадает не только маркетинг, но и обычная почта компании. Мы работаем только с базой, собранной с согласия получателей.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Настроим email-маркетинг в Битрикс24 с нормальной доставляемостью</h2>
+        <p>Подберём сервис рассылок, настроим домен, SPF, DKIM и DMARC, подключим отправителя к CRM-маркетингу и проведём первые рассылки на прогреве. Дальше — сопровождаем и следим за репутацией.</p>
+      </div>
+      <a href="contacts.html#form" class="btn btn--primary">Обсудить рассылки</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:16px;">
+          <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+          <span class="brand__name">АйТи Аналитикс</span>
+        </a>
+        <p>Внедрение Битрикс24 и систем телефонии. Ваш партнёр в мире Битрикс24 с 2011 года.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="bitrix24.html">Битрикс24</a></li>
+          <li><a href="telephony.html">Телефония</a></li>
+          <li><a href="ai.html">ИИ-решения</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="partners.html">Партнёрам</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+375445057799">+375 (44) 505-77-99</a></li>
+          <li><a href="mailto:sales@it-a.by">sales@it-a.by</a></li>
+          <li><a href="contacts.html#map">г. Минск, ул. Лукьяновича, 10к7</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Мы на связи</h4>
+        <div class="social-row">
+          <a href="https://www.instagram.com/it_a.by/" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="https://t.me/ita_by_bitrix" aria-label="Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2011–2026 АйТи Аналитикс. УНП 791048093</span>
+      <span>Все услуги: Битрикс24 · IP-телефония · Интеграции</span>
+      <span><a href="assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Политика конфиденциальности</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.by/b1536661/crm/site_button/loader_31_u35a1q.js');
+</script>
+</body>
+</html>

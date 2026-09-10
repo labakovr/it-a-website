@@ -576,6 +576,19 @@ p {
   margin-top: 1px;
 }
 
+.check-list li a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--green, #8fbf21);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  transition: color .15s ease;
+}
+
+.check-list li a:hover {
+  color: var(--green, #8fbf21);
+}
+
 .check-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

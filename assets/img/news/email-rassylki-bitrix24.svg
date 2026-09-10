@@ -1,0 +1,41 @@
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Почтовые рассылки из Битрикс24 через сервис транзакционных рассылок">
+  <rect width="1280" height="720" fill="#1d1d1b"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#8fbf21"/>
+  <text x="90" y="150" fill="#8fbf21" font-family="Nunito, 'Segoe UI', sans-serif" font-size="26" font-weight="800" letter-spacing="3">СТАТЬЯ · МАРКЕТИНГ</text>
+  <text x="90" y="240" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="72" font-weight="900">Почтовые рассылки</text>
+  <text x="90" y="320" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="72" font-weight="900">из Битрикс24</text>
+  <text x="92" y="380" fill="#b7b7b2" font-family="Nunito, 'Segoe UI', sans-serif" font-size="28" font-weight="700">Сервис рассылок · SPF · DKIM · DMARC · доставляемость</text>
+
+  <g transform="translate(90 430)" font-family="Nunito, 'Segoe UI', sans-serif">
+    <rect x="0" y="0" width="1100" height="210" rx="16" fill="#262622"/>
+
+    <rect x="28" y="30" width="300" height="150" rx="10" fill="#303029"/>
+    <text x="46" y="58" fill="#8fbf21" font-size="15" font-weight="800">Битрикс24 · CRM-маркетинг</text>
+    <rect x="46" y="78" width="240" height="12" rx="6" fill="#3d3d35"/>
+    <rect x="46" y="100" width="200" height="12" rx="6" fill="#3d3d35"/>
+    <rect x="46" y="130" width="150" height="34" rx="8" fill="#8fbf21"/>
+    <text x="121" y="152" fill="#1d1d1b" font-size="12" font-weight="900" text-anchor="middle">Разослать</text>
+
+    <path d="M348 105 L432 105" stroke="#8fbf21" stroke-width="5"/>
+    <path d="M424 92 L448 105 L424 118 Z" fill="#8fbf21"/>
+    <text x="390" y="96" fill="#b7b7b2" font-size="11" font-weight="700" text-anchor="middle">SMTP</text>
+
+    <rect x="470" y="30" width="330" height="150" rx="10" fill="#303029"/>
+    <text x="490" y="58" fill="#8fbf21" font-size="15" font-weight="800">Сервис рассылок</text>
+    <text x="490" y="82" fill="#b7b7b2" font-size="12" font-weight="700">почта клиента + домен</text>
+    <rect x="490" y="96" width="128" height="26" rx="6" fill="#37372f"/>
+    <text x="554" y="113" fill="#cfe39a" font-size="11" font-weight="800" text-anchor="middle">SPF · DKIM</text>
+    <rect x="626" y="96" width="128" height="26" rx="6" fill="#37372f"/>
+    <text x="690" y="113" fill="#cfe39a" font-size="11" font-weight="800" text-anchor="middle">DMARC</text>
+    <rect x="490" y="130" width="264" height="26" rx="6" fill="#37372f"/>
+    <text x="622" y="147" fill="#b7b7b2" font-size="11" font-weight="700" text-anchor="middle">репутация · прогрев · статистика</text>
+
+    <path d="M820 105 L904 105" stroke="#8fbf21" stroke-width="5"/>
+    <path d="M896 92 L920 105 L896 118 Z" fill="#8fbf21"/>
+
+    <rect x="940" y="30" width="132" height="150" rx="10" fill="#303029"/>
+    <text x="1006" y="58" fill="#8fbf21" font-size="15" font-weight="800" text-anchor="middle">Inbox</text>
+    <text x="1006" y="120" fill="#8fbf21" font-size="44" font-weight="900" text-anchor="middle">✓</text>
+    <text x="1006" y="150" fill="#b7b7b2" font-size="11" font-weight="700" text-anchor="middle">не спам</text>
+  </g>
+</svg>

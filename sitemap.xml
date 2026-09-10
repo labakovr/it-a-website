@@ -101,6 +101,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://it-a.by/news-email-rassylki-bitrix24.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://it-a.by/news-administrirovanie-korobki-bitrix24.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
