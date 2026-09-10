@@ -2984,3 +2984,29 @@ body.show-diff-only .compare-table--full tbody tr[data-uniform="true"] {
 .compare-table--bi td:first-child {
   color: var(--dark);
 }
+
+/* ===== Кейс: реальные скриншоты из портала клиента ===== */
+
+.article-shot__frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.case-prose h3 {
+  font-size: 20px;
+  margin: 34px 0 12px;
+  color: var(--dark);
+}
+
+.case-prose h3:first-child {
+  margin-top: 0;
+}
+
+.case-source {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(29, 29, 27, 0.12);
+  font-size: 14px;
+  color: var(--text-soft);
+}
