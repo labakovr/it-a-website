@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Администрирование и поддержка коробочных порталов Битрикс24: регламент, обновления, бэкапы, сервер | АйТи Аналитикс</title>
+<meta name="description" content="Что регламентно нужно делать при обслуживании коробочного Битрикс24: обновления платформы и ядра, резервное копирование, cron и агенты, мониторинг сервера, безопасность и продление ключа. И чем администрирование коробки отличается от облака.">
+<link rel="canonical" href="https://it-a.by/news-administrirovanie-korobki-bitrix24.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="АйТи Аналитикс">
+<meta property="og:title" content="Администрирование и поддержка коробочных порталов Битрикс24">
+<meta property="og:description" content="Регламентные работы по коробочному Битрикс24: обновления, бэкапы, cron и агенты, мониторинг сервера, безопасность. Чем обслуживание коробки отличается от облака.">
+<meta property="og:url" content="https://it-a.by/news-administrirovanie-korobki-bitrix24.html">
+<meta property="og:image" content="https://it-a.by/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Администрирование и поддержка коробочных порталов Битрикс24">
+<meta name="twitter:description" content="Регламентные работы по коробочному Битрикс24: обновления, бэкапы, cron и агенты, мониторинг сервера, безопасность. Чем обслуживание коробки отличается от облака.">
+<meta name="twitter:image" content="https://it-a.by/assets/img/og-image.png">
+<meta name="theme-color" content="#1d1d1b">
+<link rel="icon" href="assets/img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Администрирование и поддержка коробочных порталов Битрикс24: регламент, обновления, бэкапы, сервер",
+  "description": "Регламентные работы по обслуживанию коробочного Битрикс24: обновления платформы и ядра, резервное копирование, cron и агенты, мониторинг сервера, безопасность, продление лицензионного ключа. Чем администрирование коробки отличается от облака.",
+  "image": "https://it-a.by/assets/img/og-image.png",
+  "author": { "@type": "Organization", "name": "АйТи Аналитикс", "url": "https://it-a.by/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "АйТи Аналитикс",
+    "logo": { "@type": "ImageObject", "url": "https://it-a.by/assets/img/logo-mark.png" }
+  },
+  "datePublished": "2026-09-10",
+  "dateModified": "2026-09-10",
+  "mainEntityOfPage": "https://it-a.by/news-administrirovanie-korobki-bitrix24.html",
+  "about": "Администрирование и техническая поддержка коробочной версии Битрикс24"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://it-a.by/" },
+    { "@type": "ListItem", "position": 2, "name": "Новости", "item": "https://it-a.by/news.html" },
+    { "@type": "ListItem", "position": 3, "name": "Администрирование коробочных порталов Битрикс24", "item": "https://it-a.by/news-administrirovanie-korobki-bitrix24.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+      <span class="brand__name">АйТи Аналитикс</span>
+    </a>
+    <nav class="nav">
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="bitrix24.html" class="nav-link">Битрикс24</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по Битрикс24" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="features.html">Возможности Битрикс24</a>
+          <a href="licenses.html">Лицензии Битрикс24</a>
+          <a href="bitrix24.html">Внедрение Битрикс24</a>
+          <a href="bitrix24.html">Сопровождение Битрикс24</a>
+          <a href="education.html">Обучение Битрикс24</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="telephony.html" class="nav-link">Телефония</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по телефонии" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="telephony.html">Внедрение IP-телефонии</a>
+          <a href="telephony.html">Настройка АТС</a>
+          <a href="telephony.html">Сопровождение телефонии</a>
+          <a href="catalog/index.html">Каталог оборудования</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="ai.html" class="nav-link">ИИ-решения</a>
+          <button type="button" class="nav-caret" aria-label="Показать ИИ-решения" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="ai.html">Внедрение ИИ-ассистентов</a>
+          <a href="ai.html">Автоматизация процессов</a>
+          <a href="ai.html">Обучение и сопровождение</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="portfolio.html" class="nav-link">Портфолио</a>
+          <button type="button" class="nav-caret" aria-label="Показать разделы портфолио" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="cases.html">Кейсы</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="certificates.html">Сертификаты</a>
+          <a href="about.html">О нас</a>
+        </div>
+      </div>
+      <a href="news.html" class="is-active">Новости</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:+375445057799" class="header__phone">+375 (44) 505-77-99</a>
+      <a href="contacts.html#form" class="btn btn--primary btn--sm">Заказать звонок</a>
+      <button class="nav-toggle" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">Главная</a><span class="sep">/</span><a href="news.html">Новости</a><span class="sep">/</span><span>Администрирование коробочных порталов Битрикс24</span></div>
+    <div class="eyebrow">Статья · Сопровождение · 10 сентября 2026</div>
+    <h1>Администрирование и поддержка коробочных порталов Битрикс24</h1>
+    <p class="hero__lead">Коробочный Битрикс24 живёт на вашем сервере, и всё, что в облаке делает вендор — обновления, резервные копии, защита, стабильность — здесь становится вашей зоной ответственности. Если этим никто не занимается системно, портал не ломается сразу: он тихо накапливает проблемы, а потом однажды не открывается, теряет данные или отказывается обновляться. Разбираем, что нужно делать регламентно и чем обслуживание коробки принципиально отличается от облака.</p>
+    <div class="hero__actions">
+      <a href="#reglament" class="btn btn--outline-dark">Сразу к регламенту работ →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="case-facts reveal">
+      <div class="card">
+        <div class="eyebrow">Услуга</div>
+        <strong>Администрирование и техподдержка коробочного Битрикс24</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Что обслуживаем</div>
+        <strong>Портал · сервер · база данных · обновления · бэкапы · безопасность</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Формат</div>
+        <strong>Регламентные работы по расписанию + реакция на инциденты</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Кому актуально</div>
+        <strong>Всем, у кого Битрикс24 стоит на своём сервере, а выделенного администратора нет</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">С чего начать</div>
+      <h2>Коробка ≠ облако: что меняется в обслуживании</h2>
+      <p>В облаке вы платите за подписку и не думаете про сервер — всё остальное делает 1С-Битрикс. В коробке вы получаете исходный код, полный контроль и данные на своём железе, но вместе с ними — весь эксплуатационный труд.</p>
+    </div>
+    <div class="compare-table-wrap reveal">
+      <table class="compare-table compare-table--bi">
+        <thead>
+          <tr>
+            <th>Что именно</th>
+            <th>Облако Битрикс24</th>
+            <th>Коробочный портал</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Сервер и окружение</td>
+            <td class="ct-yes">Вендора, вам не видно</td>
+            <td>Ваш: ОС, PHP, MySQL/MariaDB, веб-сервер, память, диск — настраиваете и обновляете сами</td>
+          </tr>
+          <tr>
+            <td>Обновления платформы</td>
+            <td class="ct-yes">Приезжают автоматически</td>
+            <td>Ставите вручную; крупные версии ядра — отдельный проект с тестированием</td>
+          </tr>
+          <tr>
+            <td>Резервные копии</td>
+            <td class="ct-yes">Делаются автоматически, восстановление по запросу</td>
+            <td>Настраиваете, хранение вне сервера и проверку восстановления организуете сами</td>
+          </tr>
+          <tr>
+            <td>Доступность и аптайм</td>
+            <td class="ct-yes">Гарантирует вендор</td>
+            <td>Отвечаете вы: питание, каналы, мониторинг, реакция ночью</td>
+          </tr>
+          <tr>
+            <td>Безопасность периметра</td>
+            <td class="ct-yes">WAF, SSL, дата-центры вендора</td>
+            <td>Проактивная защита, файрвол, SSL, обновления ОС, патчи — на вас</td>
+          </tr>
+          <tr>
+            <td>Фоновые задачи (агенты, очереди, почта)</td>
+            <td class="ct-yes">Работают сами</td>
+            <td>Нужно вынести на cron и следить, что задания реально выполняются</td>
+          </tr>
+          <tr>
+            <td>Лицензия</td>
+            <td>Подписка: перестал платить — доступ закрылся</td>
+            <td>Куплена бессрочно, но ключ обновлений и техподдержки продлевается ежегодно</td>
+          </tr>
+          <tr>
+            <td>Техподдержка вендора</td>
+            <td class="ct-yes">Входит в коммерческий тариф</td>
+            <td>Только при активном ключе и после установки всех стабильных обновлений</td>
+          </tr>
+          <tr>
+            <td>Доработки</td>
+            <td>Через REST API и приложения Маркета</td>
+            <td class="ct-yes">Плюс свой код в <code>/local</code>, события D7, любые интеграции на сервере</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="case-prose reveal">
+      <p>Вывод простой: коробку выбирают ради контроля, требований по хранению данных и глубоких доработок — но этот контроль требует постоянного внимания. Дальше — что именно и с какой периодичностью.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Роли</div>
+      <h2>Кто за что отвечает</h2>
+      <p>Частая причина проблем — размытая ответственность: все думают, что «сервером занимается кто-то ещё».</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">1С-Битрикс (вендор)</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Выпускает обновления модулей и новые версии ядра</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Закрывает уязвимости платформы, публикует бюллетени безопасности</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Консультирует по продукту при активном ключе</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Не отвечает за ваш сервер, данные и работоспособность портала</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Администратор сервера / партнёр</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Держит в порядке ОС, PHP, БД, веб-сервер, кэш, cron</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Ставит обновления, делает и проверяет резервные копии</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Мониторит нагрузку, место, доступность, реагирует на инциденты</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Настраивает безопасность, права, интеграции и доработки</li>
+        </ul>
+      </div>
+    </div>
+    <div class="case-prose reveal">
+      <p>Внутри компании обычно остаётся <strong>бизнес-администратор портала</strong> — тот, кто заводит и отключает сотрудников, настраивает воронки, права, роботов и бизнес-процессы. Это отдельная роль: она про настройку CRM, а не про сервер. Сопровождение коробки закрывает именно техническую часть, а по бизнес-настройке помогает по запросу.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reglament">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Главное</div>
+      <h2>Регламентные работы по коробочному Битрикс24</h2>
+      <p>Это не «зайти раз в год, когда что-то сломалось», а расписание. Ниже — рабочий регламент, который мы применяем на сопровождении. Периодичность можно подстроить под нагрузку и критичность портала.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <svg viewBox="0 0 860 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Регламент обслуживания коробочного Битрикс24: ежедневные, еженедельные, ежемесячные, ежеквартальные и ежегодные работы">
+          <rect width="860" height="470" fill="#f7f7f5"/>
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <text x="32" y="44" fill="#1d1d1b" font-size="15" font-weight="900">Календарь сопровождения</text>
+
+            <rect x="32" y="60" width="796" height="72" rx="10" fill="#fff" stroke="#e2e2e0"/>
+            <rect x="32" y="60" width="8" height="72" rx="4" fill="#8fbf21"/>
+            <text x="52" y="84" fill="#1d1d1b" font-size="11" font-weight="900">ЕЖЕДНЕВНО</text>
+            <text x="52" y="104" fill="#55564f" font-size="10">Доступность портала и сервисов · успешность ночного бэкапа · свободное место на диске</text>
+            <text x="52" y="120" fill="#55564f" font-size="10">Очередь исходящей почты · выполнение cron-заданий и агентов · нагрузка CPU / RAM / БД</text>
+
+            <rect x="32" y="142" width="796" height="72" rx="10" fill="#fff" stroke="#e2e2e0"/>
+            <rect x="32" y="142" width="8" height="72" rx="4" fill="#7fae1e"/>
+            <text x="52" y="166" fill="#1d1d1b" font-size="11" font-weight="900">ЕЖЕНЕДЕЛЬНО</text>
+            <text x="52" y="186" fill="#55564f" font-size="10">Разбор журнала ошибок PHP и медленных запросов · журнал вторжений и попытки входа</text>
+            <text x="52" y="202" fill="#55564f" font-size="10">Накопленные обновления модулей — на тестовом контуре · рост размера БД и таблиц лога</text>
+
+            <rect x="32" y="224" width="796" height="72" rx="10" fill="#fff" stroke="#e2e2e0"/>
+            <rect x="32" y="224" width="8" height="72" rx="4" fill="#6b9d1b"/>
+            <text x="52" y="248" fill="#1d1d1b" font-size="11" font-weight="900">ЕЖЕМЕСЯЧНО</text>
+            <text x="52" y="268" fill="#55564f" font-size="10">Обновление платформы на проде после теста · оптимизация таблиц БД · чистка логов и старых бэкапов</text>
+            <text x="52" y="284" fill="#55564f" font-size="10">Отчёт «Монитор производительности» · ревизия прав и уволенных · сроки SSL · апдейт документации</text>
+
+            <rect x="32" y="306" width="796" height="72" rx="10" fill="#fff" stroke="#e2e2e0"/>
+            <rect x="32" y="306" width="8" height="72" rx="4" fill="#4c952e"/>
+            <text x="52" y="330" fill="#1d1d1b" font-size="11" font-weight="900">ЕЖЕКВАРТАЛЬНО</text>
+            <text x="52" y="350" fill="#55564f" font-size="10">Аудит безопасности: сканер, уровень проактивной защиты, охват 2FA · тестовое восстановление из бэкапа</text>
+            <text x="52" y="366" fill="#55564f" font-size="10">План обновления ядра · апгрейд ОС / PHP / MySQL / веб-сервера до поддерживаемых версий</text>
+
+            <rect x="32" y="388" width="796" height="60" rx="10" fill="#1d1d1b"/>
+            <rect x="32" y="388" width="8" height="60" rx="4" fill="#8fbf21"/>
+            <text x="52" y="412" fill="#8fbf21" font-size="11" font-weight="900">ЕЖЕГОДНО</text>
+            <text x="52" y="432" fill="#ececec" font-size="10">Продление лицензионного ключа (обновления + техподдержка) · пересмотр редакции и числа пользователей · ревизия архитектуры</text>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Регламент обслуживания коробочного Битрикс24 по периодичности. Состав работ подстраивается под нагрузку и критичность портала.</figcaption>
+    </figure>
+
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Ежедневно</h4>
+        <p>Проверяем, что портал открывается и отвечает быстро, ночной бэкап прошёл, на диске есть запас места, исходящая почта не встала, cron отрабатывает агенты и очереди. Смотрим нагрузку на процессор, память и базу.</p>
+      </div>
+      <div class="step">
+        <h4>Еженедельно</h4>
+        <p>Разбираем журнал ошибок PHP и лог медленных запросов, проверяем журнал вторжений и подозрительные входы, накатываем накопившиеся обновления модулей на тестовый контур, следим за ростом базы и служебных таблиц.</p>
+      </div>
+      <div class="step">
+        <h4>Ежемесячно</h4>
+        <p>После проверки на тесте обновляем платформу на проде, оптимизируем таблицы БД, чистим старые логи, кэш и просроченные бэкапы, читаем отчёт «Монитор производительности», сверяем список доступов с реальными сотрудниками, проверяем сроки SSL-сертификатов.</p>
+      </div>
+      <div class="step">
+        <h4>Ежеквартально</h4>
+        <p>Проводим аудит безопасности (сканер, уровень проактивной защиты, охват двухфакторной аутентификации), делаем тестовое восстановление из резервной копии на отдельном сервере, планируем обновление ядра, поднимаем версии ОС, PHP, MySQL и веб-сервера до поддерживаемых.</p>
+      </div>
+      <div class="step">
+        <h4>Ежегодно</h4>
+        <p>Продлеваем лицензионный ключ (это открывает обновления и техподдержку на следующий год), пересматриваем редакцию и число пользователей, оцениваем, не пора ли масштабировать инфраструктуру или переходить на кластер.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Регламент · деталь 1</div>
+      <h2>Обновления платформы и ядра</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>В коробке есть два разных процесса. <strong>Обновления модулей</strong> — регулярные исправления и мелкие улучшения, ставятся через «Обновление платформы» в административной панели. <strong>Переход на новую версию ядра</strong> (например, смена мажорной версии главного модуля) — это уже проект: меняются требования к PHP и БД, могут отвалиться старые доработки и модули Маркета.</p>
+      <p>Правильный порядок один и тот же: сначала свежий бэкап, потом установка на тестовой копии портала, проверка ключевых сценариев (CRM, бизнес-процессы, телефония, интеграции), и только затем — прод в нерабочее время с готовым планом отката. Обновляться «сразу на боевом» — самый частый способ уронить портал на день.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <svg viewBox="0 0 860 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема обновления коробочного Битрикс24 через тестовый контур: бэкап, установка на копии, проверка, обновление боевого портала с планом отката">
+          <rect width="860" height="430" fill="#f4f6f2"/>
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="28" y="150" width="150" height="120" rx="10" fill="#fff" stroke="#e2e2e0"/>
+            <text x="103" y="200" fill="#1d1d1b" font-size="12" font-weight="900" text-anchor="middle">Боевой</text>
+            <text x="103" y="218" fill="#1d1d1b" font-size="12" font-weight="900" text-anchor="middle">портал</text>
+            <text x="103" y="240" fill="#8a8a86" font-size="9" text-anchor="middle">версия N</text>
+
+            <path d="M182 210 L232 210" stroke="#4c952e" stroke-width="3"/><path d="M226 202 L242 210 L226 218 Z" fill="#4c952e"/>
+            <text x="212" y="196" fill="#4c952e" font-size="9" font-weight="800" text-anchor="middle">бэкап</text>
+
+            <rect x="246" y="130" width="170" height="160" rx="10" fill="#fff" stroke="#8fbf21" stroke-width="2"/>
+            <text x="331" y="160" fill="#1d1d1b" font-size="12" font-weight="900" text-anchor="middle">Тестовая копия</text>
+            <g font-size="9" fill="#55564f">
+              <text x="262" y="184">1. Ставим обновление</text>
+              <text x="262" y="204">2. Проверяем CRM и БП</text>
+              <text x="262" y="224">3. Телефония, интеграции</text>
+              <text x="262" y="244">4. Доработки из /local</text>
+              <text x="262" y="264">5. Скорость и ошибки</text>
+            </g>
+
+            <path d="M420 210 L470 210" stroke="#4c952e" stroke-width="3"/><path d="M464 202 L480 210 L464 218 Z" fill="#4c952e"/>
+            <text x="445" y="196" fill="#4c952e" font-size="9" font-weight="800" text-anchor="middle">ОК</text>
+
+            <rect x="484" y="150" width="150" height="120" rx="10" fill="#eef4e2" stroke="#8fbf21"/>
+            <text x="559" y="196" fill="#1d1d1b" font-size="12" font-weight="900" text-anchor="middle">Боевой</text>
+            <text x="559" y="214" fill="#1d1d1b" font-size="12" font-weight="900" text-anchor="middle">портал</text>
+            <text x="559" y="236" fill="#4c952e" font-size="9" font-weight="800" text-anchor="middle">версия N+1</text>
+
+            <path d="M559 286 C 559 330, 331 330, 331 300" stroke="#c0392b" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+            <path d="M325 306 L331 292 L338 306 Z" fill="#c0392b"/>
+            <text x="445" y="330" fill="#c0392b" font-size="9" font-weight="800" text-anchor="middle">план отката: восстановление из бэкапа</text>
+
+            <text x="28" y="52" fill="#1d1d1b" font-size="14" font-weight="900">Обновление — всегда через тест</text>
+            <text x="28" y="74" fill="#55564f" font-size="10">Прод обновляем в нерабочее время, с готовым бэкапом и планом возврата на предыдущую версию.</text>
+            <text x="28" y="92" fill="#8a8a86" font-size="10">Крупные версии ядра меняют требования к PHP и БД — их поднимаем заранее.</text>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Обновление коробочного портала через тестовый контур. Прод трогаем только после проверки на копии и с планом отката.</figcaption>
+    </figure>
+
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Что контролируем</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Активный лицензионный ключ — без него обновления не скачиваются</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Совместимость версий PHP и MySQL с новым ядром</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Поведение доработок в <code>/local</code> и платных модулей Маркета</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Резервная копия непосредственно перед установкой</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Чем грозит «не обновлять годами»</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Незакрытые уязвимости платформы</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Разрыв в версиях — обновиться одним шагом уже нельзя</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Новые модули и приложения требуют свежее ядро</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Мобильное приложение и десктоп теряют совместимость</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Регламент · деталь 2</div>
+      <h2>Резервное копирование и восстановление</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>В облаке бэкапы — забота вендора. В коробке резервное копирование нужно <strong>настроить, автоматизировать и регулярно проверять</strong>, иначе в момент аварии выясняется, что копий нет, они битые или лежат на том же диске, который отказал.</p>
+      <p>Рабочая схема: ежедневные копии базы и файлов плюс периодическая полная копия, хранение минимум в двух местах, одно из которых — <strong>вне сервера портала</strong> (другой хост, объектное хранилище, облако). Отдельно — периодическое тестовое восстановление на чистый сервер: это единственный способ убедиться, что копия рабочая и вы знаете, сколько времени займёт подъём.</p>
+      <p>Битрикс24 умеет делать резервные копии штатным модулем и через окружение BitrixVM. На больших порталах (десятки-сотни ГБ) штатный архиватор упирается в ресурсы — тогда переходят на копирование средствами БД и файловой системы по расписанию.</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Что входит</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Расписание копий: ежедневно инкремент, еженедельно — полная</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Хранение вне сервера портала и контроль глубины хранения</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Мониторинг: пришло ли уведомление об успешном бэкапе</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Ежеквартальный тест восстановления с замером времени</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Типичные ошибки</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Копии лежат на том же сервере и том же диске</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Никто ни разу не пробовал восстановиться</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Бэкап падает по нехватке места, а алерта нет</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">В копию не попадает папка <code>/upload</code> или база целиком</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Регламент · деталь 3</div>
+      <h2>Производительность, cron и мониторинг</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Главная особенность коробки, про которую забывают: <strong>агенты и очереди по умолчанию запускаются на «хитах»</strong> — то есть в момент, когда кто-то открывает страницу портала. Ночью посетителей нет — значит, не рассылаются письма, не выполняются отложенные бизнес-процессы, не работают задания Открытых линий. Правильно — вынести выполнение агентов и почты на <strong>cron</strong> и следить, что планировщик жив.</p>
+      <p>Дальше — стандартная эксплуатация под нагрузкой: кэширование (тегированный и управляемый кэш, композитный сайт), внешний кэш в Redis или Memcached, push-сервер на Node.js для мгновенных уведомлений и чатов, анализ медленных запросов, переиндексация поиска. Отчёт «Монитор производительности» показывает, где узкое место — конфигурация PHP, диск, база или код.</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Настраиваем и проверяем</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Выполнение агентов и отправка почты — через cron, а не на хитах</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Задания Открытых линий и очередей в планировщике</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">OPcache, memory_limit, внешний кэш Redis / Memcached</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Push-сервер, композитный кэш, актуальные индексы БД</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Мониторинг</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Доступность портала и время ответа (внешняя проверка)</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">CPU, память, свободное место на диске, рост базы</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Живой ли cron, не растёт ли очередь писем</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Отчёт «Монитор производительности» раз в месяц</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Регламент · деталь 4</div>
+      <h2>Безопасность коробочного портала</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Портал на своём сервере — это ваш периметр. У Битрикс24 есть встроенный модуль безопасности: <strong>проактивный фильтр (WAF)</strong>, защита от подбора паролей и перебора, журнал вторжений, контроль целостности файлов, одноразовые пароли и двухфакторная аутентификация, сканер безопасности. Всё это нужно включить, поднять до нужного уровня и регулярно просматривать отчёты.</p>
+      <p>Вторая половина — это сервер: своевременные обновления ОС и системного ПО, актуальные версии PHP, MySQL и веб-сервера, закрытые лишние порты, HTTPS с действующим сертификатом, ограничение доступа к административной части. И регулярная ревизия прав внутри портала: у уволенных сотрудников доступ должен закрываться сразу.</p>
+      <blockquote class="article-quote">
+        «Коробку часто ставят именно из-за требований к безопасности и хранению данных. Но безопасность — это не галочка при установке, а регламент: обновления, аудит, контроль доступа и проверенные бэкапы каждый месяц».
+        <cite>Команда «АйТи Аналитикс»</cite>
+      </blockquote>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Внутри портала</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Проактивная защита на рабочем уровне, включённый WAF</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Двухфакторная аутентификация, особенно для администраторов</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Журнал вторжений и сканер безопасности — раз в квартал</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Ревизия прав, групп и уволенных сотрудников</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">На уровне сервера</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Патчи ОС и системного ПО, поддерживаемые PHP и MySQL</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">HTTPS с автопродлением сертификата, редирект с http</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Файрвол, закрытые порты, ограничение доступа к админке</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Отдельные учётки для БД и приложения, без доступа root «для всего»</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Честно о рисках</div>
+      <h2>Что бывает, когда коробку пускают на самотёк</h2>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Не продлён ключ — обновления и техподдержка недоступны, часть функций уходит в ограниченный режим</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Агенты не вынесены на cron — ночью не идут письма, роботы и бизнес-процессы «залипают»</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Диск забит логами, кэшем и старыми бэкапами — портал внезапно встаёт</li>
+        </ul>
+      </div>
+      <div class="card">
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Бэкапов нет или они не проверялись — авария означает потерю данных</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Ядро устарело на несколько версий — обновиться и подключить новое уже нельзя без миграции</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Старый PHP и ОС без патчей — известные уязвимости и падение производительности</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как мы работаем</div>
+      <h2>Что входит в наше сопровождение коробки Битрикс24</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Аудит и приёмка</h4>
+        <p>Смотрим сервер, версии, конфигурацию, состояние бэкапов, безопасность и доработки. Фиксируем риски и приводим портал к рабочему состоянию.</p>
+      </div>
+      <div class="step">
+        <h4>Настройка регламента</h4>
+        <p>Настраиваем автобэкап с хранением вне сервера, cron для агентов и почты, мониторинг доступности и ресурсов, оповещения.</p>
+      </div>
+      <div class="step">
+        <h4>Плановые работы</h4>
+        <p>Ведём портал по расписанию из этой статьи: ежедневный контроль, еженедельный разбор, ежемесячные обновления и оптимизация.</p>
+      </div>
+      <div class="step">
+        <h4>Тестовый контур</h4>
+        <p>Держим копию портала для проверки обновлений и доработок, чтобы боевой Битрикс24 не трогать вслепую.</p>
+      </div>
+      <div class="step">
+        <h4>Обновления и безопасность</h4>
+        <p>Ставим обновления модулей, планируем переходы на новое ядро, проводим ежеквартальный аудит безопасности и тест восстановления.</p>
+      </div>
+      <div class="step">
+        <h4>Реакция на инциденты</h4>
+        <p>Портал не открывается, тормозит, не уходит почта — разбираемся по согласованному времени реакции, с приоритетом по критичности.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Возьмём ваш коробочный Битрикс24 на сопровождение</h2>
+        <p>Проведём аудит сервера и портала, настроим бэкапы, cron и мониторинг, дальше — плановые работы по регламенту и реакция на инциденты. Облачный портал тоже сопровождаем — по бизнес-настройке и доработкам.</p>
+      </div>
+      <a href="contacts.html#form" class="btn btn--primary">Обсудить сопровождение</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:16px;">
+          <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+          <span class="brand__name">АйТи Аналитикс</span>
+        </a>
+        <p>Внедрение Битрикс24 и систем телефонии. Ваш партнёр в мире Битрикс24 с 2011 года.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="bitrix24.html">Битрикс24</a></li>
+          <li><a href="telephony.html">Телефония</a></li>
+          <li><a href="ai.html">ИИ-решения</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="partners.html">Партнёрам</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+375445057799">+375 (44) 505-77-99</a></li>
+          <li><a href="mailto:sales@it-a.by">sales@it-a.by</a></li>
+          <li><a href="contacts.html#map">г. Минск, ул. Лукьяновича, 10к7</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Мы на связи</h4>
+        <div class="social-row">
+          <a href="https://www.instagram.com/it_a.by/" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="https://t.me/ita_by_bitrix" aria-label="Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2011–2026 АйТи Аналитикс. УНП 791048093</span>
+      <span>Все услуги: Битрикс24 · IP-телефония · Интеграции</span>
+      <span><a href="assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Политика конфиденциальности</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.by/b1536661/crm/site_button/loader_31_u35a1q.js');
+</script>
+</body>
+</html>
