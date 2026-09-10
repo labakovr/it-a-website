@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Интеграция сайта с Битрикс24: формы, заказы интернет-магазина и виджет Открытых линий | АйТи Аналитикс</title>
+<meta name="description" content="Как связать сайт на любой CMS с Битрикс24: движки и способы интеграции, передача заявок с форм, заказов из интернет-магазина в CRM и установка виджета Открытых линий. Нюансы, ограничения и что это даёт бизнесу.">
+<link rel="canonical" href="https://it-a.by/news-integraciya-saytov-bitrix24.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="АйТи Аналитикс">
+<meta property="og:title" content="Интеграция сайта с Битрикс24: формы, заказы интернет-магазина и виджет Открытых линий">
+<meta property="og:description" content="С какими CMS интегрируется Битрикс24 и каким образом, передача форм и заказов в CRM, виджет Открытых линий на сайте. Нюансы и что даёт интеграция.">
+<meta property="og:url" content="https://it-a.by/news-integraciya-saytov-bitrix24.html">
+<meta property="og:image" content="https://it-a.by/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Интеграция сайта с Битрикс24: формы, заказы интернет-магазина и виджет Открытых линий">
+<meta name="twitter:description" content="С какими CMS интегрируется Битрикс24 и каким образом, передача форм и заказов в CRM, виджет Открытых линий на сайте. Нюансы и что даёт интеграция.">
+<meta name="twitter:image" content="https://it-a.by/assets/img/og-image.png">
+<meta name="theme-color" content="#1d1d1b">
+<link rel="icon" href="assets/img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Интеграция сайта с Битрикс24: формы, заказы интернет-магазина и виджет Открытых линий",
+  "description": "С какими CMS интегрируется Битрикс24 и каким образом, передача заявок с форм и заказов из интернет-магазина в CRM, установка виджета Открытых линий на сайт. Нюансы, ограничения и польза для бизнеса.",
+  "image": "https://it-a.by/assets/img/og-image.png",
+  "author": { "@type": "Organization", "name": "АйТи Аналитикс", "url": "https://it-a.by/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "АйТи Аналитикс",
+    "logo": { "@type": "ImageObject", "url": "https://it-a.by/assets/img/logo-mark.png" }
+  },
+  "datePublished": "2026-09-10",
+  "dateModified": "2026-09-10",
+  "mainEntityOfPage": "https://it-a.by/news-integraciya-saytov-bitrix24.html",
+  "about": "Интеграция сайтов и интернет-магазинов с Битрикс24"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://it-a.by/" },
+    { "@type": "ListItem", "position": 2, "name": "Новости", "item": "https://it-a.by/news.html" },
+    { "@type": "ListItem", "position": 3, "name": "Интеграция сайта с Битрикс24", "item": "https://it-a.by/news-integraciya-saytov-bitrix24.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+      <span class="brand__name">АйТи Аналитикс</span>
+    </a>
+    <nav class="nav">
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="bitrix24.html" class="nav-link">Битрикс24</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по Битрикс24" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="features.html">Возможности Битрикс24</a>
+          <a href="licenses.html">Лицензии Битрикс24</a>
+          <a href="bitrix24.html">Внедрение Битрикс24</a>
+          <a href="bitrix24.html">Сопровождение Битрикс24</a>
+          <a href="education.html">Обучение Битрикс24</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="telephony.html" class="nav-link">Телефония</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по телефонии" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="telephony.html">Внедрение IP-телефонии</a>
+          <a href="telephony.html">Настройка АТС</a>
+          <a href="telephony.html">Сопровождение телефонии</a>
+          <a href="catalog/index.html">Каталог оборудования</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="ai.html" class="nav-link">ИИ-решения</a>
+          <button type="button" class="nav-caret" aria-label="Показать ИИ-решения" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="ai.html">Внедрение ИИ-ассистентов</a>
+          <a href="ai.html">Автоматизация процессов</a>
+          <a href="ai.html">Обучение и сопровождение</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="portfolio.html" class="nav-link">Портфолио</a>
+          <button type="button" class="nav-caret" aria-label="Показать разделы портфолио" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="cases.html">Кейсы</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="certificates.html">Сертификаты</a>
+          <a href="about.html">О нас</a>
+        </div>
+      </div>
+      <a href="news.html" class="is-active">Новости</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:+375445057799" class="header__phone">+375 (44) 505-77-99</a>
+      <a href="contacts.html#form" class="btn btn--primary btn--sm">Заказать звонок</a>
+      <button class="nav-toggle" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">Главная</a><span class="sep">/</span><a href="news.html">Новости</a><span class="sep">/</span><span>Интеграция сайта с Битрикс24</span></div>
+    <div class="eyebrow">Статья · Интеграции · 10 сентября 2026</div>
+    <h1>Интеграция сайта с Битрикс24: формы, заказы интернет-магазина и виджет Открытых линий</h1>
+    <p class="hero__lead">Пока сайт и CRM живут отдельно, заявки собираются на почте, в мессенджерах и в чьей-то голове, а рекламный бюджет тратится «в никуда». Интеграция закрывает разрыв: заявка с формы, заказ из интернет-магазина и сообщение в чат сразу попадают в Битрикс24 — с источником, менеджером и историей. Разбираем, с какими движками это работает, какими способами и на что смотреть при настройке.</p>
+    <div class="hero__actions">
+      <a href="#cms" class="btn btn--outline-dark">С какими CMS работает →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="case-facts reveal">
+      <div class="card">
+        <div class="eyebrow">Услуга</div>
+        <strong>Интеграция сайта и интернет-магазина с Битрикс24</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Что передаём в CRM</div>
+        <strong>Заявки с форм · заказы магазина · чаты с сайта</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Способы</div>
+        <strong>REST и вебхуки · CRM-формы · модули CMS · Открытые линии</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Кому актуально</div>
+        <strong>Всем, у кого заявки с сайта теряются между почтой, мессенджерами и таблицами</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Зачем это нужно</div>
+      <h2>Что даёт интеграция сайта с Битрикс24</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Сайт без интеграции — это «чёрный ящик»: посетитель оставил заявку, письмо ушло на общий ящик, кто-то его увидел (или нет), перезвонил через два часа (или на следующий день). Понять, из какой рекламы пришёл клиент и сколько таких заявок было за месяц, почти невозможно. Интеграция превращает сайт в полноценный канал продаж внутри CRM:</p>
+      <p>— каждая заявка, заказ и чат <strong>автоматически становится лидом или сделкой</strong> — ничего не теряется и не «зависает» в почте;<br>
+      — сделка сразу <strong>назначается на менеджера</strong> по правилам распределения, ему приходит уведомление, а клиенту — автоответ;<br>
+      — вместе с заявкой сохраняется <strong>источник и UTM-метки</strong>, поэтому в сквозной аналитике видно цепочку «реклама → заявка → продажа» и стоимость обращения по каждому каналу;<br>
+      — все касания клиента — форма, чат, письмо, звонок — собираются <strong>в одной карточке</strong>, менеджер видит контекст, а не переспрашивает;<br>
+      — включаются <strong>роботы и автоворонки</strong>: письмо и SMS клиенту, задача менеджеру, напоминание о неотвеченной заявке, догрев после отказа;<br>
+      — для интернет-магазина заказы обрабатываются <strong>прямо в CRM</strong> — со статусами, составом, повторными продажами и работой с брошенными корзинами.</p>
+      <blockquote class="article-quote">
+        «Самый частый эффект первых недель — не рост конверсии, а то, что перестают теряться заявки. Компания годами жила с мыслью, что „клиентов мало“, а по факту треть обращений просто не доходила до менеджера».
+        <cite>Команда «АйТи Аналитикс»</cite>
+      </blockquote>
+      <p>Технически всё сводится к трём задачам: передать в CRM <strong>формы сайта</strong>, передать <strong>заказы интернет-магазина</strong> и разместить на сайте <strong>виджет Открытых линий</strong> для чата. Ниже — как это устроено на разных движках.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="cms">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Движки</div>
+      <h2>С какими CMS интегрируется Битрикс24</h2>
+      <p>Короткий ответ — практически с любой. Вопрос не в том, «получится ли», а в том, каким способом и насколько глубоко: односторонняя отправка заявок или полноценный обмен каталогом и статусами.</p>
+    </div>
+    <div class="compare-table-wrap reveal">
+      <table class="compare-table compare-table--bi">
+        <thead>
+          <tr>
+            <th>Движок сайта</th>
+            <th>Как подключается</th>
+            <th>Готовый модуль</th>
+            <th>Обмен заказами и каталогом</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1С-Битрикс: Управление сайтом</td>
+            <td>Штатный модуль «Интеграция CRM», настройка в админке за несколько шагов</td>
+            <td class="ct-yes">Да, от вендора</td>
+            <td class="ct-yes">Полный двусторонний обмен: товары, цены, остатки, заказы, статусы</td>
+          </tr>
+          <tr>
+            <td>Битрикс24.Сайты и Магазины</td>
+            <td>Конструктор внутри Битрикс24 — формы и каталог связаны с CRM изначально</td>
+            <td class="ct-yes">Встроено</td>
+            <td class="ct-yes">Заказы и товары уже в CRM, настройка не требуется</td>
+          </tr>
+          <tr>
+            <td>Tilda</td>
+            <td>Штатная интеграция в панели Тильды: подключение по вебхуку Битрикс24</td>
+            <td class="ct-yes">Да, в интерфейсе Тильды</td>
+            <td>Формы и заказы каталога → лиды/сделки; синхронизации остатков нет</td>
+          </tr>
+          <tr>
+            <td>WordPress / WooCommerce</td>
+            <td>Плагин (форма-коннектор для Contact Form 7, WPForms, Gravity Forms; для WooCommerce — модуль отправки заказов)</td>
+            <td>Да, плагины из каталога</td>
+            <td>Заказы → сделки; глубина обмена зависит от плагина</td>
+          </tr>
+          <tr>
+            <td>OpenCart, CS-Cart, MODX, Joomla, Drupal</td>
+            <td>Модуль из Битрикс24.Маркет или подключение по REST / вебхуку</td>
+            <td>Часто есть на маркетплейсе</td>
+            <td>От отправки заказов до обмена статусами — по возможностям модуля</td>
+          </tr>
+          <tr>
+            <td>Самописный сайт, SPA на React / Vue</td>
+            <td>REST API Битрикс24: серверный запрос при отправке формы или оформлении заказа</td>
+            <td class="ct-no">Нет — пишется под проект</td>
+            <td>Любой сценарий, но реализуется разработчиком</td>
+          </tr>
+          <tr>
+            <td>Любой сайт через коннекторы</td>
+            <td>Сервисы-посредники: Albato, ApiX-Drive, Make — связывают формы и магазин с Битрикс24 без кода</td>
+            <td>Да, no-code</td>
+            <td>Базовая передача заявок и заказов; за сервис — абонплата</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="case-prose reveal">
+      <p>Отдельно стоит связка с <strong>1С</strong>: если каталог и заказы у вас ведутся в 1С, обмен обычно строят по цепочке «1С ↔ сайт ↔ Битрикс24» или «1С ↔ Битрикс24» напрямую, чтобы не было двух источников правды по остаткам и ценам.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Механика</div>
+      <h2>Способы интеграции: как это устроено</h2>
+      <p>Под капотом у всех модулей и плагинов — один из этих четырёх механизмов.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>1. Входящий вебхук + REST API</h4>
+        <p>Сайт при событии (отправлена форма, оформлен заказ) шлёт HTTP-запрос на адрес вебхука Битрикс24 — <code>crm.lead.add</code>, <code>crm.deal.add</code>, <code>crm.item.add</code>. Быстро и гибко, но односторонне, а ключ вебхука даёт доступ к CRM — его нельзя светить в браузерном коде.</p>
+      </div>
+      <div class="step">
+        <h4>2. CRM-формы Битрикс24</h4>
+        <p>Форма создаётся в Битрикс24, на сайт вставляется её скрипт. Данные сразу в CRM, «из коробки» — учёт UTM, капча, согласие на обработку данных, автоответ. Минус — это внешний блок, дизайн подстраивается ограниченно.</p>
+      </div>
+      <div class="step">
+        <h4>3. Модуль или приложение из Битрикс24.Маркет</h4>
+        <p>Готовый коннектор для WordPress, Tilda, OpenCart, 1С-Битрикс. Подключается через OAuth, часто умеет двусторонний обмен статусами. Настройка — часы, а не дни; часть приложений требует подписку Маркет Плюс.</p>
+      </div>
+      <div class="step">
+        <h4>4. Обмен для интернет-магазинов</h4>
+        <p>Протокол коммерческой информации (CommerceML, «обмен с сайтом»). Для 1С-Битрикс — полная синхронизация: каталог, цены, остатки, заказы и их статусы ходят в обе стороны по расписанию.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Задача 1</div>
+      <h2>Формы сайта → CRM</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Формы обратной связи, заявки на расчёт, подписки, заказ звонка — всё это должно создавать в Битрикс24 лид или сделку с заполненными полями. Помимо имени и телефона в CRM передаются служебные данные: страница, с которой пришла заявка, UTM-метки, идентификатор посетителя для сквозной аналитики, отметка о согласии на обработку персональных данных.</p>
+      <p>Дальше срабатывает автоматика: заявка распределяется на свободного менеджера, ставится задача «связаться за 15 минут», клиенту уходит письмо-подтверждение, а при отсутствии реакции — эскалация руководителю.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <svg viewBox="0 0 860 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема: форма на сайте передаёт заявку в карточку лида Битрикс24 с источником, UTM-метками и ответственным менеджером">
+          <rect width="860" height="470" fill="#f7f7f5"/>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="24" y="40" width="360" height="390" rx="12" fill="#fff" stroke="#e2e2e0"/>
+            <rect x="24" y="40" width="360" height="34" rx="12" fill="#1d1d1b"/>
+            <rect x="24" y="60" width="360" height="14" fill="#1d1d1b"/>
+            <circle cx="44" cy="57" r="4" fill="#55564f"/><circle cx="60" cy="57" r="4" fill="#55564f"/><circle cx="76" cy="57" r="4" fill="#55564f"/>
+            <text x="200" y="61" fill="#ececec" font-size="10" font-weight="700" text-anchor="middle">ваш-сайт.by/uslugi</text>
+
+            <text x="48" y="112" fill="#1d1d1b" font-size="15" font-weight="900">Оставьте заявку</text>
+            <text x="48" y="132" fill="#55564f" font-size="10">Перезвоним в течение 15 минут</text>
+
+            <rect x="48" y="146" width="312" height="34" rx="6" fill="#f2f2ef" stroke="#e2e2e0"/>
+            <text x="60" y="167" fill="#8a8a86" font-size="11">Имя</text>
+            <rect x="48" y="188" width="312" height="34" rx="6" fill="#f2f2ef" stroke="#e2e2e0"/>
+            <text x="60" y="209" fill="#8a8a86" font-size="11">Телефон</text>
+            <rect x="48" y="230" width="312" height="34" rx="6" fill="#f2f2ef" stroke="#e2e2e0"/>
+            <text x="60" y="251" fill="#8a8a86" font-size="11">Комментарий</text>
+
+            <rect x="48" y="278" width="13" height="13" rx="3" fill="#8fbf21"/>
+            <text x="69" y="289" fill="#55564f" font-size="9.5">Согласен на обработку персональных данных</text>
+
+            <rect x="48" y="304" width="312" height="40" rx="8" fill="#8fbf21"/>
+            <text x="204" y="329" fill="#1d1d1b" font-size="12" font-weight="900" text-anchor="middle">Отправить заявку</text>
+
+            <text x="48" y="380" fill="#a0a09b" font-size="8.5">скрытые поля: utm_source=google · utm_campaign=uslugi</text>
+            <text x="48" y="394" fill="#a0a09b" font-size="8.5">страница: /uslugi · client_id: 44219.83</text>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <path d="M392 235 L468 235" stroke="#4c952e" stroke-width="3"/>
+            <path d="M462 227 L478 235 L462 243 Z" fill="#4c952e"/>
+            <text x="430" y="224" fill="#4c952e" font-size="9" font-weight="800" text-anchor="middle">REST</text>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="486" y="40" width="350" height="390" rx="12" fill="#fff" stroke="#e2e2e0"/>
+            <rect x="486" y="40" width="350" height="34" rx="12" fill="#1d1d1b"/>
+            <rect x="486" y="60" width="350" height="14" fill="#1d1d1b"/>
+            <text x="504" y="61" fill="#8fbf21" font-size="10" font-weight="800">Битрикс24 · CRM</text>
+            <rect x="740" y="48" width="84" height="18" rx="9" fill="#8fbf21"/>
+            <text x="782" y="61" fill="#1d1d1b" font-size="9" font-weight="800" text-anchor="middle">Новый лид</text>
+
+            <text x="506" y="100" fill="#1d1d1b" font-size="14" font-weight="900">Ирина Ковалёва</text>
+            <text x="506" y="118" fill="#55564f" font-size="10">Лид #10842 · создан только что</text>
+
+            <line x1="506" y1="132" x2="816" y2="132" stroke="#eee"/>
+            <g font-size="10.5" font-weight="700">
+              <text x="506" y="154" fill="#8a8a86">Телефон</text><text x="816" y="154" fill="#1d1d1b" text-anchor="end">+375 29 6•• •• ••</text>
+              <text x="506" y="178" fill="#8a8a86">Источник</text><text x="816" y="178" fill="#1d1d1b" text-anchor="end">Сайт · форма «Услуги»</text>
+              <text x="506" y="202" fill="#8a8a86">Кампания</text><text x="816" y="202" fill="#1d1d1b" text-anchor="end">google / cpc / uslugi</text>
+              <text x="506" y="226" fill="#8a8a86">Ответственный</text><text x="816" y="226" fill="#1d1d1b" text-anchor="end">А. Петров (автораспределение)</text>
+              <text x="506" y="250" fill="#8a8a86">Согласие на обработку ПД</text><text x="816" y="250" fill="#4c952e" text-anchor="end">получено</text>
+            </g>
+
+            <line x1="506" y1="266" x2="816" y2="266" stroke="#eee"/>
+            <text x="506" y="288" fill="#1d1d1b" font-size="11" font-weight="800">Автоматика</text>
+            <g font-size="10">
+              <circle cx="512" cy="306" r="3" fill="#8fbf21"/><text x="524" y="310" fill="#55564f">Задача менеджеру: связаться за 15 минут</text>
+              <circle cx="512" cy="326" r="3" fill="#8fbf21"/><text x="524" y="330" fill="#55564f">Клиенту отправлено письмо-подтверждение</text>
+              <circle cx="512" cy="346" r="3" fill="#8fbf21"/><text x="524" y="350" fill="#55564f">Уведомление в чат отдела продаж</text>
+              <circle cx="512" cy="366" r="3" fill="#d9b23a"/><text x="524" y="370" fill="#55564f">Через 30 мин без звонка — эскалация РОПу</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Схема передачи заявки с формы сайта в карточку лида Битрикс24: контакт, источник, UTM и запуск автоматики. Пример условный.</figcaption>
+    </figure>
+
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Что настраиваем</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Сопоставление полей формы и полей CRM</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Проброс UTM и client_id скрытыми полями</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Правила распределения на менеджеров</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Автоответ клиенту и задача менеджеру</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Где чаще ошибаются</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Ключ вебхука вставлен в JS на странице — виден всем</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Не включён контроль дублей — один клиент плодит лиды</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Нет капчи — CRM засоряется спам-заявками</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">UTM не передаются — сквозная аналитика пустая</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Задача 2</div>
+      <h2>Заказы интернет-магазина → Битрикс24</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Здесь два уровня глубины. <strong>Простой</strong> — магазин при оформлении заказа отправляет в CRM сделку с составом, суммой и контактом покупателя; дальше менеджер ведёт её по воронке. <strong>Полный обмен</strong> (доступен для 1С-Битрикс и части модулей) — это ещё и синхронизация товарного каталога, цен и остатков, а также возврат статусов: менеджер меняет стадию сделки в Битрикс24 — статус заказа обновляется на сайте и в личном кабинете покупателя.</p>
+      <p>В сделку попадает то, что нужно для обработки: товарные позиции с количеством и ценой, способ доставки и оплаты, комментарий покупателя, адрес. На этих данных работают допродажи, повторные продажи и сценарии брошенной корзины.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <svg viewBox="0 0 860 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема: оформленный заказ интернет-магазина создаёт сделку в воронке Битрикс24 с товарами, суммой и статусом, который возвращается на сайт">
+          <rect width="860" height="470" fill="#f4f6f2"/>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="24" y="36" width="330" height="398" rx="12" fill="#fff" stroke="#e2e2e0"/>
+            <rect x="24" y="36" width="330" height="30" rx="12" fill="#1d1d1b"/>
+            <rect x="24" y="52" width="330" height="14" fill="#1d1d1b"/>
+            <text x="189" y="56" fill="#ececec" font-size="10" font-weight="700" text-anchor="middle">магазин.by / оформление заказа</text>
+
+            <text x="44" y="98" fill="#1d1d1b" font-size="13" font-weight="900">Заказ №4471</text>
+
+            <g font-size="10.5">
+              <rect x="44" y="112" width="290" height="30" rx="6" fill="#f7f7f5" stroke="#eee"/>
+              <text x="56" y="131" fill="#1d1d1b" font-weight="700">Смеситель Grohe BauEdge</text>
+              <text x="322" y="131" fill="#55564f" text-anchor="end">1 × 189 р.</text>
+              <rect x="44" y="148" width="290" height="30" rx="6" fill="#f7f7f5" stroke="#eee"/>
+              <text x="56" y="167" fill="#1d1d1b" font-weight="700">Гигиенический душ, хром</text>
+              <text x="322" y="167" fill="#55564f" text-anchor="end">2 × 64 р.</text>
+              <rect x="44" y="184" width="290" height="30" rx="6" fill="#f7f7f5" stroke="#eee"/>
+              <text x="56" y="203" fill="#1d1d1b" font-weight="700">Доставка по Минску</text>
+              <text x="322" y="203" fill="#55564f" text-anchor="end">15 р.</text>
+            </g>
+
+            <line x1="44" y1="230" x2="334" y2="230" stroke="#eee"/>
+            <text x="44" y="252" fill="#1d1d1b" font-size="12" font-weight="900">Итого</text>
+            <text x="334" y="252" fill="#1d1d1b" font-size="12" font-weight="900" text-anchor="end">332 р.</text>
+
+            <g font-size="10" fill="#55564f">
+              <text x="44" y="278">Покупатель: Сергей М.</text>
+              <text x="44" y="296">Оплата: картой онлайн · Доставка: курьер</text>
+            </g>
+
+            <rect x="44" y="316" width="290" height="26" rx="13" fill="#eef4e2" stroke="#cfe3a8"/>
+            <text x="189" y="333" fill="#4c952e" font-size="10" font-weight="800" text-anchor="middle">Статус: Передан в доставку</text>
+            <text x="44" y="362" fill="#a0a09b" font-size="8.5">↑ статус пришёл из Битрикс24</text>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <path d="M362 210 L400 210" stroke="#4c952e" stroke-width="3"/><path d="M394 202 L410 210 L394 218 Z" fill="#4c952e"/>
+            <path d="M410 250 L362 250" stroke="#8a8a86" stroke-width="2" stroke-dasharray="4 3"/><path d="M368 242 L352 250 L368 258 Z" fill="#8a8a86"/>
+            <text x="386" y="285" fill="#55564f" font-size="8" text-anchor="middle">заказ →</text>
+            <text x="386" y="297" fill="#8a8a86" font-size="8" text-anchor="middle">← статус</text>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="420" y="36" width="416" height="398" rx="12" fill="#fff" stroke="#e2e2e0"/>
+            <rect x="420" y="36" width="416" height="30" rx="12" fill="#1d1d1b"/>
+            <rect x="420" y="52" width="416" height="14" fill="#1d1d1b"/>
+            <text x="438" y="56" fill="#8fbf21" font-size="10" font-weight="800">Битрикс24 · Воронка «Интернет-магазин»</text>
+
+            <g font-size="9" font-weight="800" fill="#8a8a86">
+              <text x="452" y="90">НОВЫЙ</text>
+              <text x="560" y="90">СБОРКА</text>
+              <text x="670" y="90">ДОСТАВКА</text>
+              <text x="778" y="90">ОПЛАЧЕН</text>
+            </g>
+
+            <rect x="440" y="100" width="96" height="60" rx="8" fill="#f7f7f5" stroke="#e2e2e0"/>
+            <text x="450" y="120" fill="#1d1d1b" font-size="9" font-weight="800">#4468</text>
+            <text x="450" y="134" fill="#55564f" font-size="8.5">Анна К. · 540 р.</text>
+
+            <rect x="548" y="100" width="96" height="60" rx="8" fill="#f7f7f5" stroke="#e2e2e0"/>
+            <text x="558" y="120" fill="#1d1d1b" font-size="9" font-weight="800">#4469</text>
+            <text x="558" y="134" fill="#55564f" font-size="8.5">ООО «Ремсбыт» · 1 210 р.</text>
+
+            <rect x="656" y="100" width="96" height="72" rx="8" fill="#eef4e2" stroke="#8fbf21" stroke-width="2"/>
+            <text x="666" y="120" fill="#1d1d1b" font-size="9" font-weight="800">#4471 ← новый</text>
+            <text x="666" y="134" fill="#55564f" font-size="8.5">Сергей М. · 332 р.</text>
+            <text x="666" y="150" fill="#4c952e" font-size="8" font-weight="700">google / cpc</text>
+            <text x="666" y="163" fill="#55564f" font-size="8">3 товара · курьер</text>
+
+            <rect x="764" y="100" width="60" height="60" rx="8" fill="#f7f7f5" stroke="#e2e2e0"/>
+            <text x="774" y="120" fill="#1d1d1b" font-size="9" font-weight="800">#4462</text>
+            <text x="774" y="134" fill="#55564f" font-size="8.5">И. Лис · 96 р.</text>
+
+            <line x1="438" y1="200" x2="818" y2="200" stroke="#eee"/>
+            <text x="438" y="222" fill="#1d1d1b" font-size="11" font-weight="800">Что синхронизируется</text>
+            <g font-size="10">
+              <circle cx="444" cy="240" r="3" fill="#8fbf21"/><text x="456" y="244" fill="#55564f">Каталог, цены и остатки — с сайта в CRM</text>
+              <circle cx="444" cy="260" r="3" fill="#8fbf21"/><text x="456" y="264" fill="#55564f">Состав заказа, оплата, доставка, адрес</text>
+              <circle cx="444" cy="280" r="3" fill="#8fbf21"/><text x="456" y="284" fill="#55564f">Статус сделки → статус заказа на сайте</text>
+              <circle cx="444" cy="300" r="3" fill="#8fbf21"/><text x="456" y="304" fill="#55564f">Брошенные корзины → сделки с роботом-догревом</text>
+            </g>
+
+            <rect x="438" y="322" width="380" height="94" rx="10" fill="#f7f7f5" stroke="#eee"/>
+            <text x="452" y="344" fill="#1d1d1b" font-size="10" font-weight="800">Дальше в CRM</text>
+            <g font-size="9.5" fill="#55564f">
+              <text x="452" y="364">Менеджер обрабатывает заказ, поднимает средний чек допродажей,</text>
+              <text x="452" y="380">через 30 дней робот предлагает повторную покупку расходников.</text>
+              <text x="452" y="400" fill="#8a8a86">Вся история покупателя — в одной карточке контакта.</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Схема обмена с интернет-магазином: заказ создаёт сделку в воронке Битрикс24, статус возвращается на сайт, каталог и остатки синхронизируются. Пример условный.</figcaption>
+    </figure>
+
+    <div class="case-prose reveal">
+      <p><strong>Нюанс по нагрузке:</strong> частый обмен большим каталогом (десятки тысяч товаров, обновление остатков каждые 5 минут) нагружает и сайт, и портал. Обычно находят баланс: каталог — раз в сутки ночью, остатки и заказы — чаще, но не «в реальном времени».</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Задача 3</div>
+      <h2>Виджет Открытых линий на сайте</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Открытые линии — это чат Битрикс24, который собирает обращения из разных каналов в одну очередь операторов. На сайте он живёт как <strong>виджет</strong>: кнопка в углу экрана, за которой прячутся живой чат, CRM-форма и кнопки перехода в мессенджеры. Технически это один тег <code>&lt;script&gt;</code>, который вставляется на все страницы перед закрывающим <code>&lt;/body&gt;</code> — код берётся в разделе <em>CRM → Контакт-центр → Виджет на сайт</em>.</p>
+      <p>Что даёт: сообщение с сайта попадает оператору мгновенно и распределяется по правилам очереди; вся переписка сохраняется в карточке клиента в CRM; в нерабочее время отвечает чат-бот или ИИ-ассистент и собирает контакт; посетитель может продолжить разговор в Telegram или на сайте — диалог не теряется.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <svg viewBox="0 0 860 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Схема: виджет Открытых линий на сайте и очередь операторов Битрикс24 с каналами сайт, Telegram, WhatsApp и историей чата в CRM">
+          <rect width="860" height="470" fill="#f7f7f5"/>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="24" y="36" width="380" height="398" rx="12" fill="#eef1f4" stroke="#e2e2e0"/>
+            <rect x="24" y="36" width="380" height="30" rx="12" fill="#1d1d1b"/>
+            <rect x="24" y="52" width="380" height="14" fill="#1d1d1b"/>
+            <text x="214" y="56" fill="#ececec" font-size="10" font-weight="700" text-anchor="middle">ваш-сайт.by</text>
+
+            <rect x="48" y="86" width="220" height="16" rx="4" fill="#d7dbe0"/>
+            <rect x="48" y="112" width="320" height="10" rx="3" fill="#e4e7ea"/>
+            <rect x="48" y="128" width="300" height="10" rx="3" fill="#e4e7ea"/>
+            <rect x="48" y="144" width="310" height="10" rx="3" fill="#e4e7ea"/>
+
+            <rect x="176" y="182" width="204" height="228" rx="12" fill="#fff" stroke="#d7dbe0"/>
+            <rect x="176" y="182" width="204" height="40" rx="12" fill="#8fbf21"/>
+            <rect x="176" y="200" width="204" height="22" fill="#8fbf21"/>
+            <text x="192" y="207" fill="#1d1d1b" font-size="10" font-weight="900">Чат · онлайн</text>
+            <circle cx="366" cy="202" r="4" fill="#1d1d1b"/>
+
+            <rect x="192" y="238" width="140" height="34" rx="9" fill="#f0f0ec"/>
+            <text x="202" y="252" fill="#55564f" font-size="8.5">Здравствуйте! Подскажите</text>
+            <text x="202" y="264" fill="#55564f" font-size="8.5">по срокам доставки?</text>
+
+            <rect x="228" y="282" width="136" height="34" rx="9" fill="#e7f0d6"/>
+            <text x="238" y="296" fill="#1d1d1b" font-size="8.5">Добрый день! По Минску —</text>
+            <text x="238" y="308" fill="#1d1d1b" font-size="8.5">завтра, по РБ 2–3 дня.</text>
+
+            <rect x="192" y="326" width="172" height="26" rx="8" fill="#f7f7f5" stroke="#e2e2e0"/>
+            <text x="202" y="343" fill="#a0a09b" font-size="8.5">Ваше сообщение…</text>
+
+            <g>
+              <rect x="192" y="362" width="52" height="20" rx="10" fill="#eef4fb" stroke="#d3e3f2"/><text x="218" y="376" fill="#3b7fd0" font-size="8" font-weight="800" text-anchor="middle">Telegram</text>
+              <rect x="250" y="362" width="52" height="20" rx="10" fill="#eafaf0" stroke="#c7ecd6"/><text x="276" y="376" fill="#2aa869" font-size="8" font-weight="800" text-anchor="middle">WhatsApp</text>
+              <rect x="308" y="362" width="40" height="20" rx="10" fill="#eef2fb" stroke="#d3dbf2"/><text x="328" y="376" fill="#4a63c0" font-size="8" font-weight="800" text-anchor="middle">VK</text>
+            </g>
+
+            <circle cx="352" cy="410" r="4" fill="#8fbf21"/>
+            <text x="48" y="424" fill="#a0a09b" font-size="8">один &lt;script&gt; перед &lt;/body&gt; · загрузка async</text>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <path d="M412 210 L452 210" stroke="#4c952e" stroke-width="3"/><path d="M446 202 L462 210 L446 218 Z" fill="#4c952e"/>
+          </g>
+
+          <g font-family="Nunito, 'Segoe UI', sans-serif">
+            <rect x="470" y="36" width="366" height="398" rx="12" fill="#fff" stroke="#e2e2e0"/>
+            <rect x="470" y="36" width="366" height="30" rx="12" fill="#1d1d1b"/>
+            <rect x="470" y="52" width="366" height="14" fill="#1d1d1b"/>
+            <text x="488" y="56" fill="#8fbf21" font-size="10" font-weight="800">Битрикс24 · Открытые линии</text>
+
+            <text x="488" y="90" fill="#1d1d1b" font-size="11" font-weight="800">Очередь диалогов</text>
+
+            <rect x="488" y="100" width="330" height="46" rx="8" fill="#eef4e2" stroke="#8fbf21" stroke-width="2"/>
+            <text x="500" y="118" fill="#1d1d1b" font-size="9.5" font-weight="800">Сергей М. · сайт</text>
+            <text x="500" y="133" fill="#55564f" font-size="8.5">по срокам доставки… · сейчас · оператор А. Петров</text>
+
+            <rect x="488" y="152" width="330" height="42" rx="8" fill="#f7f7f5" stroke="#e2e2e0"/>
+            <text x="500" y="170" fill="#1d1d1b" font-size="9.5" font-weight="800">Марина · Telegram</text>
+            <text x="500" y="184" fill="#55564f" font-size="8.5">ожидает 0:40 · свободный оператор</text>
+
+            <rect x="488" y="200" width="330" height="42" rx="8" fill="#f7f7f5" stroke="#e2e2e0"/>
+            <text x="500" y="218" fill="#1d1d1b" font-size="9.5" font-weight="800">+375 44 ••• · WhatsApp</text>
+            <text x="500" y="232" fill="#55564f" font-size="8.5">бот уточняет вопрос · нерабочее время</text>
+
+            <line x1="488" y1="258" x2="818" y2="258" stroke="#eee"/>
+            <text x="488" y="280" fill="#1d1d1b" font-size="11" font-weight="800">Карточка клиента в CRM</text>
+            <g font-size="9.5" fill="#55564f">
+              <circle cx="494" cy="298" r="3" fill="#8fbf21"/><text x="506" y="302">Контакт создан из чата, привязан к сделке #4471</text>
+              <circle cx="494" cy="318" r="3" fill="#8fbf21"/><text x="506" y="322">Вся переписка сохранена в таймлайне</text>
+              <circle cx="494" cy="338" r="3" fill="#8fbf21"/><text x="506" y="342">Источник обращения: сайт · страница /dostavka</text>
+              <circle cx="494" cy="358" r="3" fill="#d9b23a"/><text x="506" y="362">Вне рабочих часов диалог принимает чат-бот / ИИ</text>
+            </g>
+
+            <rect x="488" y="380" width="330" height="38" rx="9" fill="#f7f7f5" stroke="#eee"/>
+            <text x="500" y="398" fill="#1d1d1b" font-size="9" font-weight="800">Оценка диалога и время ответа</text>
+            <text x="500" y="412" fill="#55564f" font-size="8.5">среднее время первого ответа — 24 сек · CSI 4,8 из 5</text>
+          </g>
+        </svg>
+      </div>
+      <figcaption>Схема виджета Открытых линий: обращение с сайта и мессенджеров попадает в единую очередь операторов, история — в карточке клиента CRM. Пример условный.</figcaption>
+    </figure>
+
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Что настраиваем</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Очередь операторов и правила распределения</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Рабочее время, приветствие и автоответы</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Подключение Telegram, WhatsApp, VK к той же линии</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Чат-бот или ИИ-ассистент на нерабочие часы</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Нюансы</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">На бесплатном тарифе — одна открытая линия</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Второй чат-виджет на странице конфликтует и тормозит загрузку</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Позицию кнопки на мобильном нужно проверять — перекрывает элементы</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Скрипт грузится асинхронно, но всё равно влияет на метрики скорости</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Честно о сложностях</div>
+      <h2>Нюансы и подводные камни</h2>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Без контроля дублей по телефону и почте один клиент плодит несколько лидов и сделок</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Согласие на обработку персональных данных обязательно: чекбокс и ссылка на политику (в РБ — Закон № 99-З «О защите персональных данных»)</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Ключ входящего вебхука = доступ к CRM: запросы шлём с сервера, не из браузерного JS</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Нужен HTTPS, а для клиентских запросов — корректный CORS</li>
+        </ul>
+      </div>
+      <div class="card">
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">UTM и идентификатор посетителя надо передавать скрытыми полями, иначе сквозная аналитика не соберётся</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Статусы заказа на сайте и стадии сделки в CRM нужно жёстко сопоставить — иначе рассинхрон</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Часть готовых приложений требует подписку Битрикс24.Маркет Плюс</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Интеграцию тестируют на реальных заявках до запуска рекламы, а не после</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как мы работаем</div>
+      <h2>Что входит в интеграцию сайта с Битрикс24</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Разбор точек контакта</h4>
+        <p>Составляем список всех форм, страниц заказа, чатов и каналов на сайте и решаем, что куда должно попадать — в лид, сделку или смарт-процесс.</p>
+      </div>
+      <div class="step">
+        <h4>Проектирование данных</h4>
+        <p>Определяем поля, воронки, правила распределения на менеджеров, набор UTM-параметров и логику контроля дублей.</p>
+      </div>
+      <div class="step">
+        <h4>Настройка передачи</h4>
+        <p>Подключаем формы и заказы выбранным способом — модуль CMS, CRM-форма, вебхук или REST — с серверной отправкой и защитой ключей.</p>
+      </div>
+      <div class="step">
+        <h4>Каталог и статусы магазина</h4>
+        <p>Для интернет-магазина настраиваем обмен товарами, ценами и остатками, сопоставляем статусы заказа со стадиями сделки.</p>
+      </div>
+      <div class="step">
+        <h4>Виджет Открытых линий</h4>
+        <p>Ставим виджет на сайт, собираем очередь операторов, рабочее время, автоответы, подключаем мессенджеры и бота на нерабочие часы.</p>
+      </div>
+      <div class="step">
+        <h4>Тест, обучение, сопровождение</h4>
+        <p>Прогоняем реальные заявки и заказы, показываем команде работу в CRM, дальше — дорабатываем по мере роста и следим за обменом.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Свяжем ваш сайт с Битрикс24</h2>
+        <p>Посмотрим ваш сайт и CRM, подберём способ интеграции под движок и задачу, настроим передачу форм и заказов и поставим виджет Открытых линий.</p>
+      </div>
+      <a href="contacts.html#form" class="btn btn--primary">Обсудить задачу</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:16px;">
+          <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+          <span class="brand__name">АйТи Аналитикс</span>
+        </a>
+        <p>Внедрение Битрикс24 и систем телефонии. Ваш партнёр в мире Битрикс24 с 2011 года.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="bitrix24.html">Битрикс24</a></li>
+          <li><a href="telephony.html">Телефония</a></li>
+          <li><a href="ai.html">ИИ-решения</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="partners.html">Партнёрам</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+375445057799">+375 (44) 505-77-99</a></li>
+          <li><a href="mailto:sales@it-a.by">sales@it-a.by</a></li>
+          <li><a href="contacts.html#map">г. Минск, ул. Лукьяновича, 10к7</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Мы на связи</h4>
+        <div class="social-row">
+          <a href="https://www.instagram.com/it_a.by/" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="https://t.me/ita_by_bitrix" aria-label="Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2011–2026 АйТи Аналитикс. УНП 791048093</span>
+      <span>Все услуги: Битрикс24 · IP-телефония · Интеграции</span>
+      <span><a href="assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Политика конфиденциальности</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.by/b1536661/crm/site_button/loader_31_u35a1q.js');
+</script>
+</body>
+</html>
