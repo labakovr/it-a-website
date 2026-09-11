@@ -3023,15 +3023,13 @@ body.show-diff-only .compare-table--full tbody tr[data-uniform="true"] {
 
 .article-shot__cta {
   position: absolute;
-  left: 24px;
-  bottom: 24px;
+  left: 11.5%;
+  bottom: 6%;
   z-index: 2;
 }
 
 @media (max-width: 560px) {
   .article-shot__cta {
-    left: 16px;
-    bottom: 16px;
     padding: 11px 18px;
     font-size: 13px;
   }
