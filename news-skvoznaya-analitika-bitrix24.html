@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сквозная аналитика в Битрикс24: что это, кому нужна и когда её мало | АйТи Аналитикс</title>
+<meta name="description" content="Разбираем сквозную аналитику в Битрикс24: как она показывает путь клиента от рекламного клика до денег в кассе, всем ли бизнесам она нужна, плюсы и минусы штатного инструмента и когда стоит подключать отдельный сервис вроде Roistat или Calltouch.">
+<link rel="canonical" href="https://it-a.by/news-skvoznaya-analitika-bitrix24.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="АйТи Аналитикс">
+<meta property="og:title" content="Сквозная аналитика в Битрикс24: что это, кому нужна и когда её мало">
+<meta property="og:description" content="Как сквозная аналитика показывает путь клиента от рекламы до оплаты, всем ли она нужна, в чём плюсы и минусы штатного инструмента Битрикс24 и когда нужен отдельный сервис.">
+<meta property="og:url" content="https://it-a.by/news-skvoznaya-analitika-bitrix24.html">
+<meta property="og:image" content="https://it-a.by/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Сквозная аналитика в Битрикс24: что это, кому нужна и когда её мало">
+<meta name="twitter:description" content="Как сквозная аналитика показывает путь клиента от рекламы до оплаты, всем ли она нужна, в чём плюсы и минусы штатного инструмента Битрикс24 и когда нужен отдельный сервис.">
+<meta name="twitter:image" content="https://it-a.by/assets/img/og-image.png">
+<meta name="theme-color" content="#1d1d1b">
+<link rel="icon" href="assets/img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Сквозная аналитика в Битрикс24: что это, кому нужна и когда её мало",
+  "description": "Что такое сквозная аналитика в Битрикс24, всем ли бизнесам она нужна, какие есть варианты, преимущества и ограничения штатного инструмента, и когда стоит подключать отдельный сервис сквозной аналитики.",
+  "image": "https://it-a.by/assets/img/og-image.png",
+  "author": { "@type": "Organization", "name": "АйТи Аналитикс", "url": "https://it-a.by/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "АйТи Аналитикс",
+    "logo": { "@type": "ImageObject", "url": "https://it-a.by/assets/img/logo-mark.png" }
+  },
+  "datePublished": "2026-09-11",
+  "dateModified": "2026-09-11",
+  "mainEntityOfPage": "https://it-a.by/news-skvoznaya-analitika-bitrix24.html",
+  "about": "Сквозная аналитика в Битрикс24"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://it-a.by/" },
+    { "@type": "ListItem", "position": 2, "name": "Новости", "item": "https://it-a.by/news.html" },
+    { "@type": "ListItem", "position": 3, "name": "Сквозная аналитика в Битрикс24", "item": "https://it-a.by/news-skvoznaya-analitika-bitrix24.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+      <span class="brand__name">АйТи Аналитикс</span>
+    </a>
+    <nav class="nav">
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="bitrix24.html" class="nav-link">Битрикс24</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по Битрикс24" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="features.html">Возможности Битрикс24</a>
+          <a href="licenses.html">Лицензии Битрикс24</a>
+          <a href="bitrix24.html">Внедрение Битрикс24</a>
+          <a href="bitrix24.html">Сопровождение Битрикс24</a>
+          <a href="education.html">Обучение Битрикс24</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="telephony.html" class="nav-link">Телефония</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по телефонии" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="telephony.html">Внедрение IP-телефонии</a>
+          <a href="telephony.html">Настройка АТС</a>
+          <a href="telephony.html">Сопровождение телефонии</a>
+          <a href="catalog/index.html">Каталог оборудования</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="ai.html" class="nav-link">ИИ-решения</a>
+          <button type="button" class="nav-caret" aria-label="Показать ИИ-решения" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="ai.html">Внедрение ИИ-ассистентов</a>
+          <a href="ai.html">Автоматизация процессов</a>
+          <a href="ai.html">Обучение и сопровождение</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="portfolio.html" class="nav-link">Портфолио</a>
+          <button type="button" class="nav-caret" aria-label="Показать разделы портфолио" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="cases.html">Кейсы</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="certificates.html">Сертификаты</a>
+          <a href="about.html">О нас</a>
+        </div>
+      </div>
+      <a href="news.html" class="is-active">Новости</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:+375445057799" class="header__phone">+375 (44) 505-77-99</a>
+      <a href="contacts.html#form" class="btn btn--primary btn--sm">Заказать звонок</a>
+      <button class="nav-toggle" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">Главная</a><span class="sep">/</span><a href="news.html">Новости</a><span class="sep">/</span><span>Сквозная аналитика в Битрикс24</span></div>
+    <div class="eyebrow">Статья · Аналитика · 11 сентября 2026</div>
+    <h1>Сквозная аналитика в Битрикс24: что это, кому нужна и когда её мало</h1>
+    <p class="hero__lead">«Какая реклама реально приносит продажи?» — вопрос, на который большинство компаний отвечают на глазок: «вроде из Инстаграма звонят чаще». Сквозная аналитика превращает это «вроде» в цифры: сколько потрачено на каждый канал и сколько денег он принёс. Разбираем, как это работает в Битрикс24, всем ли бизнесам это нужно и когда штатного инструмента становится мало.</p>
+    <div class="hero__actions">
+      <a href="#kogda-malo" class="btn btn--outline-dark">Когда нужен отдельный сервис →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="case-facts reveal">
+      <div class="card">
+        <div class="eyebrow">Услуга</div>
+        <strong>Настройка сквозной аналитики в Битрикс24</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Что показывает</div>
+        <strong>Путь клиента от рекламного клика до оплаченной сделки</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">С чего начинаем</div>
+        <strong>Аудит источников трафика, меток и учёта расходов</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Кому подходит</div>
+        <strong>Бизнесу, который вкладывается в рекламу на нескольких каналах</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Простыми словами</div>
+      <h2>Что такое сквозная аналитика</h2>
+      <p>Раздел живёт в <em>CRM → Аналитика → Оперативная аналитика → Сквозная аналитика</em>. По сути это место, где сведены все каналы привлечения клиентов и вклад каждого из них в продажи.</p>
+    </div>
+    <div class="case-prose reveal">
+      <p>Обычная CRM-аналитика показывает, что происходит внутри воронки: сколько лидов, на каком этапе застряли сделки, кто из менеджеров эффективнее. Но она не отвечает на вопрос «откуда взялся этот лид и во сколько он обошёлся». Сквозная аналитика добавляет именно этот слой: учитывает расходы на каждый источник — контекстную рекламу, соцсети, наружку, выставки — и сопоставляет их с реальными продажами из этого источника.</p>
+      <p>В результате видно не «сколько лидов пришло из ВКонтакте», а <strong>сколько стоил один клиент из ВКонтакте и сколько денег этот канал в итоге принёс</strong>. Это и есть основа для решения «куда вложить рекламный бюджет в следующем месяце».</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/skvoznaya/menu.jpg" alt="Переход в раздел «Сквозная аналитика» в Битрикс24: CRM → Аналитика → Оперативная аналитика → Сквозная аналитика" loading="lazy" width="1827" height="1096">
+      </div>
+      <figcaption>Сквозная аналитика находится в общем меню отчётности Битрикс24, рядом с воронкой продаж и эффективностью менеджеров. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Главный вопрос</div>
+      <h2>Всем ли нужна сквозная аналитика</h2>
+      <p>Инструмент мощный, но не обязательный для всех. Прежде чем настраивать, стоит честно ответить — а есть ли задача, которую он решает.</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Точно нужна</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Рекламный бюджет распределён на несколько каналов одновременно — контекст, таргет, маркетплейсы, офлайн</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Руководитель или маркетолог регулярно решает, куда перераспределить бюджет на следующий период</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Есть звонки как канал обращения, и важно понимать, какая реклама их приносит</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Цикл сделки не мгновенный — важно довести источник до итоговой оплаты, а не только до заявки</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Можно обойтись без неё</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Реклама не запущена вообще или идёт из одного-единственного источника</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Продажи идут в основном по рекомендациям, тендерам или через личные контакты менеджеров</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">В CRM пока не наведён порядок — сначала стоит настроить саму работу со сделками</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Тариф Битрикс24 не поддерживает функцию — тогда обычной оперативной аналитики достаточно на первое время</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как это устроено</div>
+      <h2>Из чего складывается настройка</h2>
+      <p>Чтобы отчёты считались верно, нужны настройки с двух сторон: в самом Битрикс24 и в источниках трафика — рекламных кабинетах, сайте, соцсетях.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>1. Источники трафика</h4>
+        <p>Заводим каждый канал отдельным источником: название, цвет для графиков и UTM-метка, по которой Битрикс24 узнаёт трафик — <code>utm_source</code>, <code>utm_medium</code>, <code>utm_campaign</code>.</p>
+      </div>
+      <div class="step">
+        <h4>2. Коллтрекинг и подмена номеров</h4>
+        <p>Если считаем звонки, для сайта подключается подмена номера: каждому источнику трафика — свой номер, а Битрикс24 сам определяет, из какой рекламы позвонил клиент. Работает не с любым оператором — номер нужно предварительно проверить.</p>
+      </div>
+      <div class="step">
+        <h4>3. Расходы на рекламу</h4>
+        <p>Для рекламных кабинетов с интеграцией (Google Ads, Яндекс.Директ) суммы подтягиваются автоматически. Для остального — радио, выставки, наружка — расход вносится вручную: период, сумма, валюта.</p>
+      </div>
+      <div class="step">
+        <h4>4. Отчёты</h4>
+        <p>Отчёт появляется только тогда, когда хотя бы один источник размечен UTM-меткой — весь неразмеченный трафик уходит в «Прочий трафик» и не участвует в сравнении каналов.</p>
+      </div>
+    </div>
+
+    <div class="grid-2 reveal">
+      <figure class="article-shot" style="margin:0;">
+        <div class="article-shot__frame">
+          <img src="assets/img/news/skvoznaya/istochnik.jpg" alt="Настройка источника трафика в сквозной аналитике Битрикс24: название источника и UTM-метка" loading="lazy" width="1920" height="1086">
+        </div>
+        <figcaption>Каждый источник — своё название и UTM-метка. Скриншот из официальной справки Битрикс24.</figcaption>
+      </figure>
+      <figure class="article-shot" style="margin:0;">
+        <div class="article-shot__frame">
+          <img src="assets/img/news/skvoznaya/raskhody.jpg" alt="Добавление расходов на рекламу в сквозной аналитике Битрикс24: период, сумма и валюта" loading="lazy" width="1920" height="1086">
+        </div>
+        <figcaption>Расходы без интеграции с рекламным кабинетом вносятся вручную — период, сумма, комментарий. Скриншот из официальной справки Битрикс24.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">На реальном примере</div>
+      <h2>Что показывают отчёты</h2>
+      <p>Отчёт «Окупаемость рекламы» — самый наглядный: сверху воронка с разбивкой по каналам и общий ROI, ниже — таблица с расходами и конверсией по каждому источнику.</p>
+    </div>
+    <div class="case-prose reveal">
+      <p>На примере из справки Битрикс24: за Google Ads заплатили 26 000 ₽, реклама принесла 51 действие и 6 сделок/заказов, из них 2 выиграно — конверсия 3,92%. У ВКонтакте бюджет 10 000 ₽, но из двух обращений до сделки дошло одно — конверсия 50%. Общий ROI рекламы за период — 43,48%. Именно такое сравнение и есть смысл сквозной аналитики: не «какой канал даёт больше лидов», а «какой канал реально окупается».</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/skvoznaya/okupaemost.jpg" alt="Отчёт «Окупаемость рекламы» в сквозной аналитике Битрикс24: воронка по каналам, ROI 43,48% и таблица расходов по источникам" loading="lazy" width="1832" height="1086">
+      </div>
+      <figcaption>Отчёт «Окупаемость рекламы»: воронка по каналам, итоговый ROI и таблица расходов, действий и сделок по каждому источнику. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+
+    <div class="case-prose reveal">
+      <p>Второй отчёт, «Влияние трафика на продажи», раскладывает те же данные по сотрудникам: видно, кто из менеджеров лучше конвертирует клиентов из конкретного канала, а не только общую эффективность рекламы.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/skvoznaya/vliyanie-trafika.jpg" alt="Отчёт «Влияние трафика на продажи» в Битрикс24: сквозная воронка от рекламы до продажи и распределение сделок по менеджерам и источникам" loading="lazy" width="1832" height="1086">
+      </div>
+      <figcaption>«Влияние трафика на продажи»: та же воронка «от рекламы до продажи», но с разбивкой по менеджерам и источникам, из которых пришли их клиенты. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Коротко в цифрах</div>
+      <h2>Плюсы и минусы штатного инструмента</h2>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Преимущества сквозной аналитики Битрикс24</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Уже встроена в CRM — не нужна отдельная система и интеграция с ней</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Работает на тех же данных о сделках, что и остальная отчётность — без риска расхождений между системами</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Готовые отчёты по окупаемости рекламы и вкладу менеджеров без разработки</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Автоподтягивание расходов из Google Ads и Яндекс.Директ при подключённом кабинете</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Входит в тариф Битрикс24 — не требует отдельной ежемесячной подписки</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Минусы и ограничения</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Доступна не на всех тарифах Битрикс24 — нужно уточнять по своему тарифному плану</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Есть лимит на число лидов, сделок, контактов и компаний: 1 000 на Бесплатном, 100 000 на Базовом/Стандартном/Профессиональном, 200 000+ на Энтерпрайзе</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Одна модель атрибуции — тонко настраивать «вклад первого и последнего касания» отдельно нельзя</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Коллтрекинг работает не с любыми номерами и операторами — нужна предварительная проверка</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Без UTM-меток источник не определяется и попадает в «Прочий трафик» — отчёт всегда настолько точен, насколько размечена реклама</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="kogda-malo">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Когда одного Битрикс24 недостаточно</div>
+      <h2>Когда нужен отдельный сервис сквозной аналитики</h2>
+      <p>Штатного инструмента хватает большинству небольших и средних компаний. Но у специализированных сервисов — Roistat, Calltouch, Callibri и похожих — есть возможности, которых в CRM нет в принципе.</p>
+    </div>
+    <div class="case-prose reveal">
+      <p>Отдельный сервис имеет смысл, если нужно: гибко настраивать модели атрибуции (не только последнее касание, а вклад каждого шага в цепочке); сводить данные из нескольких CRM или систем продаж в одном месте; подключать динамический коллтрекинг с подменой номера для каждого посетителя сайта в реальном времени; или строить сквозную аналитику для бизнеса, где часть продаж вообще идёт мимо Битрикс24 — например, через отдельный колл-центр или розничные точки.</p>
+    </div>
+    <div class="compare-table-wrap reveal">
+      <table class="compare-table compare-table--bi">
+        <thead>
+          <tr>
+            <th>Критерий</th>
+            <th>Сквозная аналитика Битрикс24</th>
+            <th>Отдельный сервис (Roistat, Calltouch и похожие)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Стоимость</td>
+            <td class="ct-yes">Входит в тариф Битрикс24</td>
+            <td>Отдельная ежемесячная подписка</td>
+          </tr>
+          <tr>
+            <td>Лимит элементов CRM</td>
+            <td class="ct-no">Есть, зависит от тарифа</td>
+            <td class="ct-yes">Обычно без таких ограничений</td>
+          </tr>
+          <tr>
+            <td>Модели атрибуции</td>
+            <td>Одна встроенная модель</td>
+            <td class="ct-yes">Несколько моделей на выбор</td>
+          </tr>
+          <tr>
+            <td>Динамический коллтрекинг</td>
+            <td>Базовый, с ограничениями по номерам</td>
+            <td class="ct-yes">Подмена номера под каждого посетителя</td>
+          </tr>
+          <tr>
+            <td>Несколько CRM или источников продаж</td>
+            <td class="ct-no">Только данные самого портала</td>
+            <td class="ct-yes">Сводит данные из разных систем</td>
+          </tr>
+          <tr>
+            <td>Настройка и внедрение</td>
+            <td class="ct-yes">Настраивается внутри портала</td>
+            <td>Нужна отдельная интеграция и обучение</td>
+          </tr>
+          <tr>
+            <td>Лучший сценарий</td>
+            <td>Один портал, разумный рекламный бюджет</td>
+            <td>Большие бюджеты, сложная многоканальная воронка</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как это соотносится с остальной отчётностью</div>
+      <h2>Одна из трёх опор аналитики в Битрикс24</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Сквозная аналитика — не отдельный инструмент сам по себе, а часть общей системы отчётности Битрикс24. Про то, какие ещё уровни отчётности есть в CRM — от готовых отчётов до конструктора и BI — мы писали в статье <a href="news-otchetnost-bitrix24.html">«Отчётность в Битрикс24: какая бывает и когда она не работает»</a>. А если возникает задача свести сквозную аналитику с данными 1С, склада или нескольких рекламных кабинетов в одном управленческом дашборде — это уже уровень BI-аналитики, который мы разбирали отдельно в статье <a href="news-bi-analitika-bitrix24.html">«BI-аналитика для Битрикс24»</a>.</p>
+      <blockquote class="article-quote">
+        «Сквозная аналитика не работает в отрыве от порядка в CRM: если сделки заводятся не всегда, а реклама размечена наполовину, отчёт покажет красивую воронку с дырами. Поэтому мы всегда начинаем с аудита источников и меток — и только потом строим отчёты, на которые можно опираться при распределении бюджета».
+        <cite>Команда «АйТи Аналитикс»</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как мы работаем</div>
+      <h2>Что входит в настройку сквозной аналитики</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Аудит рекламы и меток</h4>
+        <p>Смотрим, какие каналы уже используются, где расставлены UTM-метки, а где реклама идёт «в прочий трафик» и теряется для аналитики.</p>
+      </div>
+      <div class="step">
+        <h4>Подключение источников</h4>
+        <p>Заводим все каналы — контекст, таргет, соцсети, офлайн — отдельными источниками с UTM-метками и, где нужно, интеграцией с рекламными кабинетами.</p>
+      </div>
+      <div class="step">
+        <h4>Коллтрекинг и подмена номеров</h4>
+        <p>Проверяем номера на поддержку подмены, настраиваем распределение звонков по источникам, чтобы обращения по телефону тоже попадали в отчёт.</p>
+      </div>
+      <div class="step">
+        <h4>Учёт расходов</h4>
+        <p>Настраиваем автоматическое подтягивание бюджетов из рекламных кабинетов и регламент ручного внесения расходов там, где интеграции нет.</p>
+      </div>
+      <div class="step">
+        <h4>Отчёты и обучение</h4>
+        <p>Показываем руководителю и маркетологу, как читать «Окупаемость рекламы» и «Влияние трафика на продажи» и принимать решения по бюджету на их основе.</p>
+      </div>
+      <div class="step">
+        <h4>Решение про отдельный сервис</h4>
+        <p>Если задач больше, чем умеет штатный инструмент — предлагаем и подключаем внешний сервис сквозной аналитики или переход на уровень BI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Настроим сквозную аналитику под ваши каналы</h2>
+        <p>Проверим источники и метки, подключим коллтрекинг и расходы, соберём отчёты — чтобы бюджет на рекламу распределялся по цифрам, а не на глаз.</p>
+      </div>
+      <a href="contacts.html#form" class="btn btn--primary">Обсудить задачу</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:16px;">
+          <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+          <span class="brand__name">АйТи Аналитикс</span>
+        </a>
+        <p>Внедрение Битрикс24 и систем телефонии. Ваш партнёр в мире Битрикс24 с 2011 года.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="bitrix24.html">Битрикс24</a></li>
+          <li><a href="telephony.html">Телефония</a></li>
+          <li><a href="ai.html">ИИ-решения</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="partners.html">Партнёрам</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+375445057799">+375 (44) 505-77-99</a></li>
+          <li><a href="mailto:sales@it-a.by">sales@it-a.by</a></li>
+          <li><a href="contacts.html#map">г. Минск, ул. Лукьяновича, 10к7</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Мы на связи</h4>
+        <div class="social-row">
+          <a href="https://www.instagram.com/it_a.by/" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="https://t.me/ita_by_bitrix" aria-label="Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2011–2026 АйТи Аналитикс. УНП 791048093</span>
+      <span>Все услуги: Битрикс24 · IP-телефония · Интеграции</span>
+      <span><a href="assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Политика конфиденциальности</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.by/b1536661/crm/site_button/loader_31_u35a1q.js');
+</script>
+</body>
+</html>

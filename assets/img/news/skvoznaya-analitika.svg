@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Сквозная аналитика в Битрикс24">
+  <rect width="1280" height="720" fill="#1d1d1b"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#8fbf21"/>
+  <text x="90" y="150" fill="#8fbf21" font-family="Nunito, 'Segoe UI', sans-serif" font-size="26" font-weight="800" letter-spacing="3">СТАТЬЯ · АНАЛИТИКА</text>
+  <text x="90" y="240" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="66" font-weight="900">Сквозная</text>
+  <text x="90" y="316" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="66" font-weight="900">аналитика</text>
+  <text x="92" y="374" fill="#b7b7b2" font-family="Nunito, 'Segoe UI', sans-serif" font-size="27" font-weight="700">От клика по рекламе до денег в кассе</text>
+
+  <g transform="translate(90 424)" font-family="Nunito, 'Segoe UI', sans-serif">
+    <rect x="0" y="0" width="1100" height="224" rx="16" fill="#262622"/>
+
+    <rect x="28" y="28" width="330" height="168" rx="10" fill="#303029"/>
+    <text x="46" y="56" fill="#8fbf21" font-size="15" font-weight="800">Источники</text>
+    <g>
+      <circle cx="66" cy="100" r="14" fill="#8fbf21"/>
+      <circle cx="66" cy="140" r="14" fill="#9cc63b"/>
+      <circle cx="66" cy="180" r="14" fill="#7cae2f"/>
+      <rect x="92" y="93" width="220" height="14" rx="5" fill="#37372f"/>
+      <rect x="92" y="133" width="180" height="14" rx="5" fill="#37372f"/>
+      <rect x="92" y="173" width="150" height="14" rx="5" fill="#37372f"/>
+    </g>
+
+    <rect x="378" y="28" width="330" height="168" rx="10" fill="#303029"/>
+    <text x="396" y="56" fill="#8fbf21" font-size="15" font-weight="800">Путь клиента</text>
+    <g>
+      <rect x="396" y="76" width="40" height="96" fill="#8fbf21"/>
+      <rect x="448" y="96" width="40" height="76" fill="#9cc63b"/>
+      <rect x="500" y="112" width="40" height="60" fill="#7cae2f"/>
+      <rect x="552" y="132" width="40" height="40" fill="#5f962a"/>
+      <rect x="604" y="146" width="40" height="26" fill="#4c952e"/>
+    </g>
+    <text x="396" y="188" fill="#7f8074" font-size="11" font-weight="700">клик → лид → оплата</text>
+
+    <rect x="728" y="28" width="342" height="168" rx="10" fill="#303029"/>
+    <text x="746" y="56" fill="#8fbf21" font-size="15" font-weight="800">Окупаемость</text>
+    <circle cx="800" cy="128" r="38" fill="none" stroke="#3d3d35" stroke-width="14"/>
+    <circle cx="800" cy="128" r="38" fill="none" stroke="#8fbf21" stroke-width="14" stroke-dasharray="130 240" stroke-linecap="round"/>
+    <text x="800" y="134" fill="#ececec" font-size="18" font-weight="900" text-anchor="middle">ROI</text>
+    <text x="860" y="120" fill="#b7b7b2" font-size="11" font-weight="700">расходы</text>
+    <text x="860" y="140" fill="#b7b7b2" font-size="11" font-weight="700">по каналам</text>
+    <text x="860" y="160" fill="#b7b7b2" font-size="11" font-weight="700">и выручка</text>
+  </g>
+</svg>
