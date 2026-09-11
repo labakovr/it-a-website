@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Интеграция Битрикс24 и 1С: штатный модуль или своя разработка | АйТи Аналитикс</title>
+<meta name="description" content="Как связать Битрикс24 и 1С: штатный Коннектор к 1С, какие конфигурации 1С он поддерживает для Беларуси, и когда вместо него приходится писать кастомную интеграцию. Плюсы, риски и на что смотреть перед выбором.">
+<link rel="canonical" href="https://it-a.by/news-integraciya-1c-bitrix24.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="АйТи Аналитикс">
+<meta property="og:title" content="Интеграция Битрикс24 и 1С: штатный модуль или своя разработка">
+<meta property="og:description" content="Штатный Коннектор к 1С и его конфигурации для Беларуси, а также риски кастомной интеграции, когда типовое решение не подходит.">
+<meta property="og:url" content="https://it-a.by/news-integraciya-1c-bitrix24.html">
+<meta property="og:image" content="https://it-a.by/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Интеграция Битрикс24 и 1С: штатный модуль или своя разработка">
+<meta name="twitter:description" content="Штатный Коннектор к 1С и его конфигурации для Беларуси, а также риски кастомной интеграции, когда типовое решение не подходит.">
+<meta name="twitter:image" content="https://it-a.by/assets/img/og-image.png">
+<meta name="theme-color" content="#1d1d1b">
+<link rel="icon" href="assets/img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Интеграция Битрикс24 и 1С: штатный модуль или своя разработка",
+  "description": "Как устроен штатный Коннектор к 1С, какие конфигурации 1С он поддерживает для Беларуси, и какие риски несёт кастомная интеграция, когда типового решения недостаточно.",
+  "image": "https://it-a.by/assets/img/og-image.png",
+  "author": { "@type": "Organization", "name": "АйТи Аналитикс", "url": "https://it-a.by/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "АйТи Аналитикс",
+    "logo": { "@type": "ImageObject", "url": "https://it-a.by/assets/img/logo-mark.png" }
+  },
+  "datePublished": "2026-09-11",
+  "dateModified": "2026-09-11",
+  "mainEntityOfPage": "https://it-a.by/news-integraciya-1c-bitrix24.html",
+  "about": "Интеграция Битрикс24 и 1С"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://it-a.by/" },
+    { "@type": "ListItem", "position": 2, "name": "Новости", "item": "https://it-a.by/news.html" },
+    { "@type": "ListItem", "position": 3, "name": "Интеграция Битрикс24 и 1С", "item": "https://it-a.by/news-integraciya-1c-bitrix24.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+      <span class="brand__name">АйТи Аналитикс</span>
+    </a>
+    <nav class="nav">
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="bitrix24.html" class="nav-link">Битрикс24</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по Битрикс24" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="features.html">Возможности Битрикс24</a>
+          <a href="licenses.html">Лицензии Битрикс24</a>
+          <a href="bitrix24.html">Внедрение Битрикс24</a>
+          <a href="bitrix24.html">Сопровождение Битрикс24</a>
+          <a href="education.html">Обучение Битрикс24</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="telephony.html" class="nav-link">Телефония</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по телефонии" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="telephony.html">Внедрение IP-телефонии</a>
+          <a href="telephony.html">Настройка АТС</a>
+          <a href="telephony.html">Сопровождение телефонии</a>
+          <a href="catalog/index.html">Каталог оборудования</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="ai.html" class="nav-link">ИИ-решения</a>
+          <button type="button" class="nav-caret" aria-label="Показать ИИ-решения" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="ai.html">Внедрение ИИ-ассистентов</a>
+          <a href="ai.html">Автоматизация процессов</a>
+          <a href="ai.html">Обучение и сопровождение</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="portfolio.html" class="nav-link">Портфолио</a>
+          <button type="button" class="nav-caret" aria-label="Показать разделы портфолио" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="cases.html">Кейсы</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="certificates.html">Сертификаты</a>
+          <a href="about.html">О нас</a>
+        </div>
+      </div>
+      <a href="news.html" class="is-active">Новости</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:+375445057799" class="header__phone">+375 (44) 505-77-99</a>
+      <a href="contacts.html#form" class="btn btn--primary btn--sm">Заказать звонок</a>
+      <button class="nav-toggle" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">Главная</a><span class="sep">/</span><a href="news.html">Новости</a><span class="sep">/</span><span>Интеграция Битрикс24 и 1С</span></div>
+    <div class="eyebrow">Статья · Интеграции · 11 сентября 2026</div>
+    <h1>Интеграция Битрикс24 и 1С: штатный модуль или своя разработка</h1>
+    <p class="hero__lead">Классический запрос от бизнеса: «хотим, чтобы Битрикс24 и 1С работали как одна система» — без двойного ввода счетов, без ручной сверки остатков, без вопроса «а эта сумма точно оплачена?». У Битрикс24 для этого есть готовый штатный модуль. Но он поддерживает ограниченный список конфигураций 1С, а для белорусских редакций этот список совсем короткий. Разбираем, как работает штатная интеграция, что делать, если ваша конфигурация в список не попадает, и почему кастомная разработка — это не просто «дороже», а отдельный проект со своими рисками.</p>
+    <div class="hero__actions">
+      <a href="#konfiguracii-rb" class="btn btn--outline-dark">Конфигурации для Беларуси →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="case-facts reveal">
+      <div class="card">
+        <div class="eyebrow">Услуга</div>
+        <strong>Интеграция Битрикс24 и 1С</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Что синхронизируем</div>
+        <strong>Контакты, сделки, счета, товары, остатки, оплаты, отгрузки</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Способы</div>
+        <strong>Штатный «Коннектор к 1С» · «1С:Синхронизация» · кастомная разработка</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Кому актуально</div>
+        <strong>Компаниям, где сделки ведёт CRM, а деньги и товары — 1С</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Зачем это нужно</div>
+      <h2>Что даёт связка Битрикс24 и 1С</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Без интеграции компания обычно живёт в двух системах параллельно: менеджер ведёт сделку в Битрикс24, а бухгалтер или логист заново вбивает те же данные в 1С — контрагента, товары, суммы. Это не просто двойная работа, а источник ошибок: где-то забыли обновить остаток, где-то менеджер не знает, что счёт уже оплачен, и звонит клиенту с вопросом, который давно закрыт.</p>
+      <p>Интеграция убирает этот разрыв: сделки и счета из CRM попадают в 1С как документы, а из 1С в CRM возвращаются актуальные остатки, цены и статусы оплаты. Менеджер видит в карточке сделки, оплатил ли клиент счёт и что есть на складе, не открывая вторую программу и не спрашивая коллег.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Вариант 1</div>
+      <h2>Штатный модуль: «Коннектор к 1С»</h2>
+      <p>У Битрикс24 есть готовое приложение от вендора — не нужно ничего программировать, если ваша конфигурация 1С входит в список поддерживаемых. Найти его можно в разделе <em>CRM → Продажи → Коннектор к 1С</em> или <em>Автоматизация → Коннектор к 1С</em>.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/1c-integraciya/menu-connector.jpg" alt="Раздел «Коннектор к 1С» в меню Продажи Битрикс24" loading="lazy" width="1917" height="1102">
+      </div>
+      <figcaption>«Коннектор к 1С» открывается прямо из CRM — в разделе «Продажи» или «Автоматизация». Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+
+    <div class="case-prose reveal">
+      <p>Внутри — не одно приложение, а несколько связанных сервисов: полноценная двусторонняя синхронизация данных, «1С:Бэкофис» для просмотра документов 1С прямо в карточке сделки, экспорт отчётов и печатных форм на телефон руководителя, автоматизация через роботов и триггеров, а для коробочной версии — ещё и обмен кадровыми данными.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/1c-integraciya/app-1c-crm.jpg" alt="Приложение «1С + CRM Битрикс24»: Коннектор к 1С, КЭДО + 1С, сервисы подключений и синхронизации" loading="lazy" width="1916" height="1086">
+      </div>
+      <figcaption>Внутри модуля — набор сервисов: комплексная интеграция, отдельные сервисы подключения и синхронизации по счетам и каталогу. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Чем обмениваются</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Контакты, компании, реквизиты и банковские счета</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Сделки и счета (новые и старые), заказы, оплаты, отгрузки</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Товары и вариации, свойства, единицы измерения, цены и остатки</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Документы и печатные формы, справочники, отчёты 1С</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Режимы обмена</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt=""><strong>В реальном времени</strong> — изменение в 1С или Битрикс24 сразу запускает синхронизацию</li>
+          <li><img class="ico" src="assets/img/check.svg" alt=""><strong>По расписанию</strong> — обмен происходит автоматически с заданной частотой</li>
+          <li><img class="ico" src="assets/img/check.svg" alt=""><strong>Вручную</strong> — запускается из 1С, когда это нужно</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Работает и с облачной, и с коробочной версией Битрикс24</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="konfiguracii-rb">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Важно для Беларуси</div>
+      <h2>Какие конфигурации 1С поддерживает штатный модуль</h2>
+      <p>Здесь и кроется главный нюанс. У штатного модуля два похожих, но разных приложения — «Коннектор к 1С» и «1С:Синхронизация» — и у каждого свой список поддерживаемых конфигураций по странам. Для России список из десятка редакций: ERP, «Управление торговлей», «Комплексная автоматизация» и другие. Для Беларуси официально поддерживаются только три.</p>
+    </div>
+
+    <div class="compare-table-wrap reveal">
+      <table class="compare-table compare-table--bi">
+        <thead>
+          <tr>
+            <th>Конфигурация 1С для Беларуси</th>
+            <th>Коннектор к 1С 2.0</th>
+            <th>1С:Синхронизация</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Управление компанией для Беларуси, ред. 1.6</td>
+            <td class="ct-yes">Поддерживается</td>
+            <td class="ct-yes">Поддерживается</td>
+          </tr>
+          <tr>
+            <td>Бухгалтерия для Беларуси, ред. 2.1</td>
+            <td class="ct-yes">Поддерживается</td>
+            <td class="ct-yes">Поддерживается</td>
+          </tr>
+          <tr>
+            <td>Управление торговлей для Беларуси, ред. 3.4</td>
+            <td class="ct-yes">Поддерживается</td>
+            <td class="ct-yes">Поддерживается</td>
+          </tr>
+          <tr>
+            <td>Всё остальное — старые редакции, версия 7.7, сильно доработанные «под себя» конфигурации, отраслевые решения на базе 1С</td>
+            <td class="ct-no">Не поддерживается</td>
+            <td class="ct-no">Не поддерживается</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="case-prose reveal">
+      <p>Три редакции — это заметно меньше, чем у российского списка, и это не ошибка вендора, а объективная особенность: белорусские редакции 1С не такие массовые, и не под каждую разработчики модуля пишут отдельную поддержку. Дополнительно каждая конфигурация обменивается по-своему: например, «Бухгалтерия для Беларуси» синхронизирует в основном счета, а «Управление торговлей для Беларуси» — ещё и сделки, заказы, товары и остатки. Полный список возможностей стоит сверять непосредственно перед подключением, а не полагаться на общее название модуля.</p>
+      <blockquote class="article-quote">
+        «Первый вопрос, который мы задаём клиенту с запросом на интеграцию с 1С, — не „что вы хотите синхронизировать“, а „какая у вас редакция и стандартная ли она“. От ответа зависит, займёт это два часа с готовым модулем или отдельный проект».
+        <cite>Команда «АйТи Аналитикс»</cite>
+      </blockquote>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/1c-integraciya/nastroyki-1c.jpg" alt="Раздел «Битрикс24» в настройках 1С: синхронизация данных, автоматизация, экспорт печатных форм и отчётов, администрирование" loading="lazy" width="1280" height="671">
+      </div>
+      <figcaption>Так выглядит раздел интеграции со стороны 1С — там же настраивается расписание обмена и правила синхронизации. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Вариант 2</div>
+      <h2>Если конфигурации нет в списке: кастомная интеграция</h2>
+      <p>Ситуация встречается часто: компания годами дорабатывала свою 1С «под себя», использует старую версию 7.7 или отраслевое решение, которого нет ни в одном официальном списке. Штатный модуль здесь просто не подключится — не потому что «руки не дошли настроить», а потому что вендор не поддерживает эту конфигурацию в принципе.</p>
+    </div>
+    <div class="case-prose reveal">
+      <p>Выход — разработать обмен данными индивидуально: программист пишет код, который через REST API Битрикс24 и веб-сервисы или обработки 1С передаёт нужные документы в обе стороны. Гибкость здесь максимальная — можно синхронизировать ровно то, что нужно, и по любой логике, вплоть до уникальных бизнес-правил конкретной компании. Но это уже не готовая коробка от вендора, а полноценная разработка: с техническим заданием, тестированием и, что важнее всего, дальнейшей поддержкой.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Честно о рисках</div>
+      <h2>Чем опасна кастомная разработка интеграции</h2>
+      <p>Кастомная интеграция — рабочий и часто единственный вариант. Но у неё принципиально другая природа рисков, чем у штатного модуля, и клиенту стоит понимать это на берегу, а не постфактум.</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">У штатного модуля</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">За модуль отвечает вендор — он же его развивает и чинит при выходе новых версий 1С и Битрикс24</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Есть документация, техподдержка и понятная процедура обновления</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Встроенный журнал ошибок и уведомления о сбоях синхронизации — из коробки</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Стоимость предсказуема: подписка или разовая настройка</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">У кастомной разработки</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Поддержку и развитие обеспечивает конкретный разработчик или подрядчик — вендор ответственности не несёт</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Обновление 1С или Битрикс24 может незаметно сломать обмен — без предупреждения от вендора, ведь для него этой интеграции «официально не существует»</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Журнал ошибок, уведомления, откат при сбое — всё это нужно закладывать в разработку отдельно, иначе их просто не будет</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Стоимость и сроки — это оценка проекта, а не прайс на подписку</li>
+        </ul>
+      </div>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/1c-integraciya/zhurnal-oshibok.jpg" alt="Настройки журнала ошибок и оповещений об ошибках синхронизации в модуле интеграции 1С с Битрикс24" loading="lazy" width="1280" height="671">
+      </div>
+      <figcaption>У штатного модуля есть готовый журнал ошибок и настройка оповещений о сбоях — это часть коробочного решения. В кастомной интеграции такое приходится проектировать и оплачивать отдельно. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+
+    <div class="case-prose reveal">
+      <p>Отдельно стоит сказать про самый неприятный сценарий — <strong>зависимость от одного разработчика</strong>. Если интеграцию писал один программист или небольшая команда без внятной документации, а через год-два этот человек стал недоступен (уволился, сменил профиль, компания-подрядчик закрылась), разобраться в чужом коде и безопасно его поддерживать — задача не быстрая и не дешёвая. У штатного модуля такой проблемы нет в принципе: за ним стоит вендор, а не один человек.</p>
+      <p>Есть и более практичный риск — <strong>безопасность</strong>. Обмен с 1С обычно означает открытый веб-сервис с доступом к бухгалтерской базе. Если его настроили наспех — без HTTPS, с общим паролем администратора вместо отдельной учётной записи для обмена, без ограничения по IP — это готовая дыра в периметре компании. У штатного модуля такие вещи проверены вендором на тысячах внедрений; у самописного решения качество защиты равно квалификации конкретного исполнителя.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Взвешенный взгляд</div>
+      <h2>Когда кастомная разработка действительно оправдана</h2>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Конфигурация 1С не входит в список поддерживаемых, а перейти на другую редакцию бизнес не готов</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Нужна синхронизация по нетиповой бизнес-логике, которую штатный модуль не покрывает даже частично</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Компания уже большая, готова содержать выделенного разработчика или подрядчика на постоянной основе</li>
+        </ul>
+      </div>
+      <div class="card">
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Достаточно синхронизировать 1–2 объекта (например, только счета), а не полный двусторонний обмен — тогда риски и стоимость кастома соразмерны задаче</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Есть готовность зафиксировать зону ответственности и договор на поддержку, а не разовую разработку «и забыли»</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Прежде чем писать своё, стоит проверить готовые решения на Битрикс24.Маркет — часто под нестандартный случай уже есть чужой модуль</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как мы работаем</div>
+      <h2>Что входит в интеграцию Битрикс24 и 1С</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Проверка конфигурации</h4>
+        <p>Смотрим точную редакцию и версию 1С, узнаём в 1С через «О программе», и насколько сильно она доработана относительно типовой — от этого зависит весь дальнейший план.</p>
+      </div>
+      <div class="step">
+        <h4>Выбор способа</h4>
+        <p>Если конфигурация поддерживается — подключаем штатный «Коннектор к 1С» или «1С:Синхронизацию». Если нет — честно проговариваем объём, сроки и стоимость кастомной разработки до старта, а не по факту.</p>
+      </div>
+      <div class="step">
+        <h4>Настройка обмена</h4>
+        <p>Сопоставляем справочники и поля, выбираем режим обмена — реальное время, расписание или вручную — под нагрузку и реальную потребность бизнеса.</p>
+      </div>
+      <div class="step">
+        <h4>Безопасность подключения</h4>
+        <p>Отдельная учётная запись для обмена, HTTPS, ограничение доступа — вне зависимости от того, штатный модуль это или кастомная разработка.</p>
+      </div>
+      <div class="step">
+        <h4>Тест на копии базы</h4>
+        <p>Прогоняем реальные сценарии — новую сделку, оплату, изменение остатка — на тестовой базе 1С, прежде чем включать обмен на боевых данных.</p>
+      </div>
+      <div class="step">
+        <h4>Документация и сопровождение</h4>
+        <p>Для кастомных решений отдельно фиксируем логику обмена в документации — чтобы интеграция не зависела от памяти одного человека.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Разберёмся, что подходит именно вам</h2>
+        <p>Проверим вашу конфигурацию 1С, скажем честно — хватит штатного модуля или нужна разработка — и посчитаем реальные сроки и стоимость.</p>
+      </div>
+      <a href="contacts.html#form" class="btn btn--primary">Обсудить задачу</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:16px;">
+          <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+          <span class="brand__name">АйТи Аналитикс</span>
+        </a>
+        <p>Внедрение Битрикс24 и систем телефонии. Ваш партнёр в мире Битрикс24 с 2011 года.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="bitrix24.html">Битрикс24</a></li>
+          <li><a href="telephony.html">Телефония</a></li>
+          <li><a href="ai.html">ИИ-решения</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="partners.html">Партнёрам</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+375445057799">+375 (44) 505-77-99</a></li>
+          <li><a href="mailto:sales@it-a.by">sales@it-a.by</a></li>
+          <li><a href="contacts.html#map">г. Минск, ул. Лукьяновича, 10к7</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Мы на связи</h4>
+        <div class="social-row">
+          <a href="https://www.instagram.com/it_a.by/" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="https://t.me/ita_by_bitrix" aria-label="Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2011–2026 АйТи Аналитикс. УНП 791048093</span>
+      <span>Все услуги: Битрикс24 · IP-телефония · Интеграции</span>
+      <span><a href="assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Политика конфиденциальности</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.by/b1536661/crm/site_button/loader_31_u35a1q.js');
+</script>
+</body>
+</html>

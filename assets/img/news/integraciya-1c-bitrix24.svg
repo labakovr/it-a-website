@@ -1,0 +1,33 @@
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Интеграция Битрикс24 и 1С">
+  <rect width="1280" height="720" fill="#1d1d1b"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#8fbf21"/>
+  <text x="90" y="150" fill="#8fbf21" font-family="Nunito, 'Segoe UI', sans-serif" font-size="26" font-weight="800" letter-spacing="3">СТАТЬЯ · ИНТЕГРАЦИИ</text>
+  <text x="90" y="240" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="72" font-weight="900">Битрикс24 и 1С</text>
+  <text x="92" y="308" fill="#b7b7b2" font-family="Nunito, 'Segoe UI', sans-serif" font-size="27" font-weight="700">Штатный модуль или своя разработка</text>
+
+  <g transform="translate(90 360)" font-family="Nunito, 'Segoe UI', sans-serif">
+    <rect x="0" y="0" width="530" height="288" rx="16" fill="#262622"/>
+    <text x="28" y="42" fill="#8fbf21" font-size="17" font-weight="800">Штатный коннектор</text>
+    <text x="28" y="66" fill="#7f8074" font-size="12.5" font-weight="700">поддержка Битрикс24 · для Беларуси — 3 конфигурации</text>
+    <g font-size="13" font-weight="700" fill="#d7d7d3">
+      <circle cx="34" cy="98" r="4" fill="#8fbf21"/><text x="48" y="103">Управление компанией для Беларуси</text>
+      <circle cx="34" cy="128" r="4" fill="#8fbf21"/><text x="48" y="133">Бухгалтерия для Беларуси</text>
+      <circle cx="34" cy="158" r="4" fill="#8fbf21"/><text x="48" y="163">Управление торговлей для Беларуси</text>
+    </g>
+    <rect x="28" y="192" width="474" height="66" rx="10" fill="#303029"/>
+    <text x="44" y="216" fill="#ececec" font-size="12.5" font-weight="800">Готовое решение вендора</text>
+    <text x="44" y="238" fill="#9a9a92" font-size="11.5" font-weight="700">поддержка, обновления, документация — всё от 1С и Битрикс24</text>
+
+    <rect x="570" y="0" width="530" height="288" rx="16" fill="#262622"/>
+    <text x="598" y="42" fill="#d9b23a" font-size="17" font-weight="800">Кастомная разработка</text>
+    <text x="598" y="66" fill="#7f8074" font-size="12.5" font-weight="700">для нестандартных конфигураций и задач</text>
+    <g font-size="13" font-weight="700" fill="#d7d7d3">
+      <circle cx="604" cy="98" r="4" fill="#d9b23a"/><text x="618" y="103">Нет вендорской поддержки</text>
+      <circle cx="604" cy="128" r="4" fill="#d9b23a"/><text x="618" y="133">Риск сломаться при обновлении</text>
+      <circle cx="604" cy="158" r="4" fill="#d9b23a"/><text x="618" y="163">Зависимость от разработчика</text>
+    </g>
+    <rect x="598" y="192" width="474" height="66" rx="10" fill="#303029"/>
+    <text x="614" y="216" fill="#ececec" font-size="12.5" font-weight="800">Проект, а не готовая коробка</text>
+    <text x="614" y="238" fill="#9a9a92" font-size="11.5" font-weight="700">гибкость в обмен на стоимость, сроки и ответственность за поддержку</text>
+  </g>
+</svg>
