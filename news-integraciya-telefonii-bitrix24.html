@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Интеграция телефонии с Битрикс24: виртуальная АТС или своя станция | АйТи Аналитикс</title>
+<meta name="description" content="Зачем связывать телефонию с Битрикс24, какие есть варианты — облачная виртуальная АТС от МТС и А1 или собственная станция на Asterisk и Yeastar, — и чем ситуация с IP-телефонией в Беларуси отличается от других стран.">
+<link rel="canonical" href="https://it-a.by/news-integraciya-telefonii-bitrix24.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="АйТи Аналитикс">
+<meta property="og:title" content="Интеграция телефонии с Битрикс24: виртуальная АТС или своя станция">
+<meta property="og:description" content="Облачная ВАТС от МТС и А1 или собственная станция на Asterisk и Yeastar: как звонки становятся частью CRM, зачем нужен отдельный модуль интеграции и чем Беларусь отличается от других стран в вопросах IP-телефонии.">
+<meta property="og:url" content="https://it-a.by/news-integraciya-telefonii-bitrix24.html">
+<meta property="og:image" content="https://it-a.by/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Интеграция телефонии с Битрикс24: виртуальная АТС или своя станция">
+<meta name="twitter:description" content="Виртуальная АТС от МТС и А1 или собственная станция на Asterisk и Yeastar — как звонки становятся частью CRM и зачем нужен отдельный модуль интеграции.">
+<meta name="twitter:image" content="https://it-a.by/assets/img/og-image.png">
+<meta name="theme-color" content="#1d1d1b">
+<link rel="icon" href="assets/img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Интеграция телефонии с Битрикс24: виртуальная АТС или своя станция",
+  "description": "Зачем связывать телефонию с Битрикс24, какие есть варианты — облачная виртуальная АТС от МТС и А1 или собственная станция на Asterisk и Yeastar, — и чем ситуация с IP-телефонией в Беларуси отличается от других стран.",
+  "image": "https://it-a.by/assets/img/og-image.png",
+  "author": { "@type": "Organization", "name": "АйТи Аналитикс", "url": "https://it-a.by/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "АйТи Аналитикс",
+    "logo": { "@type": "ImageObject", "url": "https://it-a.by/assets/img/logo-mark.png" }
+  },
+  "datePublished": "2026-09-11",
+  "dateModified": "2026-09-11",
+  "mainEntityOfPage": "https://it-a.by/news-integraciya-telefonii-bitrix24.html",
+  "about": "Интеграция телефонии с Битрикс24: виртуальная АТС операторов и собственные станции Asterisk и Yeastar"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://it-a.by/" },
+    { "@type": "ListItem", "position": 2, "name": "Новости", "item": "https://it-a.by/news.html" },
+    { "@type": "ListItem", "position": 3, "name": "Интеграция телефонии с Битрикс24", "item": "https://it-a.by/news-integraciya-telefonii-bitrix24.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+      <span class="brand__name">АйТи Аналитикс</span>
+    </a>
+    <nav class="nav">
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="bitrix24.html" class="nav-link">Битрикс24</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по Битрикс24" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="features.html">Возможности Битрикс24</a>
+          <a href="licenses.html">Лицензии Битрикс24</a>
+          <a href="bitrix24.html">Внедрение Битрикс24</a>
+          <a href="bitrix24.html">Сопровождение Битрикс24</a>
+          <a href="education.html">Обучение Битрикс24</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="telephony.html" class="nav-link">Телефония</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по телефонии" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="telephony.html">Внедрение IP-телефонии</a>
+          <a href="telephony.html">Настройка АТС</a>
+          <a href="telephony.html">Сопровождение телефонии</a>
+          <a href="catalog/index.html">Каталог оборудования</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="ai.html" class="nav-link">ИИ-решения</a>
+          <button type="button" class="nav-caret" aria-label="Показать ИИ-решения" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="ai.html">Внедрение ИИ-ассистентов</a>
+          <a href="ai.html">Автоматизация процессов</a>
+          <a href="ai.html">Обучение и сопровождение</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="portfolio.html" class="nav-link">Портфолио</a>
+          <button type="button" class="nav-caret" aria-label="Показать разделы портфолио" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="cases.html">Кейсы</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="certificates.html">Сертификаты</a>
+          <a href="about.html">О нас</a>
+        </div>
+      </div>
+      <a href="news.html" class="is-active">Новости</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:+375445057799" class="header__phone">+375 (44) 505-77-99</a>
+      <a href="contacts.html#form" class="btn btn--primary btn--sm">Заказать звонок</a>
+      <button class="nav-toggle" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">Главная</a><span class="sep">/</span><a href="news.html">Новости</a><span class="sep">/</span><span>Интеграция телефонии с Битрикс24</span></div>
+    <div class="eyebrow">Статья · Телефония · 11 сентября 2026</div>
+    <h1>Интеграция телефонии с Битрикс24: виртуальная АТС или своя станция</h1>
+    <p class="hero__lead">Пока телефония не связана с CRM, звонок — это просто звонок: поговорили и положили трубку. Кто звонил, о чём договорились, перезвонили ли клиенту через неделю — Битрикс24 об этом не знает. Стоит подключить телефонию к CRM, и картина меняется: система сама показывает карточку звонящего, сохраняет запись разговора там же, где вся история клиента, и не даёт забыть о пропущенном вызове. Разбираем, какими способами это делают в Беларуси — через облачную виртуальную АТС оператора или через собственную станцию на Asterisk или Yeastar.</p>
+    <div class="hero__actions">
+      <a href="#varianty" class="btn btn--outline-dark">Какие есть варианты →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="case-facts reveal">
+      <div class="card">
+        <div class="eyebrow">Услуга</div>
+        <strong>Интеграция телефонии с Битрикс24</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Два пути</div>
+        <strong>Виртуальная АТС оператора (МТС, А1) или собственная станция</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">С чем работаем чаще всего</div>
+        <strong>Станции Yeastar и Asterisk — наш профиль по собственным АТС</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Важно знать заранее</div>
+        <strong>Любой вариант требует настройки и последующей поддержки</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="zachem">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Зачем это нужно</div>
+      <h2>Что меняется, когда звонки становятся частью CRM</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Без интеграции телефония и CRM живут отдельно друг от друга. Менеджер видит на аппарате или в мобильном приложении незнакомый номер, поднимает трубку, разговаривает — а потом должен сам вспомнить, что нужно зайти в Битрикс24 и создать карточку, если это новый клиент, или найти существующую и вручную записать, о чём договорились. Если не успел или забыл — информация осталась только в голове менеджера. Запись разговора, если она вообще велась, лежит отдельно на сервере АТС и с карточкой клиента никак не связана.</p>
+      <p>После интеграции этот процесс автоматический. Входящий звонок сразу поднимает карточку клиента — на экране всплывает имя, ответственный менеджер, история предыдущих обращений. Если звонит новый номер, Битрикс24 может сам создать лид или сделку. Запись разговора прикрепляется прямо к карточке — ничего не нужно искать отдельно. Пропущенный звонок не теряется: по нему автоматически ставится задача перезвонить. А в конце месяца руководитель видит не ощущения, а цифры: сколько звонков приняли, сколько пропустили, сколько длился разговор у каждого сотрудника.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/integraciya-telefonii-bitrix24/vsplyvayuschaya-kartochka-zvonka.png" alt="Всплывающая карточка входящего звонка в Битрикс24 с именем клиента и ответственным менеджером" loading="lazy" width="600" height="293">
+      </div>
+      <figcaption>Так выглядит всплывающая карточка при входящем звонке — пример из приложения «Виртуальная АТС МТС Беларусь» в Битрикс24.Маркете. Похожим образом работает любая интеграция телефонии с CRM.</figcaption>
+    </figure>
+
+    <ul class="check-list check-grid reveal">
+      <li><img class="ico" src="assets/img/check.svg" alt="">Карточка клиента всплывает сама — не нужно искать её вручную во время разговора</li>
+      <li><img class="ico" src="assets/img/check.svg" alt="">Запись разговора сохраняется прямо в карточке сделки или лида</li>
+      <li><img class="ico" src="assets/img/check.svg" alt="">Новый номер может автоматически превращаться в лид или сделку</li>
+      <li><img class="ico" src="assets/img/check.svg" alt="">Звонок можно совершить прямо из карточки клиента одним кликом по номеру</li>
+      <li><img class="ico" src="assets/img/check.svg" alt="">Пропущенные звонки не теряются — по ним ставится задача на перезвон</li>
+      <li><img class="ico" src="assets/img/check.svg" alt="">Появляется реальная статистика: количество, длительность и результат звонков по каждому сотруднику</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--light" id="varianty">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как это устроено</div>
+      <h2>В Битрикс24 три способа подключения телефонии, но выбор — по сути, из двух путей</h2>
+      <p>Официальная справка Битрикс24 выделяет три технических способа подключить звонки: арендовать номер у партнёра платформы, подключить свою АТС через SIP-коннектор или установить готовое приложение конкретного оператора или станции из Маркета. Для аренды номера ничего своего не нужно — это отдельная история. А если у компании уже есть телефония, выбор сводится к двум стратегиям: подключить облачную виртуальную АТС оператора или связать с Битрикс24 собственную станцию.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/integraciya-telefonii-bitrix24/telefoniya-podklyuchenie-sposoby.png" alt="Раздел «Телефония → Подключение» в Битрикс24: аренда номера, офисная и облачная SIP АТС, телефония от партнёров" loading="lazy" width="1209" height="724">
+      </div>
+      <figcaption>Раздел «Телефония → Подключение» в Битрикс24: все способы собраны в одном месте — аренда номера, SIP-коннектор для своей АТС и каталог готовых приложений от партнёров. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+
+    <div class="case-prose reveal">
+      <p>Оба пути в итоге решают одну задачу — довести звонок и данные о нём до CRM, — но по-разному распределяют, что где хранится и кто за что отвечает. С облачной ВАТС оператор берёт на себя номера, серверы и связь, а компании остаётся только настроить сценарии и подключить приложение. Со своей станцией компания сама владеет оборудованием и получает больше гибкости, но и больше ответственности за его работу.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="belarus">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Особенности Беларуси</div>
+      <h2>Почему в Беларуси выбор чаще падает на ВАТС локальных операторов</h2>
+      <p>В странах, где рынок VoIP не регулируется так жёстко, компании выбирают между десятками облачных АТС и провайдеров SIP-трафика по всему миру — международные звонки маршрутизируются через того, у кого дешевле и удобнее. В Беларуси ситуация другая: с 2016 года действуют правила, по которым право предоставлять международную IP-телефонию закреплено за ограниченным числом операторов, а не за любым зарубежным VoIP-провайдером на выбор.</p>
+    </div>
+    <div class="case-prose reveal">
+      <p>На практике это не мешает бизнесу пользоваться IP-телефонией и виртуальными АТС внутри страны — этот рынок вполне легален и развит. Но выбор для компании внутри Беларуси уже, чем «в других странах»: вместо подключения к произвольному зарубежному облачному провайдеру логичный и предсказуемый путь — виртуальная АТС от белорусского оператора связи, у которого уже есть номера, лицензия и договор с компанией на другие услуги. Поэтому виртуальные АТС от МТС и А1 в Беларуси — это не просто одно из многих предложений на рынке, а по сути стандартный путь для компании, у которой уже есть номера этих операторов и которая не хочет разбираться в тонкостях международного трафика.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="vats">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Простой путь</div>
+      <h2>Виртуальная АТС от МТС и А1 — заметно проще, чем разворачивать свою станцию</h2>
+      <p>Мы не будем говорить, что это «в два клика» и «дёшево» — сначала всё равно нужно подключить услугу у оператора, установить приложение и настроить сценарии обработки звонков. Но по сравнению с собственной АТС это действительно понятный и предсказуемый путь: не нужно покупать и обслуживать оборудование, у оператора уже есть номера и лицензия, а интеграция с Битрикс24 оформлена в виде готового приложения из Маркета.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/integraciya-telefonii-bitrix24/mts-vats-podklyuchenie.png" alt="Инструкция подключения интеграции виртуальной АТС МТС Беларусь с Битрикс24: установка приложения и ввод адреса портала" loading="lazy" width="600" height="591">
+      </div>
+      <figcaption>Подключение виртуальной АТС МТС Беларусь к Битрикс24: приложение ставится из Маркета, дальше нужно указать адрес портала — интеграция работает и с облачной, и с коробочной версией. Скриншот с официальной страницы подключения ВАТС МТС.</figcaption>
+    </figure>
+
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Виртуальная АТС МТС Беларусь</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Приложение в Битрикс24.Маркете от разработчика ITooLabs, бесплатное с оплатой звонков по тарифам МТС</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Звонок по клику, всплывающая карточка клиента, автосоздание лидов и сделок по новым номерам</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Запись разговоров с привязкой к карточке, аналитика по сотрудникам и отделам</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Виртуальная АТС А1</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Одно из самых устанавливаемых приложений телефонии в белорусском Битрикс24.Маркете</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Исходящие звонки прямо из CRM, карточки при входящих вызовах, привязка сотрудников АТС к пользователям CRM</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Больше 100 функций телефонии на стороне самой АТС — очереди, голосовое меню, статистика</li>
+        </ul>
+      </div>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/integraciya-telefonii-bitrix24/a1-vats-instrukciya-integracii.png" alt="Инструкция по интеграции виртуальной АТС А1 с Битрикс24 в личном кабинете А1 ВАТС" loading="lazy" width="600" height="447">
+      </div>
+      <figcaption>А1 приводит инструкцию по подключению Битрикс24 прямо в личном кабинете своей виртуальной АТС — установить приложение, авторизоваться и привязать сотрудников. Скриншот из личного кабинета А1 ВАТС.</figcaption>
+    </figure>
+
+    <div class="case-prose reveal">
+      <p>Как и с любым сторонним приложением, качество работы конкретной интеграции зависит от разработчика: у одних она отлажена стабильнее, у других случаются задержки и нужно точнее настраивать сценарии. Это ещё одна причина не относиться к подключению как к формальности — приложение нужно протестировать на реальных звонках, а не просто установить и понадеяться, что всё заработает само.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="svoya-ats">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Больше контроля</div>
+      <h2>Собственная станция: Asterisk и Yeastar</h2>
+      <p>Компании выбирают собственную АТС вместо облачной, когда хотят держать телефонию под своим контролем: сохранить существующие городские линии и GSM-шлюзы, не зависеть от тарифов и решений одного оператора, настроить нестандартную маршрутизацию звонков или просто масштабировать телефонию под большой штат так, как это удобно именно компании. Мы по телефонии в основном работаем с двумя платформами — Asterisk и станциями Yeastar.</p>
+    </div>
+    <div class="case-prose reveal">
+      <p>Asterisk — открытое программное обеспечение для АТС: гибкое и бесплатное само по себе, но требующее сервера и грамотной настройки. Yeastar — готовые станции, физические или виртуальные, с собственной панелью администрирования, которая проще в освоении, чем голый Asterisk. Обе платформы умеют подключаться к Битрикс24 — сначала как SIP-АТС через встроенный SIP-коннектор, который отвечает за базовую маршрутизацию звонков в CRM и обратно.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/integraciya-telefonii-bitrix24/sip-konnektor-podklyuchenie.jpg" alt="Подключённые через SIP-коннектор офисная и облачная SIP АТС в настройках телефонии Битрикс24" loading="lazy" width="1187" height="617">
+      </div>
+      <figcaption>Собственная станция подключается к Битрикс24 как «Офисная SIP АТС» через SIP-коннектор — это базовый уровень связи, на котором держится любая интеграция своей АТС. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+
+    <div class="section-head reveal">
+      <h2>Почему для Asterisk и Yeastar обычно ставят отдельный модуль интеграции</h2>
+      <p>Встроенный SIP-коннектор решает базовую задачу — довести голос и команды звонка до Битрикс24 и обратно, — но он не заглядывает внутрь самой станции. А для полноценной автоматизации нужно как раз это: знать, какая очередь приняла звонок, на кого он в итоге переведён, где лежит файл записи, что происходит с параллельными вызовами.</p>
+    </div>
+
+    <div class="case-prose reveal">
+      <p>Для этого и ставится отдельный модуль интеграции — программная прослойка между станцией и Битрикс24. Для Asterisk такие модули подключаются к серверу через Asterisk Manager Interface (AMI) и читают данные напрямую из базы станции; для Yeastar — через собственный API станции. Модуль уже умеет то, что не делает голый SIP-коннектор: автоматически создавать лид по звонку с незнакомого номера, распределять вызовы на ответственного менеджера, сохранять запись разговора в карточке, показывать всплывающую карточку клиента и фиксировать пропущенные звонки отдельной задачей.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="podderzhka">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Важный нюанс</div>
+      <h2>Любой вариант — это не «настроил один раз и забыл»</h2>
+      <p>И облачная ВАТС оператора, и собственная станция требуют настройки на старте и внимания дальше — разница только в том, что именно приходится настраивать и на чьей стороне лежит ответственность за это.</p>
+    </div>
+
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Что настраивается при подключении</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Привязка сотрудников АТС к пользователям Битрикс24</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Маршрутизация и распределение звонков по отделам и ответственным</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Права доступа — кто может слушать записи и звонить из чужих сделок</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Сценарии для новых и повторных звонков — когда создавать лид, а когда искать существующую карточку</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Что требует внимания после запуска</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Обновления приложения или модуля интеграции вслед за обновлениями Битрикс24</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Для своей станции — мониторинг сервера, бэкапы, обновления самого Asterisk или Yeastar</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Лицензия SIP-коннектора и оплата подключения — их нужно продлевать</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Качество связи — иногда сценарии приходится донастраивать по мере роста штата или изменения процессов</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как мы работаем</div>
+      <h2>Что входит в подключение телефонии к Битрикс24</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Аудит</h4>
+        <p>Смотрим, какая телефония сейчас — оператор, номера, оборудование, — и как выстроена работа с входящими звонками.</p>
+      </div>
+      <div class="step">
+        <h4>Выбор пути</h4>
+        <p>Помогаем выбрать между облачной ВАТС оператора и собственной станцией — исходя из задач, бюджета и уже имеющегося оборудования.</p>
+      </div>
+      <div class="step">
+        <h4>Подключение</h4>
+        <p>Настраиваем SIP-коннектор или модуль интеграции, маршрутизацию звонков и права доступа сотрудников.</p>
+      </div>
+      <div class="step">
+        <h4>Проверка</h4>
+        <p>Тестируем на реальных звонках: карточки клиентов, запись разговоров, создание лидов и сделок.</p>
+      </div>
+      <div class="step">
+        <h4>Обучение и сопровождение</h4>
+        <p>Показываем сотрудникам карточку звонка в работе и остаёмся на связи, если что-то потребует донастройки.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Хотите, чтобы звонки не терялись в CRM?</h2>
+        <p>Подберём вариант под вашу телефонию — виртуальную АТС оператора или собственную станцию на Asterisk или Yeastar — и настроим интеграцию с Битрикс24 от начала до тестовых звонков.</p>
+      </div>
+      <a href="contacts.html#form" class="btn btn--primary">Обсудить телефонию для Битрикс24 →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:16px;">
+          <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+          <span class="brand__name">АйТи Аналитикс</span>
+        </a>
+        <p>Внедрение Битрикс24 и систем телефонии. Ваш партнёр в мире Битрикс24 с 2011 года.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="bitrix24.html">Битрикс24</a></li>
+          <li><a href="telephony.html">Телефония</a></li>
+          <li><a href="ai.html">ИИ-решения</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="partners.html">Партнёрам</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+375445057799">+375 (44) 505-77-99</a></li>
+          <li><a href="mailto:sales@it-a.by">sales@it-a.by</a></li>
+          <li><a href="contacts.html#map">г. Минск, ул. Лукьяновича, 10к7</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Мы на связи</h4>
+        <div class="social-row">
+          <a href="https://www.instagram.com/it_a.by/" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="https://t.me/ita_by_bitrix" aria-label="Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2011–2026 АйТи Аналитикс. УНП 791048093</span>
+      <span>Все услуги: Битрикс24 · IP-телефония · Интеграции</span>
+      <span><a href="assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Политика конфиденциальности</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.by/b1536661/crm/site_button/loader_31_u35a1q.js');
+</script>
+</body>
+</html>
