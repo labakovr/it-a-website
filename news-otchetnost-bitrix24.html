@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Отчётность в Битрикс24: какая бывает и когда она не работает | АйТи Аналитикс</title>
+<meta name="description" content="Разбираем виды отчётности в Битрикс24: штатная оперативная аналитика, конструктор отчётов и BI-аналитика. Что можно кастомизировать, а что нет, и почему отчёты показывают пустоту, если компания не работает в CRM.">
+<link rel="canonical" href="https://it-a.by/news-otchetnost-bitrix24.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="АйТи Аналитикс">
+<meta property="og:title" content="Отчётность в Битрикс24: какая бывает и когда она не работает">
+<meta property="og:description" content="Штатная оперативная аналитика, конструктор отчётов и BI-аналитика: что можно настроить под себя, а что нет. И почему отчёты остаются пустыми, если в CRM никто не работает.">
+<meta property="og:url" content="https://it-a.by/news-otchetnost-bitrix24.html">
+<meta property="og:image" content="https://it-a.by/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Отчётность в Битрикс24: какая бывает и когда она не работает">
+<meta name="twitter:description" content="Штатная оперативная аналитика, конструктор отчётов и BI-аналитика: что можно настроить под себя, а что нет. И почему отчёты остаются пустыми, если в CRM никто не работает.">
+<meta name="twitter:image" content="https://it-a.by/assets/img/og-image.png">
+<meta name="theme-color" content="#1d1d1b">
+<link rel="icon" href="assets/img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Отчётность в Битрикс24: какая бывает и когда она не работает",
+  "description": "Виды отчётности в Битрикс24: штатная оперативная аналитика, конструктор отчётов и BI-аналитика. Что можно кастомизировать, а что нет, и при каких условиях отчёты вообще показывают данные.",
+  "image": "https://it-a.by/assets/img/og-image.png",
+  "author": { "@type": "Organization", "name": "АйТи Аналитикс", "url": "https://it-a.by/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "АйТи Аналитикс",
+    "logo": { "@type": "ImageObject", "url": "https://it-a.by/assets/img/logo-mark.png" }
+  },
+  "datePublished": "2026-09-11",
+  "dateModified": "2026-09-11",
+  "mainEntityOfPage": "https://it-a.by/news-otchetnost-bitrix24.html",
+  "about": "Отчётность и аналитика в Битрикс24"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://it-a.by/" },
+    { "@type": "ListItem", "position": 2, "name": "Новости", "item": "https://it-a.by/news.html" },
+    { "@type": "ListItem", "position": 3, "name": "Отчётность в Битрикс24", "item": "https://it-a.by/news-otchetnost-bitrix24.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+      <span class="brand__name">АйТи Аналитикс</span>
+    </a>
+    <nav class="nav">
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="bitrix24.html" class="nav-link">Битрикс24</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по Битрикс24" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="features.html">Возможности Битрикс24</a>
+          <a href="licenses.html">Лицензии Битрикс24</a>
+          <a href="bitrix24.html">Внедрение Битрикс24</a>
+          <a href="bitrix24.html">Сопровождение Битрикс24</a>
+          <a href="education.html">Обучение Битрикс24</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="telephony.html" class="nav-link">Телефония</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по телефонии" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="telephony.html">Внедрение IP-телефонии</a>
+          <a href="telephony.html">Настройка АТС</a>
+          <a href="telephony.html">Сопровождение телефонии</a>
+          <a href="catalog/index.html">Каталог оборудования</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="ai.html" class="nav-link">ИИ-решения</a>
+          <button type="button" class="nav-caret" aria-label="Показать ИИ-решения" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="ai.html">Внедрение ИИ-ассистентов</a>
+          <a href="ai.html">Автоматизация процессов</a>
+          <a href="ai.html">Обучение и сопровождение</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="portfolio.html" class="nav-link">Портфолио</a>
+          <button type="button" class="nav-caret" aria-label="Показать разделы портфолио" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="cases.html">Кейсы</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="certificates.html">Сертификаты</a>
+          <a href="about.html">О нас</a>
+        </div>
+      </div>
+      <a href="news.html" class="is-active">Новости</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:+375445057799" class="header__phone">+375 (44) 505-77-99</a>
+      <a href="contacts.html#form" class="btn btn--primary btn--sm">Заказать звонок</a>
+      <button class="nav-toggle" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">Главная</a><span class="sep">/</span><a href="news.html">Новости</a><span class="sep">/</span><span>Отчётность в Битрикс24</span></div>
+    <div class="eyebrow">Статья · Аналитика · 11 сентября 2026</div>
+    <h1>Отчётность в Битрикс24: какая бывает и когда она не работает</h1>
+    <p class="hero__lead">«Хотим видеть отчётность» — одна из самых частых фраз на старте проекта. И почти всегда за ней стоят три разных запроса сразу: готовая воронка продаж, свой отчёт под конкретную задачу и красивый дашборд для руководителя. В Битрикс24 за это отвечают три разных инструмента с разной степенью гибкости. Разбираем, что это за инструменты, что в них можно настроить под себя, а что — нет, и почему отчёт иногда остаётся пустым, даже когда всё настроено правильно.</p>
+    <div class="hero__actions">
+      <a href="#kogda-ne-rabotaet" class="btn btn--outline-dark">Сразу к разделу «когда не работает» →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="case-facts reveal">
+      <div class="card">
+        <div class="eyebrow">Услуга</div>
+        <strong>Настройка отчётности и аналитики в Битрикс24</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Уровни отчётности</div>
+        <strong>Оперативная аналитика · Конструктор отчётов · BI-аналитика</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">С чего начинаем</div>
+        <strong>Аудит: заполняются ли данные, которые должны попасть в отчёт</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Кому актуально</div>
+        <strong>Руководителям, которые хотят видеть цифры, а не собирать их вручную</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">С чего начать</div>
+      <h2>Где в Битрикс24 живёт отчётность</h2>
+      <p>Все отчёты и аналитика собраны в одном месте: <em>CRM → Аналитика</em>. Дальше портал предлагает на выбор три раздела разной глубины — от готовых отчётов до внешних BI-систем.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/otchetnost/menu.jpg" alt="Меню CRM → Аналитика в Битрикс24: Оперативная аналитика, Конструктор отчётов, BI-аналитика" loading="lazy" width="1279" height="724">
+      </div>
+      <figcaption>Раздел «Аналитика» в Битрикс24: оперативные отчёты, конструктор отчётов и BI-аналитика собраны в одном меню. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+
+    <div class="case-prose reveal">
+      <p><strong>Оперативная аналитика</strong> — это готовые отчёты по воронке продаж, звонкам, менеджерам. Ничего не нужно настраивать, но и структуру отчёта поменять нельзя. <strong>Конструктор отчётов</strong> — визуальный редактор, в котором собирают свой отчёт из полей CRM: свой набор колонок, свой период, своя сортировка. <strong>BI-аналитика</strong> — выгрузка данных во внешние системы (DataLens, Power BI, Looker Studio) или во встроенный BI Конструктор, когда нужно объединить Битрикс24 с другими источниками данных. У нас есть отдельная статья про этот уровень — <a href="news-bi-analitika-bitrix24.html">BI-аналитика для Битрикс24</a>, здесь мы коснёмся её только коротко.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Уровень 1</div>
+      <h2>Оперативная аналитика: готовые отчёты</h2>
+      <p>Раздел <em>CRM → Аналитика → Оперативная аналитика</em>. Это набор штатных отчётов, которые работают сразу после активации — без разработчика и без настройки.</p>
+    </div>
+    <div class="case-prose reveal">
+      <p>Сюда входят: воронка продаж (классическая и конверсионная — показывает, на каких стадиях сделки чаще проваливаются), эффективность менеджеров, план продаж, динамика продаж, сравнение периодов, аналитика звонков и диалогов, сквозная аналитика по рекламным каналам. Отчёты по лидам и сделкам открываются в одном разделе, а раньше были разбросаны по разным блокам CRM.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/otchetnost/voronka.png" alt="Отчёт «Воронка продаж» в CRM-аналитике Битрикс24: конверсия по стадиям, суммы лидов и сделок, эффективность менеджеров" loading="lazy" width="1024" height="570">
+      </div>
+      <figcaption>Отчёт «Воронка продаж» в оперативной аналитике: сумма и конверсия по стадиям считаются автоматически на данных CRM. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Что можно</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Менять период, фильтровать по менеджеру, воронке, источнику</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Смотреть данные по конкретной сделке, кликнув по сегменту</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Сравнивать периоды между собой</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Пользоваться сразу, без настройки и разработчика</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Чего нельзя</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Менять состав показателей и структуру самого отчёта</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Добавить свою метрику или пользовательское поле CRM</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Объединить в одном отчёте несколько типов данных</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Подключить источник данных вне Битрикс24</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Уровень 2</div>
+      <h2>Конструктор отчётов: своя отчётность без программиста</h2>
+      <p>Раздел <em>CRM → Аналитика → Конструктор отчётов</em>. Здесь готовых шаблонов недостаточно, и отчёт собирают вручную: свой набор колонок, свой период, свои условия.</p>
+    </div>
+    <div class="case-prose reveal">
+      <p>Логика простая: задаёте название и описание отчёта, отчётный период (интервал дат или число дней), а дальше выбираете колонки — стандартные поля сделки (стадия, ответственный, сумма, дата) и пользовательские поля CRM, если они заведены на портале. Колонки можно добавлять, убирать, сортировать по любой из них. Готовым отчётом можно поделиться с коллегами — передаётся именно шаблон отчёта, а не данные, поэтому у каждого сотрудника отчёт показывает только то, что разрешено его правами доступа.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/otchetnost/constructor.jpg" alt="Конструктор отчётов в Битрикс24: название и период отчёта, выбор колонок и сортировка" loading="lazy" width="1280" height="722">
+      </div>
+      <figcaption>Конструктор отчётов: свой период, свой набор колонок из полей CRM, своя сортировка. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Что можно настроить</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Произвольный период — интервал или число дней</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Состав колонок, включая пользовательские поля CRM</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Сортировку по любой из выбранных колонок</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Доступ коллег к готовому шаблону отчёта</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Где предел</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Источник — только данные CRM Битрикс24, без внешних систем</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Нет сложных вычисляемых метрик и формул поверх нескольких таблиц</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Есть ограничение по числу элементов в подборке — на очень больших объёмах лучше подходит BI Конструктор</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Новые счета конструктор не показывает — только старая версия счетов</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Уровень 3 · коротко</div>
+      <h2>BI-аналитика: когда нужно больше, чем CRM</h2>
+      <p>Раздел <em>CRM → Аналитика → BI-аналитика</em>. Подключаем, когда одного портала мало: нужен единый дашборд из нескольких источников или отчёт для людей без доступа в Битрикс24.</p>
+    </div>
+    <div class="case-prose reveal">
+      <p>Здесь два пути. <strong>BI Конструктор</strong> — визуальный редактор дашбордов прямо внутри портала (построен на Apache Superset): ничего подключать не нужно, но данные — в основном из Битрикс24. <strong>BI-аналитика</strong> — выгрузка датасетов во внешние системы: Yandex DataLens, Google Looker Studio, Microsoft Power BI. Так можно объединить сделки Битрикс24 с 1С, сайтом, рекламными кабинетами и получить один дашборд для руководителя или инвестора. Мы намеренно не разворачиваем эту тему здесь подробно — сравнение систем, примеры дашбордов и подводные камни собраны в отдельной статье: <a href="news-bi-analitika-bitrix24.html">BI-аналитика для Битрикс24</a>.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/otchetnost/bi-constructor.jpg" alt="BI Конструктор в Битрикс24: список готовых отчётов и дашбордов, рабочее место аналитика" loading="lazy" width="1280" height="773">
+      </div>
+      <figcaption>BI Конструктор — рабочее место аналитика внутри портала: готовые отчёты и дашборды на данных Битрикс24. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Коротко в таблице</div>
+      <h2>Что можно кастомизировать, а что нет</h2>
+    </div>
+    <div class="compare-table-wrap reveal">
+      <table class="compare-table compare-table--bi">
+        <thead>
+          <tr>
+            <th>Критерий</th>
+            <th>Оперативная аналитика</th>
+            <th>Конструктор отчётов</th>
+            <th>BI-аналитика / BI Конструктор</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Структура отчёта</td>
+            <td class="ct-no">Фиксированная, менять нельзя</td>
+            <td class="ct-yes">Свои колонки и сортировка</td>
+            <td class="ct-yes">Полностью гибкая</td>
+          </tr>
+          <tr>
+            <td>Период</td>
+            <td>Стандартные пресеты и фильтр</td>
+            <td class="ct-yes">Любой интервал или число дней</td>
+            <td class="ct-yes">Любой, на стороне BI-системы</td>
+          </tr>
+          <tr>
+            <td>Свои поля CRM</td>
+            <td class="ct-no">Нет</td>
+            <td class="ct-yes">Да, если поле заведено на портале</td>
+            <td class="ct-yes">Да</td>
+          </tr>
+          <tr>
+            <td>Источники кроме Битрикс24</td>
+            <td class="ct-no">Нет</td>
+            <td class="ct-no">Нет</td>
+            <td class="ct-yes">1С, сайт, реклама, CSV и другие</td>
+          </tr>
+          <tr>
+            <td>Настройка и обучение</td>
+            <td class="ct-yes">Не требуется, работает сразу</td>
+            <td>Пара минут на отчёт, без разработчика</td>
+            <td>Нужна настройка подключения и датасета</td>
+          </tr>
+          <tr>
+            <td>Отдать «наружу» человеку без доступа в портал</td>
+            <td class="ct-no">Нет</td>
+            <td class="ct-no">Нет</td>
+            <td class="ct-yes">Да — ссылкой или публикацией</td>
+          </tr>
+          <tr>
+            <td>Лучший сценарий</td>
+            <td>Быстро посмотреть воронку и звонки</td>
+            <td>Отчёт под конкретную разовую задачу</td>
+            <td>Управленческий дашборд из нескольких систем</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="kogda-ne-rabotaet">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Важно понимать</div>
+      <h2>Когда отчётность в Битрикс24 «не работает»</h2>
+      <p>Иногда отчёт настроен верно, но показывает не то, что ожидает руководитель. Обычно это не баг, а особенность логики отчёта — вот самые частые случаи из практики и официальной справки Битрикс24.</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt=""><strong>«Прочий трафик»</strong> — так помечаются лиды и сделки, если Битрикс24 не смог определить источник обращения: например, переход из соцсети без UTM-меток</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Воронка продаж показывает <strong>исторический путь</strong> сделки, а не её текущий статус: если сделка побывала на стадии «Успех», а потом её вернули в работу и закрыли как проигранную, воронка всё равно зафиксирует прохождение «Успеха»</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Фильтр «Отчётный период» в сквозной аналитике считает <strong>по дате создания</strong> сделки, а не по дате оплаты — конверсия и стоимость привлечения строятся именно так</li>
+        </ul>
+      </div>
+      <div class="card">
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Коллтрекинг работает <strong>не с любым номером</strong> — не все операторы и типы номеров поддерживают определение источника звонка, номер нужно предварительно проверить</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">CRM-аналитика не видит <strong>новые счета</strong> — поддерживается только старая версия; для новых нужен BI Конструктор</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">У CRM-аналитики есть <strong>лимит на число элементов</strong> в подборке — на очень крупных порталах часть отчётов лучше строить через BI Конструктор</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Самая частая причина</div>
+      <h2>Отчётность не создаёт данные — она их показывает</h2>
+      <p>Это главная мысль статьи. Очень часто к нам приходят с запросом «настройте красивую отчётность», а по факту сотрудники в Битрикс24 почти не работают: сделки заводятся не всегда, звонки идут с личных телефонов, обсуждения — в мессенджерах мимо CRM. В такой ситуации любой, даже идеально настроенный отчёт будет пустым или бессмысленным — не потому что Битрикс24 «не работает», а потому что показывать нечего.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Воронка «без середины»</h4>
+        <p>Хотят конверсионную воронку по стадиям, но менеджеры заводят сделку и сразу переводят её либо в «Успех», либо в «Отказ» — промежуточные стадии пропускаются. Отчёт технически работает, но показывает, что «все сделки закрываются за один шаг», хотя реально процесс продажи занимает недели.</p>
+      </div>
+      <div class="step">
+        <h4>Реклама без меток</h4>
+        <p>Хотят сквозную аналитику «какой канал приносит продажи», но на сайте и в рекламных кабинетах не настроены UTM-метки. В отчёте почти весь трафик попадает в «Прочий трафик» — система физически не может определить источник, если его не передали.</p>
+      </div>
+      <div class="step">
+        <h4>Звонки мимо телефонии</h4>
+        <p>Хотят отчёт по загрузке и эффективности менеджеров, но часть команды звонит с личных мобильных, а не через телефонию Битрикс24. У лучшего по факту продавца в отчёте — «0 звонков», потому что система видит только то, что прошло через портал.</p>
+      </div>
+      <div class="step">
+        <h4>Сумма сделки «потом заполним»</h4>
+        <p>Хотят отчёт по выручке и среднему чеку, но при создании сделки сумму и товары не указывают — «заполним перед закрытием». Часть сделок закрывается без заполнения, и отчёт занижает реальную выручку иногда в разы.</p>
+      </div>
+    </div>
+    <div class="case-prose reveal">
+      <blockquote class="article-quote">
+        «Перед тем как настраивать отчёты, мы всегда смотрим на сами данные: заводятся ли сделки, двигаются ли по стадиям, заполняются ли обязательные поля. Если нет — начинаем не с конструктора отчётов, а с регламента работы в CRM. Иначе красивый дашборд просто быстрее покажет, что учёт сломан».
+        <cite>Команда «АйТи Аналитикс»</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Условия</div>
+      <h2>Что нужно, чтобы отчётность была полезной</h2>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Все обращения и сделки заводятся в CRM, а не в блокноте, Excel или голове менеджера</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Стадии воронки отражают реальный процесс продажи и сделки двигают по ним по мере работы, а не «в один клик» перед отчётом</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Обязательные поля — источник, сумма, товары, ответственный — заполняются по ходу работы, а не задним числом</li>
+        </ul>
+      </div>
+      <div class="card">
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Звонки и переписки идут через Битрикс24: телефонию, Открытые линии, почту — а не мимо портала</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Сайт и рекламные кабинеты размечены UTM-метками для сквозной аналитики и коллтрекинга</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">За дисциплиной внесения данных следит конкретный ответственный, а не «все понемногу»</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как мы работаем</div>
+      <h2>Что входит в настройку отчётности</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Аудит данных</h4>
+        <p>Смотрим, что реально происходит в CRM: заводятся ли сделки, двигаются ли по стадиям, заполняются ли поля, которые нужны для будущих отчётов.</p>
+      </div>
+      <div class="step">
+        <h4>Регламент внесения данных</h4>
+        <p>Если данных не хватает — сначала настраиваем обязательные поля, стадии воронок и правила работы, а не отчёты поверх пустоты.</p>
+      </div>
+      <div class="step">
+        <h4>Оперативная аналитика и конструктор</h4>
+        <p>Подключаем штатные отчёты и собираем свои через конструктор — под задачи руководителя, отдела продаж, маркетинга.</p>
+      </div>
+      <div class="step">
+        <h4>Сквозная аналитика и коллтрекинг</h4>
+        <p>Настраиваем UTM-метки, проверяем номера на поддержку коллтрекинга, чтобы отчёты по каналам показывали реальную картину, а не «Прочий трафик».</p>
+      </div>
+      <div class="step">
+        <h4>BI-аналитика при необходимости</h4>
+        <p>Если нужен дашборд из нескольких систем или отчёт для людей без доступа в портал — подключаем BI Конструктор или внешние BI-системы (подробнее — в <a href="news-bi-analitika-bitrix24.html">отдельной статье</a>).</p>
+      </div>
+      <div class="step">
+        <h4>Обучение команды</h4>
+        <p>Показываем руководителям и менеджерам, как читать отчёты и почему важно вносить данные вовремя — без этого отчётность держится недолго.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Настроим отчётность, которой можно доверять</h2>
+        <p>Проверим, что реально попадает в CRM, наведём порядок в данных и соберём отчёты — от готовой воронки продаж до дашборда для руководителя.</p>
+      </div>
+      <a href="contacts.html#form" class="btn btn--primary">Обсудить задачу</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:16px;">
+          <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+          <span class="brand__name">АйТи Аналитикс</span>
+        </a>
+        <p>Внедрение Битрикс24 и систем телефонии. Ваш партнёр в мире Битрикс24 с 2011 года.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="bitrix24.html">Битрикс24</a></li>
+          <li><a href="telephony.html">Телефония</a></li>
+          <li><a href="ai.html">ИИ-решения</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="partners.html">Партнёрам</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+375445057799">+375 (44) 505-77-99</a></li>
+          <li><a href="mailto:sales@it-a.by">sales@it-a.by</a></li>
+          <li><a href="contacts.html#map">г. Минск, ул. Лукьяновича, 10к7</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Мы на связи</h4>
+        <div class="social-row">
+          <a href="https://www.instagram.com/it_a.by/" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="https://t.me/ita_by_bitrix" aria-label="Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2011–2026 АйТи Аналитикс. УНП 791048093</span>
+      <span>Все услуги: Битрикс24 · IP-телефония · Интеграции</span>
+      <span><a href="assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Политика конфиденциальности</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.by/b1536661/crm/site_button/loader_31_u35a1q.js');
+</script>
+</body>
+</html>
