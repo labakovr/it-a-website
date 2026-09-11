@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Миграция в Битрикс24: перенос данных из amoCRM и других CRM | АйТи Аналитикс</title>
+<meta name="description" content="Зачем компании переходят на Битрикс24 с amoCRM и других систем, какие есть способы переноса данных — штатные приложения Маркета, импорт CSV и миграция через API — и почему часть данных при смене CRM теряется почти всегда.">
+<link rel="canonical" href="https://it-a.by/news-migraciya-v-bitrix24.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="АйТи Аналитикс">
+<meta property="og:title" content="Миграция в Битрикс24: перенос данных из amoCRM и других CRM">
+<meta property="og:description" content="Штатные приложения-миграторы в Маркете Битрикс24, импорт CSV и миграция через API: как переносят данные из amoCRM и других систем, и почему часть данных теряется при любом способе.">
+<meta property="og:url" content="https://it-a.by/news-migraciya-v-bitrix24.html">
+<meta property="og:image" content="https://it-a.by/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Миграция в Битрикс24: перенос данных из amoCRM и других CRM">
+<meta name="twitter:description" content="Штатные миграторы Маркета, импорт CSV и миграция через API — и почему часть данных теряется при любом способе переноса.">
+<meta name="twitter:image" content="https://it-a.by/assets/img/og-image.png">
+<meta name="theme-color" content="#1d1d1b">
+<link rel="icon" href="assets/img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Миграция в Битрикс24: перенос данных из amoCRM и других CRM",
+  "description": "Зачем компании переходят на Битрикс24 с amoCRM и других систем, какие есть способы переноса данных — штатные приложения Маркета, импорт CSV и миграция через API — и почему часть данных при смене CRM теряется почти всегда.",
+  "image": "https://it-a.by/assets/img/og-image.png",
+  "author": { "@type": "Organization", "name": "АйТи Аналитикс", "url": "https://it-a.by/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "АйТи Аналитикс",
+    "logo": { "@type": "ImageObject", "url": "https://it-a.by/assets/img/logo-mark.png" }
+  },
+  "datePublished": "2026-09-11",
+  "dateModified": "2026-09-11",
+  "mainEntityOfPage": "https://it-a.by/news-migraciya-v-bitrix24.html",
+  "about": "Миграция данных в Битрикс24 с amoCRM и других CRM"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://it-a.by/" },
+    { "@type": "ListItem", "position": 2, "name": "Новости", "item": "https://it-a.by/news.html" },
+    { "@type": "ListItem", "position": 3, "name": "Миграция в Битрикс24", "item": "https://it-a.by/news-migraciya-v-bitrix24.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+      <span class="brand__name">АйТи Аналитикс</span>
+    </a>
+    <nav class="nav">
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="bitrix24.html" class="nav-link">Битрикс24</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по Битрикс24" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="features.html">Возможности Битрикс24</a>
+          <a href="licenses.html">Лицензии Битрикс24</a>
+          <a href="bitrix24.html">Внедрение Битрикс24</a>
+          <a href="bitrix24.html">Сопровождение Битрикс24</a>
+          <a href="education.html">Обучение Битрикс24</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="telephony.html" class="nav-link">Телефония</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по телефонии" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="telephony.html">Внедрение IP-телефонии</a>
+          <a href="telephony.html">Настройка АТС</a>
+          <a href="telephony.html">Сопровождение телефонии</a>
+          <a href="catalog/index.html">Каталог оборудования</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="ai.html" class="nav-link">ИИ-решения</a>
+          <button type="button" class="nav-caret" aria-label="Показать ИИ-решения" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="ai.html">Внедрение ИИ-ассистентов</a>
+          <a href="ai.html">Автоматизация процессов</a>
+          <a href="ai.html">Обучение и сопровождение</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="portfolio.html" class="nav-link">Портфолио</a>
+          <button type="button" class="nav-caret" aria-label="Показать разделы портфолио" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="cases.html">Кейсы</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="certificates.html">Сертификаты</a>
+          <a href="about.html">О нас</a>
+        </div>
+      </div>
+      <a href="news.html" class="is-active">Новости</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:+375445057799" class="header__phone">+375 (44) 505-77-99</a>
+      <a href="contacts.html#form" class="btn btn--primary btn--sm">Заказать звонок</a>
+      <button class="nav-toggle" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">Главная</a><span class="sep">/</span><a href="news.html">Новости</a><span class="sep">/</span><span>Миграция в Битрикс24</span></div>
+    <div class="eyebrow">Статья · CRM · 11 сентября 2026</div>
+    <h1>Миграция в Битрикс24: перенос данных из amoCRM и других CRM</h1>
+    <p class="hero__lead">Чаще всего к нам приходят с amoCRM — компания выросла, и узкой воронки продаж уже не хватает: нужны задачи и проекты, склад, сайты, телефония и аналитика в одном месте. Реже переезжают с «Мегаплана», Excel-таблиц или других CRM. И почти в каждом таком проекте первый вопрос один и тот же: «А всё перенесётся?». Если отвечать честно — нет, не всё. Разбираем, какими способами переносят данные в Битрикс24 и почему часть потерь неизбежна при любом из них.</p>
+    <div class="hero__actions">
+      <a href="#sposoby" class="btn btn--outline-dark">Способы переноса данных →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="case-facts reveal">
+      <div class="card">
+        <div class="eyebrow">Услуга</div>
+        <strong>Переход в Битрикс24 с другой CRM</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Чаще всего переносят из</div>
+        <strong>amoCRM, реже — «Мегаплан», Excel/Google Таблицы, другие CRM</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Способы</div>
+        <strong>Приложение из Маркета, импорт CSV, миграция через API</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Важно знать заранее</div>
+        <strong>Перенести абсолютно всё нельзя или очень дорого — потери будут всегда</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Зачем это нужно</div>
+      <h2>Почему компании уходят с amoCRM и других систем</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>amoCRM — хороший инструмент именно для отдела продаж: воронка, сделки, базовая автоматизация. Но когда компания растёт, ей нужно больше, чем воронка продаж. Появляются задачи и проекты с постановкой и контролем исполнения, склад и учёт товаров, документооборот, сквозная аналитика, интеграция с 1С, база знаний, HR-процессы — и всё это хочется видеть в одной системе, а не собирать из пяти разных сервисов с ручной синхронизацией между ними.</p>
+      <p>Битрикс24 в этом смысле — не просто другая CRM, а более широкая платформа: CRM, задачи, контакт-центр для мессенджеров и соцсетей, склад, сайты, HR и BI-аналитика работают в одном портале. Плюс возможность выбрать коробочную версию, если важно держать данные на своём сервере. Поэтому переход обычно происходит не из-за недовольства amoCRM как таковым, а потому что компания переросла узкоспециализированный инструмент.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="sposoby">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как это устроено</div>
+      <h2>Три способа перенести данные в Битрикс24</h2>
+      <p>У переноса данных в Битрикс24 нет единой кнопки «мигрировать всё автоматически». Есть три принципиально разных пути, и штатная справка Битрикс24 прямо перечисляет их в разделе CRM — Настройки: приложение-мигратор из Маркета, встроенный импорт CSV и миграция через API силами партнёра. Для большинства сделок и лидов доступ к этим вариантам открывается прямо из меню раздела CRM, рядом с обычным импортом.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/migraciya-v-bitrix24/menu-migraciya-import.jpg" alt="Меню настроек в разделе Сделки CRM Битрикс24 с пунктами «Импорт сделок» и «Миграция из других CRM»" loading="lazy" width="1279" height="695">
+      </div>
+      <figcaption>В настройках любого раздела CRM — Сделки, Лиды, Контакты — рядом с обычным импортом есть отдельный пункт «Миграция из других CRM». Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">1. Приложение из Маркета</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Готовый мигратор под конкретную систему — amoCRM, Excel, Zoho CRM, Trello, «МойСклад» и другие</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Самый быстрый и дешёвый вариант — для небольших и типовых баз без сложной кастомизации</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Устанавливает и запускает администратор портала, без программирования</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">2. Импорт из CSV-файла</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Штатный инструмент Битрикс24 — работает с любой системой, из которой можно выгрузить таблицу</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Подходит, если для вашей CRM нет готового мигратора в Маркете</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Требует ручной подготовки файла и сопоставления полей — доступен только новым сделкам, обновить существующие импортом нельзя</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-prose reveal">
+      <p>Третий вариант — миграция через API силами интегратора — нужен, когда первые два не годятся: база большая, в ней много нестандартных полей, нужно сохранить файлы и вложения, историю переписки или привязать перенос к параллельной доработке портала. Сам Битрикс24 прямо предлагает этот путь тем, кто не хочет разбираться самостоятельно: в справке есть форма «наш партнёр поможет перенести данные из вашей системы в Битрикс24» — по сути, приглашение обратиться к интегратору, а не делать миграцию своими силами.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="market">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Штатные средства</div>
+      <h2>Миграторов в Маркете Битрикс24 хватает не только на amoCRM</h2>
+      <p>В Маркете Битрикс24 есть отдельный раздел «Импорт, экспорт → Миграция в Б24» — десятки приложений под конкретные источники: несколько конкурирующих миграторов для amoCRM, импорт из Excel и Google Таблиц, перенос из Zoho CRM и Zoho Inventory, «МойСклад», Trello, GetCourse, чатов Telegram и Microsoft Teams, переезд между двумя порталами самого Битрикс24 — облачным и коробочным. Для самых частых сценариев готовое решение обычно уже есть.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/migraciya-v-bitrix24/amocrm-import-etapy.png" alt="Приложение «Импорт из amoCRM»: список из 10 этапов переноса — интеграция, сопоставление пользователей, компаний, контактов, сделок, задач, комментариев, звонков" loading="lazy" width="1280" height="720">
+      </div>
+      <figcaption>Один из миграторов amoCRM → Битрикс24 из Маркета: перенос разбит на 10 последовательных этапов, каждый — отдельная сущность CRM. Скриншот с официальной страницы приложения в Маркете Битрикс24.</figcaption>
+    </figure>
+
+    <div class="case-prose reveal">
+      <p>Самое популярное такое приложение для amoCRM — «Импорт из amoCRM» — по данным разработчика, переносит компании, контакты, сделки, задачи, примечания и звонки без ограничения по количеству записей, и делает это довольно быстро: например, 16 644 контакта переносятся примерно за 45 минут, 8 764 сделки — чуть больше часа. Есть и второе популярное приложение — «Мигратор amoCRM» — с более чем 14 000 установок: конкуренция между разработчиками миграторов обычно означает, что типовой сценарий «amoCRM → Битрикс24» хорошо обкатан и отлажен.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как это выглядит на практике</div>
+      <h2>Перенос — это не одна кнопка, а пошаговая сверка</h2>
+      <p>Даже у самого отлаженного мигратора перенос — это не «нажал и жди»: систему нужно подключить, сопоставить сотрудников, воронки и поля вручную. Разберём на примере переноса сделок из amoCRM.</p>
+    </div>
+
+    <div class="steps reveal">
+      <div class="step">
+        <h4>1. Подключение</h4>
+        <p>Администратор авторизуется в amoCRM и разрешает приложению доступ к данным аккаунта.</p>
+      </div>
+      <div class="step">
+        <h4>2. Сотрудники</h4>
+        <p>Пользователи amoCRM сопоставляются с сотрудниками Битрикс24 — по почте автоматически, остальные вручную.</p>
+      </div>
+      <div class="step">
+        <h4>3. Воронки и поля</h4>
+        <p>Воронки, стадии сделок и поля карточек сопоставляются с аналогами в Битрикс24 или создаются заново.</p>
+      </div>
+      <div class="step">
+        <h4>4. Перенос по сущностям</h4>
+        <p>Компании, контакты, сделки, задачи, комментарии и звонки переносятся отдельными шагами — с прогрессом по каждому.</p>
+      </div>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/migraciya-v-bitrix24/amocrm-voronki-sopostavlenie.png" alt="Сопоставление воронок amoCRM с направлениями и стадиями сделок в Битрикс24 перед переносом" loading="lazy" width="1280" height="720">
+      </div>
+      <figcaption>Воронки amoCRM не превращаются в направления сделок Битрикс24 автоматически — их нужно сопоставить вручную или создать заново, стадия за стадией. Скриншот с официальной страницы приложения в Маркете Битрикс24.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="poteri">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Честно о нюансах</div>
+      <h2>Почему часть данных теряется при любом способе переноса</h2>
+      <p>Главная причина проста: у amoCRM, «Мегаплана», Excel-таблицы и Битрикс24 разная структура данных. Где-то нет прямого аналога поля, где-то логика работает иначе. Мигратор не может выдумать поле, которого в целевой системе не существует, — он либо предлагает создать новое, либо просто не переносит значение.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/migraciya-v-bitrix24/amocrm-polya-sdelok-sopostavlenie.png" alt="Сопоставление полей сделки amoCRM с полями Битрикс24: для каждого поля можно выбрать существующее поле, создать новое или отметить «Не загружать»" loading="lazy" width="1280" height="720">
+      </div>
+      <figcaption>У каждого поля сделки — свой выбор: сопоставить с существующим полем Битрикс24, создать новое или явно отметить «Не загружать». Часть полей закономерно попадает в третью категорию. Скриншот с официальной страницы приложения в Маркете Битрикс24.</figcaption>
+    </figure>
+
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Что обычно теряется или урезается</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Записи звонков и вложения — переносятся не всеми миграторами, иногда только ссылкой или вовсе не переносятся</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Комментарии — как правило, только текстовые примечания, без системных событий и части типов сообщений</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Дата завершения сделки — штатный импорт CSV заменяет её датой загрузки файла, если не подготовить обходной путь заранее</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Нестандартные и вычисляемые поля — если для них нет аналога в Битрикс24, их либо создают заново, либо не переносят</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Бизнес-процессы и автоматизация — переносится только сырой набор данных, логику воронки нужно настраивать в Битрикс24 заново</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Почему нельзя перенести абсолютно всё</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">У систем разная структура данных — прямого аналога поля или сущности иногда просто не существует</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Штатные миграторы Маркета рассчитаны на типовой сценарий, а не на вашу уникальную конфигурацию</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Перенести можно практически всё — но через кастомную разработку под API, а это уже не бесплатное приложение, а отдельный проект по деньгам и срокам</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Импортировать штатно можно только новые записи — обновить существующие сделки повторным импортом нельзя</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-prose reveal">
+      <p>Поэтому первый честный шаг любой миграции — не запуск переноса, а быстрый аудит: что действительно важно перенести, а что проще завести заново в Битрикс24 с чистого листа. Основная база клиентов, сделок и истории общения переносится почти всегда без серьёзных потерь. А вот тонкая настройка старой системы — автоматизация, нестандартные поля, специфичные интеграции — почти никогда не переезжает «как было», и это нормально: у Битрикс24 для тех же задач часто есть свои штатные инструменты, просто настроенные иначе.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="csv">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Когда нет готового мигратора</div>
+      <h2>Универсальный импорт CSV: медленнее, но работает с чем угодно</h2>
+      <p>Если для вашей CRM в Маркете нет отдельного приложения — например, данные лежат в узкоспециализированной или самописной системе — остаётся встроенный импорт из CSV-файла. Он есть в каждом разделе CRM: лидах, сделках, контактах, компаниях, товарах.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/migraciya-v-bitrix24/csv-import-nastroyki.jpg" alt="Окно настроек импорта сделок в Битрикс24: загрузка CSV-файла, выбор кодировки, разделителя столбцов и шаблон файла для импорта" loading="lazy" width="1600" height="905">
+      </div>
+      <figcaption>Перед импортом Битрикс24 даёт скачать шаблон файла — так проще подготовить данные под нужную структуру заранее. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+
+    <div class="case-prose reveal">
+      <p>Дальше — обязательный шаг сопоставления полей: слева поля карточки Битрикс24, справа — столбцы из вашего файла. Если что-то не сопоставлено или сопоставлено неверно, значение просто не попадёт в нужное место.</p>
+    </div>
+
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/migraciya-v-bitrix24/csv-import-sopostavlenie-poley.jpg" alt="Сопоставление полей файла импорта с полями сделки в Битрикс24: выпадающий список с вариантами «Номер», «Тема», «Статус», «Сумма», «Сделка», «Компания»" loading="lazy" width="1600" height="905">
+      </div>
+      <figcaption>Каждое поле файла нужно вручную сопоставить с полем Битрикс24 — автоматически совпадают в лучшем случае названия-тёзки. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+
+    <div class="case-prose reveal">
+      <p>Способ надёжный и бесплатный, но трудоёмкий: файл нужно правильно подготовить, а часть штатных полей ведёт себя не так, как ожидаешь — например, при импорте завершённых сделок Битрикс24 подставляет в поле «Дата завершения» дату самой загрузки файла, а не реальную дату из старой системы. Обойти это можно, но только через дополнительное пользовательское поле и настройку робота — то есть снова через ручную работу, а не «из коробки».</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="cta-band reveal" style="margin-bottom:0;">
+      <div>
+        <h2>А если база большая и без потерь важна каждая деталь?</h2>
+        <p>Тысячи сделок с нестандартными полями, вложениями, историей звонков и завязанной на них автоматизацией — тот случай, когда штатный мигратор или CSV не справятся. Настраиваем перенос через API, тестируем на части базы и сверяем результат до того, как отключить старую систему.</p>
+      </div>
+      <a href="contacts.html#form" class="btn btn--primary">Обсудить миграцию →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как мы работаем</div>
+      <h2>Что входит в переход на Битрикс24 с другой CRM</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>Аудит базы</h4>
+        <p>Смотрим, что в старой системе есть на самом деле: сколько сделок, какие поля используются, а какие давно не заполняются.</p>
+      </div>
+      <div class="step">
+        <h4>Выбор способа</h4>
+        <p>Оцениваем объём и сложность данных и предлагаем реалистичный вариант — приложение из Маркета, импорт CSV или перенос через API.</p>
+      </div>
+      <div class="step">
+        <h4>Список потерь заранее</h4>
+        <p>Прямо говорим, что не перенесётся или потребует ручной доработки — до начала работ, а не после.</p>
+      </div>
+      <div class="step">
+        <h4>Тестовый перенос</h4>
+        <p>Сначала переносим часть базы и сверяем цифры — количество записей, суммы сделок, привязку к сотрудникам.</p>
+      </div>
+      <div class="step">
+        <h4>Основной перенос и проверка</h4>
+        <p>Переносим всю базу, проверяем результат и настраиваем воронки и автоматизацию под процессы компании в Битрикс24.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Переезжаете с amoCRM или другой CRM?</h2>
+        <p>Проведём аудит базы, честно скажем, что перенесётся без потерь, а что — нет, и подберём способ миграции под объём и бюджет проекта.</p>
+      </div>
+      <a href="contacts.html#form" class="btn btn--primary">Обсудить задачу</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:16px;">
+          <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+          <span class="brand__name">АйТи Аналитикс</span>
+        </a>
+        <p>Внедрение Битрикс24 и систем телефонии. Ваш партнёр в мире Битрикс24 с 2011 года.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="bitrix24.html">Битрикс24</a></li>
+          <li><a href="telephony.html">Телефония</a></li>
+          <li><a href="ai.html">ИИ-решения</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="partners.html">Партнёрам</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+375445057799">+375 (44) 505-77-99</a></li>
+          <li><a href="mailto:sales@it-a.by">sales@it-a.by</a></li>
+          <li><a href="contacts.html#map">г. Минск, ул. Лукьяновича, 10к7</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Мы на связи</h4>
+        <div class="social-row">
+          <a href="https://www.instagram.com/it_a.by/" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="https://t.me/ita_by_bitrix" aria-label="Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2011–2026 АйТи Аналитикс. УНП 791048093</span>
+      <span>Все услуги: Битрикс24 · IP-телефония · Интеграции</span>
+      <span><a href="assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Политика конфиденциальности</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.by/b1536661/crm/site_button/loader_31_u35a1q.js');
+</script>
+</body>
+</html>
