@@ -185,6 +185,17 @@ p {
   font-size: 13px;
 }
 
+.btn--gold {
+  background: linear-gradient(90deg, #fffab8, #c09f4a);
+  color: #1d1d1b;
+  border-radius: 10px;
+  box-shadow: 0 12px 24px -10px rgba(192, 159, 74, 0.6);
+}
+
+.btn--gold:hover {
+  filter: brightness(1.05);
+}
+
 /* ===== Header ===== */
 
 .header {
@@ -3004,6 +3015,26 @@ body.show-diff-only .compare-table--full tbody tr[data-uniform="true"] {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.article-shot__frame--overlay {
+  position: relative;
+}
+
+.article-shot__cta {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  z-index: 2;
+}
+
+@media (max-width: 560px) {
+  .article-shot__cta {
+    left: 16px;
+    bottom: 16px;
+    padding: 11px 18px;
+    font-size: 13px;
+  }
 }
 
 .case-prose h3 {
