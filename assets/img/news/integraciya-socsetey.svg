@@ -1,0 +1,33 @@
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Интеграция соцсетей и Битрикс24">
+  <rect width="1280" height="720" fill="#1d1d1b"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#8fbf21"/>
+  <text x="90" y="150" fill="#8fbf21" font-family="Nunito, 'Segoe UI', sans-serif" font-size="26" font-weight="800" letter-spacing="3">СТАТЬЯ · ИНТЕГРАЦИИ</text>
+  <text x="90" y="240" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="66" font-weight="900">Соцсети и Битрикс24</text>
+  <text x="92" y="308" fill="#b7b7b2" font-family="Nunito, 'Segoe UI', sans-serif" font-size="27" font-weight="700">Открытые линии, штатные каналы и сторонние сервисы</text>
+
+  <g transform="translate(90 360)" font-family="Nunito, 'Segoe UI', sans-serif">
+    <rect x="0" y="0" width="530" height="288" rx="16" fill="#262622"/>
+    <text x="28" y="42" fill="#8fbf21" font-size="17" font-weight="800">Штатные каналы</text>
+    <text x="28" y="66" fill="#7f8074" font-size="12.5" font-weight="700">подключаются прямо в Контакт-центре</text>
+    <g font-size="13" font-weight="700" fill="#d7d7d3">
+      <circle cx="34" cy="98" r="4" fill="#8fbf21"/><text x="48" y="103">ВКонтакте — сообщества и паблики</text>
+      <circle cx="34" cy="128" r="4" fill="#8fbf21"/><text x="48" y="133">Instagram и Facebook — сообщения</text>
+      <circle cx="34" cy="158" r="4" fill="#8fbf21"/><text x="48" y="163">Одноклассники</text>
+    </g>
+    <rect x="28" y="192" width="474" height="66" rx="10" fill="#303029"/>
+    <text x="44" y="216" fill="#ececec" font-size="12.5" font-weight="800">Подключение бесплатное</text>
+    <text x="44" y="238" fill="#9a9a92" font-size="11.5" font-weight="700">авторизация сообщества — без разработки</text>
+
+    <rect x="570" y="0" width="530" height="288" rx="16" fill="#262622"/>
+    <text x="598" y="42" fill="#8fbf21" font-size="17" font-weight="800">Открытая линия</text>
+    <text x="598" y="66" fill="#7f8074" font-size="12.5" font-weight="700">общий механизм для всех каналов</text>
+    <g font-size="13" font-weight="700" fill="#d7d7d3">
+      <circle cx="604" cy="98" r="4" fill="#8fbf21"/><text x="618" y="103">Очередь и распределение операторам</text>
+      <circle cx="604" cy="128" r="4" fill="#8fbf21"/><text x="618" y="133">Автоответы и рабочее время</text>
+      <circle cx="604" cy="158" r="4" fill="#8fbf21"/><text x="618" y="163">История переписки — в карточке CRM</text>
+    </g>
+    <rect x="598" y="192" width="474" height="66" rx="10" fill="#303029"/>
+    <text x="614" y="216" fill="#ececec" font-size="12.5" font-weight="800">Одно окно для всех сообщений</text>
+    <text x="614" y="238" fill="#9a9a92" font-size="11.5" font-weight="700">ничего не теряется между чатами и вкладками</text>
+  </g>
+</svg>
