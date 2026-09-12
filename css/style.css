@@ -111,6 +111,22 @@ p {
   color: var(--green);
 }
 
+.section--dark .card {
+  color: var(--dark);
+}
+
+.section--dark .card .eyebrow {
+  color: var(--green-dark);
+}
+
+.section--dark .article-quote {
+  color: var(--text-on-dark);
+}
+
+.section--dark .article-quote cite {
+  color: var(--green);
+}
+
 .section-head {
   max-width: 720px;
   margin: 0 0 48px;
