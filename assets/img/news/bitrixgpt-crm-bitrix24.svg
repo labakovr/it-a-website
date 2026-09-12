@@ -1,0 +1,35 @@
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Битрикс24 — первая CRM со встроенным ИИ">
+  <rect width="1280" height="720" fill="#1d1d1b"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#8fbf21"/>
+  <text x="90" y="150" fill="#8fbf21" font-family="Nunito, 'Segoe UI', sans-serif" font-size="26" font-weight="800" letter-spacing="3">СТАТЬЯ · ИИ</text>
+  <text x="90" y="234" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="60" font-weight="900">Битрикс24 — первая</text>
+  <text x="90" y="304" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="60" font-weight="900">CRM со встроенным ИИ</text>
+  <text x="92" y="358" fill="#b7b7b2" font-family="Nunito, 'Segoe UI', sans-serif" font-size="27" font-weight="700">BitrixGPT в CRM и на сайтах</text>
+
+  <g transform="translate(90 408)" font-family="Nunito, 'Segoe UI', sans-serif">
+    <rect x="0" y="0" width="1100" height="240" rx="16" fill="#262622"/>
+
+    <rect x="26" y="26" width="480" height="188" rx="10" fill="#1d1d1b" stroke="#3a3a34"/>
+    <circle cx="52" cy="56" r="10" fill="#25d366"/>
+    <rect x="70" y="46" width="300" height="24" rx="7" fill="#303029"/>
+    <rect x="70" y="80" width="360" height="24" rx="7" fill="#303029"/>
+    <rect x="52" y="126" width="420" height="70" rx="8" fill="#2f3a20" stroke="#8fbf21"/>
+    <text x="68" y="150" fill="#8fbf21" font-size="14" font-weight="800">BitrixGPT · резюме диалога</text>
+    <text x="68" y="172" fill="#dfe6cf" font-size="12" font-weight="700">Сумма, оплата и сроки — определены</text>
+    <text x="68" y="188" fill="#dfe6cf" font-size="12" font-weight="700">автоматически из переписки</text>
+
+    <rect x="536" y="26" width="538" height="188" rx="10" fill="#1d1d1b" stroke="#3a3a34"/>
+    <text x="560" y="54" fill="#8fbf21" font-size="14" font-weight="800">Сайты AI</text>
+    <rect x="560" y="68" width="490" height="36" rx="8" fill="#303029"/>
+    <text x="574" y="91" fill="#dfe6cf" font-size="13" font-weight="700">«Сайт для студии интерьера, зелёные акценты…»</text>
+    <rect x="560" y="116" width="230" height="80" rx="8" fill="#2f3a20"/>
+    <rect x="576" y="130" width="198" height="14" rx="4" fill="#8fbf21"/>
+    <rect x="576" y="152" width="150" height="10" rx="3" fill="#dfe6cf"/>
+    <rect x="576" y="170" width="170" height="10" rx="3" fill="#dfe6cf"/>
+    <rect x="808" y="116" width="242" height="80" rx="8" fill="#2f3a20"/>
+    <rect x="822" y="130" width="90" height="30" rx="6" fill="#8fbf21"/>
+    <rect x="922" y="130" width="90" height="30" rx="6" fill="#3a3a34"/>
+    <rect x="1022" y="130" width="14" height="30" rx="4" fill="#3a3a34"/>
+    <rect x="822" y="168" width="214" height="10" rx="3" fill="#dfe6cf"/>
+  </g>
+</svg>
