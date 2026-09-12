@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Коллтрекинг в Битрикс24">
+  <rect width="1280" height="720" fill="#1d1d1b"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#8fbf21"/>
+  <text x="90" y="150" fill="#8fbf21" font-family="Nunito, 'Segoe UI', sans-serif" font-size="26" font-weight="800" letter-spacing="3">СТАТЬЯ · КОЛЛТРЕКИНГ</text>
+  <text x="90" y="240" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="66" font-weight="900">Откуда звонят</text>
+  <text x="90" y="316" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="66" font-weight="900">клиенты</text>
+  <text x="92" y="374" fill="#b7b7b2" font-family="Nunito, 'Segoe UI', sans-serif" font-size="27" font-weight="700">Коллтрекинг для звонков в Битрикс24</text>
+
+  <g transform="translate(90 424)" font-family="Nunito, 'Segoe UI', sans-serif">
+    <rect x="0" y="0" width="1100" height="224" rx="16" fill="#262622"/>
+
+    <rect x="28" y="28" width="330" height="168" rx="10" fill="#303029"/>
+    <text x="46" y="56" fill="#8fbf21" font-size="15" font-weight="800">Реклама</text>
+    <g>
+      <circle cx="66" cy="100" r="14" fill="#8fbf21"/>
+      <rect x="92" y="93" width="220" height="14" rx="5" fill="#37372f"/>
+      <text x="98" y="104" fill="#ececec" font-size="12" font-weight="700">Яндекс.Директ</text>
+      <circle cx="66" cy="140" r="14" fill="#9cc63b"/>
+      <rect x="92" y="133" width="220" height="14" rx="5" fill="#37372f"/>
+      <text x="98" y="144" fill="#ececec" font-size="12" font-weight="700">Instagram</text>
+      <circle cx="66" cy="180" r="14" fill="#7cae2f"/>
+      <rect x="92" y="173" width="220" height="14" rx="5" fill="#37372f"/>
+      <text x="98" y="184" fill="#ececec" font-size="12" font-weight="700">Вывеска у входа</text>
+    </g>
+
+    <rect x="378" y="28" width="330" height="168" rx="10" fill="#303029"/>
+    <text x="396" y="56" fill="#8fbf21" font-size="15" font-weight="800">Номер на сайте</text>
+    <g font-size="13" font-weight="800">
+      <rect x="396" y="82" width="180" height="30" rx="15" fill="#8fbf21"/>
+      <text x="486" y="102" fill="#1d1d1b" text-anchor="middle">+375 29 xx-01</text>
+      <rect x="396" y="122" width="180" height="30" rx="15" fill="#9cc63b"/>
+      <text x="486" y="142" fill="#1d1d1b" text-anchor="middle">+375 29 xx-02</text>
+      <rect x="396" y="162" width="180" height="30" rx="15" fill="#7cae2f"/>
+      <text x="486" y="182" fill="#1d1d1b" text-anchor="middle">+375 29 xx-03</text>
+    </g>
+
+    <g stroke="#7f8074" stroke-width="2" stroke-dasharray="6 6">
+      <line x1="728" y1="97" x2="770" y2="97"/>
+      <line x1="728" y1="137" x2="770" y2="137"/>
+      <line x1="728" y1="177" x2="770" y2="177"/>
+    </g>
+
+    <rect x="770" y="28" width="300" height="168" rx="10" fill="#303029"/>
+    <text x="788" y="56" fill="#8fbf21" font-size="15" font-weight="800">Битрикс24</text>
+    <rect x="788" y="82" width="264" height="34" rx="6" fill="#8fbf21"/>
+    <text x="802" y="105" fill="#1d1d1b" font-size="13" font-weight="800">Сделка + источник звонка</text>
+    <rect x="788" y="126" width="264" height="34" rx="6" fill="#37372f"/>
+    <text x="802" y="149" fill="#b7b7b2" font-size="13" font-weight="700">Запись разговора</text>
+    <rect x="788" y="170" width="264" height="14" rx="5" fill="#37372f"/>
+  </g>
+</svg>
