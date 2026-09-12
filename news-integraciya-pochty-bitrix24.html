@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Интеграция почты и Битрикс24: как переписка с клиентами попадает в CRM | АйТи Аналитикс</title>
+<meta name="description" content="Зачем подключать личную и корпоративную почту к Битрикс24: письма автоматически попадают в карточку клиента, не теряются при увольнении сотрудника и не живут отдельно от сделок. Разбираем сценарии со скриншотами из официальной справки Битрикс24.">
+<link rel="canonical" href="https://it-a.by/news-integraciya-pochty-bitrix24.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="АйТи Аналитикс">
+<meta property="og:title" content="Интеграция почты и Битрикс24: как переписка с клиентами попадает в CRM">
+<meta property="og:description" content="Письма автоматически попадают в карточку клиента, а не остаются в личном ящике сотрудника. Разбираем, как подключается почта к Битрикс24 и что это даёт бизнесу.">
+<meta property="og:url" content="https://it-a.by/news-integraciya-pochty-bitrix24.html">
+<meta property="og:image" content="https://it-a.by/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Интеграция почты и Битрикс24: как переписка с клиентами попадает в CRM">
+<meta name="twitter:description" content="Письма автоматически попадают в карточку клиента, а не остаются в личном ящике сотрудника. Разбираем, как подключается почта к Битрикс24 и что это даёт бизнесу.">
+<meta name="twitter:image" content="https://it-a.by/assets/img/og-image.png">
+<meta name="theme-color" content="#1d1d1b">
+<link rel="icon" href="assets/img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Интеграция почты и Битрикс24: как переписка с клиентами попадает в CRM",
+  "description": "Как подключить личную и корпоративную почту к Битрикс24: автоматическое прикрепление писем к карточке клиента, отправка писем прямо из сделки, шаблоны и общий ящик отдела.",
+  "image": "https://it-a.by/assets/img/og-image.png",
+  "author": { "@type": "Organization", "name": "АйТи Аналитикс", "url": "https://it-a.by/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "АйТи Аналитикс",
+    "logo": { "@type": "ImageObject", "url": "https://it-a.by/assets/img/logo-mark.png" }
+  },
+  "datePublished": "2026-09-12",
+  "dateModified": "2026-09-12",
+  "mainEntityOfPage": "https://it-a.by/news-integraciya-pochty-bitrix24.html",
+  "about": "Интеграция почты и Битрикс24"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://it-a.by/" },
+    { "@type": "ListItem", "position": 2, "name": "Новости", "item": "https://it-a.by/news.html" },
+    { "@type": "ListItem", "position": 3, "name": "Интеграция почты и Битрикс24", "item": "https://it-a.by/news-integraciya-pochty-bitrix24.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+      <span class="brand__name">АйТи Аналитикс</span>
+    </a>
+    <nav class="nav">
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="bitrix24.html" class="nav-link">Битрикс24</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по Битрикс24" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="features.html">Возможности Битрикс24</a>
+          <a href="licenses.html">Лицензии Битрикс24</a>
+          <a href="bitrix24.html">Внедрение Битрикс24</a>
+          <a href="bitrix24.html">Сопровождение Битрикс24</a>
+          <a href="education.html">Обучение Битрикс24</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="telephony.html" class="nav-link">Телефония</a>
+          <button type="button" class="nav-caret" aria-label="Показать услуги по телефонии" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="telephony.html">Внедрение IP-телефонии</a>
+          <a href="telephony.html">Настройка АТС</a>
+          <a href="telephony.html">Сопровождение телефонии</a>
+          <a href="catalog/index.html">Каталог оборудования</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="ai.html" class="nav-link">ИИ-решения</a>
+          <button type="button" class="nav-caret" aria-label="Показать ИИ-решения" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="ai.html">Внедрение ИИ-ассистентов</a>
+          <a href="ai.html">Автоматизация процессов</a>
+          <a href="ai.html">Обучение и сопровождение</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <span class="nav-item-row">
+          <a href="portfolio.html" class="nav-link">Портфолио</a>
+          <button type="button" class="nav-caret" aria-label="Показать разделы портфолио" aria-expanded="false">▾</button>
+        </span>
+        <div class="dropdown">
+          <a href="cases.html">Кейсы</a>
+          <a href="reviews.html">Отзывы</a>
+          <a href="certificates.html">Сертификаты</a>
+          <a href="about.html">О нас</a>
+        </div>
+      </div>
+      <a href="news.html" class="is-active">Новости</a>
+    </nav>
+    <div class="header__actions">
+      <a href="tel:+375445057799" class="header__phone">+375 (44) 505-77-99</a>
+      <a href="contacts.html#form" class="btn btn--primary btn--sm">Заказать звонок</a>
+      <button class="nav-toggle" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">Главная</a><span class="sep">/</span><a href="news.html">Новости</a><span class="sep">/</span><span>Интеграция почты и Битрикс24</span></div>
+    <div class="eyebrow">Статья · Интеграции · 12 сентября 2026</div>
+    <h1>Интеграция почты и Битрикс24: как переписка с клиентами перестаёт жить в чужом почтовом ящике</h1>
+    <p class="hero__lead">Клиент написал на personal-почту менеджера — и вся эта переписка видна только ему одному. Руководитель не знает, что обсуждалось, коллега не может подхватить сделку в отпуске менеджера, а при увольнении сотрудника история общения с клиентом нередко уходит вместе с ним. Интеграция почты с Битрикс24 закрывает именно эту проблему: письма автоматически попадают в карточку клиента и остаются в компании, а не в личном ящике.</p>
+    <div class="hero__actions">
+      <a href="#kak-podklyuchit" class="btn btn--outline-dark">Как это подключается →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="case-facts reveal">
+      <div class="card">
+        <div class="eyebrow">Для кого</div>
+        <strong>Компании, которые ведут переписку с клиентами по почте — от первого письма до счетов и договоров</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Что делаем</div>
+        <strong>Подключаем личные и общие почтовые ящики к Битрикс24 и настраиваем интеграцию с CRM</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Формат</div>
+        <strong>Gmail, Яндекс, Mail.ru, Outlook, iCloud — в пару кликов, либо любая корпоративная почта через IMAP/SMTP</strong>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Результат</div>
+        <strong>Переписка — в карточке клиента, а не только в почтовом клиенте одного сотрудника</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Простыми словами</div>
+      <h2>Почта — ещё один канал общения с клиентом, который можно завести в CRM</h2>
+      <p>Звонки и заявки с сайта в Битрикс24 обычно уже фиксируются в сделке — это настраивается одним из первых. Почта часто остаётся в стороне: менеджер годами переписывается с клиентами из личного Gmail или корпоративного ящика, и эта переписка нигде, кроме почтового клиента, не хранится. Интеграция почты решает ту же задачу, что и для звонков: перестать держать историю общения с клиентом в инструменте, привязанном к конкретному сотруднику.</p>
+    </div>
+    <div class="case-prose reveal">
+      <p>После подключения почтовый ящик остаётся тем же самым — меняется не сам ящик, а то, куда попадает переписка дальше. Входящие и исходящие письма прикрепляются к карточке контакта, лида или сделки, и любой сотрудник с доступом видит переписку целиком, а не только то, что ему перескажут.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="kak-podklyuchit">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Первый шаг</div>
+      <h2>Подключить можно и обычную почту, и свой корпоративный домен</h2>
+      <p>Битрикс24 не требует заводить отдельный ящик специально под CRM. Подключается тот адрес, с которого и так ведётся переписка с клиентами.</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <h3>Популярные сервисы — в пару кликов</h3>
+        <p>Gmail, Outlook, iCloud, Office 365, Exchange, Yahoo!, Aol, Яндекс.Почта и Mail.ru подключаются через готовую авторизацию: нужно выбрать сервис и войти в свой аккаунт, вводить пароль в само́й Битрикс24 не обязательно.</p>
+      </div>
+      <div class="card">
+        <h3>Своя почта на корпоративном домене</h3>
+        <p>Если компания использует почту на собственном домене (info@company.by) — она подключается через IMAP и SMTP: адреса серверов, порты, логин и пароль обычно один раз уточняются у своего провайдера почты или системного администратора.</p>
+      </div>
+    </div>
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/integraciya-pochty-bitrix24/podklyuchenie-pochtovogo-yaschika.jpg" alt="Окно подключения почтового ящика в Битрикс24: Gmail, Outlook, iCloud, Office 365, Exchange, Yahoo, Aol, Яндекс, Mail.ru и корпоративная почта по IMAP+SMTP" loading="lazy" width="1280" height="735">
+      </div>
+      <figcaption>Так выглядит окно подключения почты в Битрикс24 — популярные сервисы в один клик, а для собственного домена есть вариант «Корпоративная почта IMAP+SMTP». Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Главное решение при подключении</div>
+      <h2>Один переключатель «Интеграция с CRM» решает, куда пойдут письма</h2>
+      <p>При подключении ящика Битрикс24 сразу спрашивает: синхронизировать письма с CRM или оставить почту отдельным разделом, как в обычном почтовом клиенте. От этого переключателя и зависит, увидит ли компания переписку в карточках или только сам сотрудник — в своей «Почте».</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <div class="eyebrow">Входящие письма</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Письмо от уже известного клиента автоматически прикрепляется к его карточке — контакту, лиду или сделке</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Письмо от нового отправителя может само создать лид или сделку — правило настраивается один раз</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Можно указать ответственного по умолчанию для писем, которые не удалось привязать автоматически</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Исходящие письма</div>
+        <ul class="check-list">
+          <li><img class="ico" src="assets/img/check.svg" alt="">Письмо, отправленное из карточки, само прикрепляется к этой же сделке или лиду</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Можно ограничить число писем, отправляемых с ящика за день — защита от случайной массовой рассылки</li>
+          <li><img class="ico" src="assets/img/check.svg" alt="">Имя отправителя в письмах клиентам задаётся один раз при подключении</li>
+        </ul>
+      </div>
+    </div>
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/integraciya-pochty-bitrix24/avtorizaciya-integraciya-s-crm.jpg" alt="Подключение почтового ящика в Битрикс24: авторизация через Яндекс и включённый переключатель «Интеграция с CRM»" loading="lazy" width="1280" height="731">
+      </div>
+      <figcaption>При подключении ящика виден переключатель «Интеграция с CRM»: письма за выбранный период появятся в карточках и по умолчанию будут доступны всем сотрудникам, если права доступа не ограничивают просмотр. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Для менеджера</div>
+      <h2>Письмо можно написать прямо из сделки, не открывая почту</h2>
+      <p>После подключения переписка ведётся там же, где менеджер и так работает — в карточке клиента. Не нужно переключаться в почтовый клиент и искать нужную сделку, чтобы вспомнить, о чём договаривались.</p>
+    </div>
+    <div class="case-prose reveal">
+      <p>В любой сделке или лиде есть пункт «Ещё → Письмо». Открывается привычный редактор: тема, текст, вложения, копия и скрытая копия — и письмо сразу привязано к этой сделке, никуда вручную прикреплять его не нужно.</p>
+    </div>
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/integraciya-pochty-bitrix24/knopka-pismo-v-sdelke.jpg" alt="Пункт «Письмо» в меню «Ещё» карточки сделки в Битрикс24" loading="lazy" width="1280" height="714">
+      </div>
+      <figcaption>Написать письмо клиенту можно прямо из сделки — пункт «Письмо» в меню «Ещё», рядом с чатом, задачей и звонком. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+    <div class="case-prose reveal">
+      <p>Для повторяющихся ситуаций — реквизиты, типовой ответ, поздравление — можно один раз сохранить письмо как шаблон и дальше просто выбирать его из списка, не набирая текст заново.</p>
+    </div>
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/integraciya-pochty-bitrix24/shablony-pisem.jpg" alt="Выпадающий список шаблонов писем в редакторе письма Битрикс24: «Реквизиты ООО», «Скидка 10%», «С днём рождения!»" loading="lazy" width="1280" height="714">
+      </div>
+      <figcaption>Готовые шаблоны писем экономят время на типовых ответах — реквизиты, стандартные скидки, поздравления. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Почему это важно</div>
+      <h2>Переписка остаётся в истории клиента, даже если менеджер уволился</h2>
+      <p>Каждое письмо — входящее и исходящее — попадает в общую хронологию сделки вместе со звонками, задачами и комментариями. Не нужно вспоминать, кто и что писал клиенту месяц назад: всё видно в одной ленте.</p>
+    </div>
+    <figure class="article-shot reveal">
+      <div class="article-shot__frame">
+        <img src="assets/img/news/integraciya-pochty-bitrix24/istoriya-perepiski-v-sdelke.jpg" alt="Исходящее письмо в истории сделки Битрикс24 с темой, получателем и отправителем письма" loading="lazy" width="1280" height="738">
+      </div>
+      <figcaption>Отправленное письмо появляется прямо в ленте сделки — с темой, отправителем и получателем, рядом с записью о звонке и онлайн-записи клиента. Скриншот из официальной справки Битрикс24.</figcaption>
+    </figure>
+    <div class="case-prose reveal">
+      <blockquote class="article-quote">
+        «Самый частый повод обратиться за интеграцией почты — не удобство, а страх. Собственник понимает, что вся переписка с ключевыми клиентами оседает в личном Gmail двух-трёх менеджеров, и если кто-то из них уйдёт, компания не восстановит историю отношений с клиентом».
+        <cite>Команда «АйТи Аналитикс»</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Для отдела, а не для одного сотрудника</div>
+      <h2>Общий почтовый ящик: одна почта — на весь отдел продаж</h2>
+      <p>Кроме личных ящиков сотрудников, в Битрикс24 можно подключить общий ящик отдела — например, sales@company.by. Такой ящик подключает один сотрудник, а доступ к нему открывает коллегам: письма попадают в CRM и распределяются между теми, кто общается с конкретным клиентом.</p>
+    </div>
+    <ul class="check-list check-grid reveal">
+      <li><img class="ico" src="assets/img/check.svg" alt="">Письмо на общий ящик не «зависает» из-за отпуска или болезни одного сотрудника — его увидят и другие</li>
+      <li><img class="ico" src="assets/img/check.svg" alt="">Для распределения новых обращений сотрудников можно выстроить в очередь — по порядку или по нагрузке</li>
+      <li><img class="ico" src="assets/img/check.svg" alt="">У всех писем с общего ящика — единое имя отправителя, клиент видит компанию, а не конкретного человека</li>
+      <li><img class="ico" src="assets/img/check.svg" alt="">Права доступа настраиваются отдельно — не каждый сотрудник с доступом к CRM обязательно видит переписку с общего ящика</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">На практике</div>
+      <h2>Как это выглядит в жизни</h2>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card">
+        <h3>Оптовая компания: клиент «потерялся» вместе с менеджером</h3>
+        <p>Ключевой клиент вёл всю переписку с одним менеджером напрямую в Gmail. Когда менеджер уволился, новый сотрудник не смог поднять историю обсуждений по спецификациям и скидкам — пришлось выяснять условия у самого клиента заново, что выглядело непрофессионально. После подключения личных ящиков менеджеров с интеграцией в CRM подобная ситуация больше не повторялась: переписка осталась в карточке клиента.</p>
+      </div>
+      <div class="card">
+        <h3>Интернет-магазин: заявки с sales@ терялись между сотрудниками</h3>
+        <p>Письма на общий адрес поддержки читал тот, кто первый открыл почту, — иногда обращение оставалось без ответа по два дня, потому что каждый думал, что ответит другой. Подключили общий ящик с интеграцией в CRM и очередью распределения: каждое письмо стало сделкой с ответственным, а не «письмом для всех и ни для кого».</p>
+      </div>
+      <div class="card">
+        <h3>Юридическая компания: длинная переписка по одному делу</h3>
+        <p>По каждому клиенту велась долгая переписка с вложенными документами, растянутая на недели. Раньше нужную версию письма искали в почте по ключевым словам. Теперь вся переписка по делу видна прямо в сделке — вместе с задачами и звонками, в одной ленте и в хронологическом порядке.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Как проходит настройка</div>
+      <h2>Из чего состоит подключение почты</h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <h4>1. Считаем ящики и договариваемся о правилах</h4>
+        <p>Смотрим, у кого из сотрудников есть личная переписка с клиентами, нужен ли общий ящик отдела и как распределять по нему письма между менеджерами.</p>
+      </div>
+      <div class="step">
+        <h4>2. Подключаем почту</h4>
+        <p>Для популярных сервисов — через готовую авторизацию, для корпоративного домена — по IMAP/SMTP с данными от почтового провайдера или системного администратора.</p>
+      </div>
+      <div class="step">
+        <h4>3. Включаем интеграцию с CRM</h4>
+        <p>Настраиваем, какие письма и за какой период попадают в карточки, а также правила автоматического создания лидов или сделок из писем новых отправителей.</p>
+      </div>
+      <div class="step">
+        <h4>4. Настраиваем шаблоны и права доступа</h4>
+        <p>Готовим шаблоны под типовые письма и проверяем, кто из сотрудников должен видеть переписку — по умолчанию, по отделу или только по своим сделкам.</p>
+      </div>
+      <div class="step">
+        <h4>5. Проверяем связку целиком</h4>
+        <p>Отправляем тестовое письмо в обе стороны и убеждаемся, что оно появилось в нужной карточке, а не потерялось между почтой и CRM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Важно учитывать</div>
+      <h2>О чём стоит знать до подключения</h2>
+    </div>
+    <ul class="check-list check-grid reveal">
+      <li><img class="ico" src="assets/img/check.svg" alt="">Есть ограничение на размер вложений в письме — большие файлы удобнее прикреплять ссылкой на диск</li>
+      <li><img class="ico" src="assets/img/check.svg" alt="">Без настроенного своего SMTP клиент первое время может видеть служебный адрес отправителя портала, хотя ответ всё равно придёт на реальный ящик</li>
+      <li><img class="ico" src="assets/img/check.svg" alt="">По умолчанию письма в CRM видны всем сотрудникам с доступом к сделке — при необходимости это ограничивается правами доступа</li>
+      <li><img class="ico" src="assets/img/check.svg" alt="">Интеграция почты — это про переписку с конкретными клиентами, а не про массовые email-рассылки: для рассылок в Битрикс24 есть отдельный инструмент</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Что ещё почитать</div>
+      <h2>Почта — один из каналов общения с клиентом</h2>
+    </div>
+    <div class="case-prose reveal">
+      <p>Если помимо личной переписки нужны ещё и массовые <a href="news-email-rassylki-bitrix24.html">почтовые рассылки</a> — это отдельная задача с другими требованиями к доставляемости и репутации домена. А чтобы клиент мог написать не только на почту, но и в мессенджер, посмотрите статью про <a href="news-integraciya-messendzherov-bitrix24.html">интеграцию мессенджеров</a> с Битрикс24.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Хотите, чтобы переписка с клиентами не терялась?</h2>
+        <p>Подключим личную и общую почту к Битрикс24, настроим интеграцию с CRM и очередь распределения писем между менеджерами.</p>
+      </div>
+      <a href="contacts.html#form" class="btn btn--primary">Заказать консультацию</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:16px;">
+          <img src="assets/img/logo-mark.png" alt="АйТи Аналитикс" class="brand__mark">
+          <span class="brand__name">АйТи Аналитикс</span>
+        </a>
+        <p>Внедрение Битрикс24 и систем телефонии. Ваш партнёр в мире Битрикс24 с 2011 года.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="bitrix24.html">Битрикс24</a></li>
+          <li><a href="telephony.html">Телефония</a></li>
+          <li><a href="ai.html">ИИ-решения</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="partners.html">Партнёрам</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+375445057799">+375 (44) 505-77-99</a></li>
+          <li><a href="mailto:sales@it-a.by">sales@it-a.by</a></li>
+          <li><a href="contacts.html#map">г. Минск, ул. Лукьяновича, 10к7</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Мы на связи</h4>
+        <div class="social-row">
+          <a href="https://www.instagram.com/it_a.by/" aria-label="Instagram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="https://t.me/ita_by_bitrix" aria-label="Telegram" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2011–2026 АйТи Аналитикс. УНП 791048093</span>
+      <span>Все услуги: Битрикс24 · IP-телефония · Интеграции</span>
+      <span><a href="assets/docs/privacy-policy.pdf" target="_blank" rel="noopener">Политика конфиденциальности</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.by/b1536661/crm/site_button/loader_31_u35a1q.js');
+</script>
+</body>
+</html>
