@@ -1,0 +1,36 @@
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Развёртывание сервера Битрикс24">
+  <rect width="1280" height="720" fill="#1d1d1b"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#8fbf21"/>
+  <text x="90" y="150" fill="#8fbf21" font-family="Nunito, 'Segoe UI', sans-serif" font-size="26" font-weight="800" letter-spacing="3">СТАТЬЯ · ВНЕДРЕНИЕ</text>
+  <text x="90" y="240" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="60" font-weight="900">Развёртывание</text>
+  <text x="90" y="316" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="60" font-weight="900">сервера Битрикс24</text>
+  <text x="92" y="374" fill="#b7b7b2" font-family="Nunito, 'Segoe UI', sans-serif" font-size="27" font-weight="700">Хостинг, установка портала и настройка сервера</text>
+
+  <g transform="translate(90 424)" font-family="Nunito, 'Segoe UI', sans-serif">
+    <rect x="0" y="0" width="1100" height="224" rx="16" fill="#262622"/>
+
+    <rect x="30" y="76" width="220" height="72" rx="10" fill="#303029"/>
+    <text x="140" y="108" fill="#ececec" font-size="15" font-weight="800" text-anchor="middle">Лицензия</text>
+    <text x="140" y="130" fill="#7f8074" font-size="11" font-weight="700" text-anchor="middle">выбор редакции</text>
+
+    <path d="M256 112 L306 112" stroke="#8fbf21" stroke-width="4"/><path d="M298 102 L316 112 L298 122 Z" fill="#8fbf21"/>
+
+    <rect x="322" y="76" width="220" height="72" rx="10" fill="#303029"/>
+    <text x="432" y="108" fill="#ececec" font-size="15" font-weight="800" text-anchor="middle">Хостинг</text>
+    <text x="432" y="130" fill="#7f8074" font-size="11" font-weight="700" text-anchor="middle">подбор сервера</text>
+
+    <path d="M548 112 L598 112" stroke="#8fbf21" stroke-width="4"/><path d="M590 102 L608 112 L590 122 Z" fill="#8fbf21"/>
+
+    <rect x="614" y="76" width="220" height="72" rx="10" fill="#303029"/>
+    <text x="724" y="108" fill="#ececec" font-size="15" font-weight="800" text-anchor="middle">Настройка</text>
+    <text x="724" y="130" fill="#7f8074" font-size="11" font-weight="700" text-anchor="middle">окружение сервера</text>
+
+    <path d="M840 112 L890 112" stroke="#8fbf21" stroke-width="4"/><path d="M882 102 L900 112 L882 122 Z" fill="#8fbf21"/>
+
+    <rect x="916" y="76" width="160" height="72" rx="10" fill="#8fbf21"/>
+    <text x="996" y="108" fill="#1d1d1b" font-size="15" font-weight="900" text-anchor="middle">Портал</text>
+    <text x="996" y="130" fill="#1d1d1b" font-size="11" font-weight="800" text-anchor="middle">готов к работе</text>
+
+    <text x="30" y="44" fill="#8fbf21" font-size="15" font-weight="800">От лицензии до рабочего портала</text>
+  </g>
+</svg>
