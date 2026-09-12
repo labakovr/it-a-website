@@ -1,0 +1,47 @@
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Доработка и автоматизация Битрикс24">
+  <rect width="1280" height="720" fill="#1d1d1b"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#8fbf21"/>
+  <text x="90" y="150" fill="#8fbf21" font-family="Nunito, 'Segoe UI', sans-serif" font-size="26" font-weight="800" letter-spacing="3">СТАТЬЯ · АВТОМАТИЗАЦИЯ</text>
+  <text x="90" y="240" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="72" font-weight="900">Доработка и</text>
+  <text x="90" y="316" fill="#ececec" font-family="Nunito, 'Segoe UI', sans-serif" font-size="72" font-weight="900">автоматизация</text>
+  <text x="92" y="374" fill="#b7b7b2" font-family="Nunito, 'Segoe UI', sans-serif" font-size="27" font-weight="700">Роботы и бизнес-процессы в CRM</text>
+
+  <g transform="translate(90 424)" font-family="Nunito, 'Segoe UI', sans-serif">
+    <rect x="0" y="0" width="1100" height="224" rx="16" fill="#262622"/>
+
+    <g transform="translate(50 62)">
+      <rect x="0" y="0" width="100" height="100" rx="14" fill="#8fbf21"/>
+      <circle cx="26" cy="34" r="6" fill="#1d1d1b"/>
+      <circle cx="74" cy="34" r="6" fill="#1d1d1b"/>
+      <path d="M26 66 Q50 84 74 66" fill="none" stroke="#1d1d1b" stroke-width="6" stroke-linecap="round"/>
+      <rect x="34" y="-16" width="32" height="14" rx="6" fill="#8fbf21"/>
+    </g>
+    <text x="30" y="196" fill="#b7b7b2" font-size="16" font-weight="700">Робот</text>
+
+    <path d="M200 112 L268 112" stroke="#4c952e" stroke-width="3"/><path d="M258 104 L276 112 L258 120 Z" fill="#4c952e"/>
+
+    <g transform="translate(300 42)">
+      <rect x="0" y="0" width="230" height="140" rx="12" fill="#303029" stroke="#4c952e" stroke-width="2"/>
+      <text x="20" y="34" fill="#8fbf21" font-size="14" font-weight="800">УВЕДОМИТЬ</text>
+      <rect x="20" y="50" width="190" height="14" rx="4" fill="#454540"/>
+      <rect x="20" y="74" width="190" height="14" rx="4" fill="#454540"/>
+      <rect x="20" y="98" width="120" height="14" rx="4" fill="#454540"/>
+      <circle cx="205" cy="20" r="7" fill="#8fbf21"/>
+    </g>
+    <text x="330" y="196" fill="#b7b7b2" font-size="16" font-weight="700">Задача клиенту не потеряна</text>
+
+    <path d="M560 112 L628 112" stroke="#4c952e" stroke-width="3"/><path d="M618 104 L636 112 L618 120 Z" fill="#4c952e"/>
+
+    <g transform="translate(660 20)">
+      <rect x="0" y="0" width="60" height="60" rx="10" fill="#8fbf21"/>
+      <path d="M15 32 L27 44 L47 18" fill="none" stroke="#1d1d1b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="70" y1="30" x2="150" y2="30" stroke="#7f8074" stroke-width="2" stroke-dasharray="6 6"/>
+      <rect x="0" y="90" width="60" height="60" rx="10" fill="#3a3a34" stroke="#4c952e" stroke-width="2"/>
+      <path d="M18 120 L42 120 M30 108 L30 132" stroke="#8fbf21" stroke-width="6" stroke-linecap="round"/>
+      <line x1="70" y1="120" x2="150" y2="120" stroke="#7f8074" stroke-width="2" stroke-dasharray="6 6"/>
+      <rect x="160" y="55" width="70" height="60" rx="10" fill="#3a3a34" stroke="#4c952e" stroke-width="2"/>
+      <circle cx="195" cy="85" r="16" fill="none" stroke="#8fbf21" stroke-width="5"/>
+    </g>
+    <text x="660" y="196" fill="#b7b7b2" font-size="16" font-weight="700">Бизнес-процесс: согласование</text>
+  </g>
+</svg>
